@@ -1,0 +1,16 @@
+folders
+    App.css
+    App.test.js
+    logo.svg
+    reportWebVitals.js
+    setupTests.js
+
+inside folders
+    index.js
+        import reportWebVitals from './reportWebVitals';
+        reportWebVitals();
+        //comments
+    App.js
+        import logo from './logo.svg';
+        import './App.css';
+        everything from <div>
