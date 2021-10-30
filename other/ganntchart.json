@@ -3,7 +3,7 @@
         "Suunnittelu": {
             "start": 0,
             "end": 0,
-            "progress": 10
+            "progress": 20
         },
         "Github & Vscode": {
             "start": 301,
@@ -15,17 +15,17 @@
             "end": 0,
             "progress": 0
         },
-        "Tv4": {
+        "HTML": {
             "start": 0,
             "end": 0,
             "progress": 0
         },
-        "Tv5": {
+        "CSS": {
             "start": 0,
             "end": 0,
-            "progress": 0
+            "progress": 10
         },
-        "Tv6": {
+        "JScript": {
             "start": 0,
             "end": 0,
             "progress": 0

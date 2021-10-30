@@ -5,10 +5,153 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #252526;
+  background-color: var(--color-dark1);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+:root {
+  /* add css variables here */
+  --color-white: #dadada;
+  --color-black: #131313;
+  --color-dark1: #1b1b1b;
+  --color-dark2: #252526;
+  --color-main: #208080;
+  --color-accent: #00b8ae;
+  --color-pop: #f51546;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+/*
+ Main Page content starts here 
+*/
+
+
+.page {
+  height: 200 vh;
+  background-color: var(--color-dark1);
+  display: grid;
+  place-items: center;
+}
+
+/*
+navigation styles start here 
+*/
+
+header {
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+}
+
+.nav-toggle {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.nav-toggle:focus ~ .nav-toggle-label {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  height: 1.2em;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: var(--color-white);
+  height: 0.25em;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav {
+  background: var(--color-dark2);
+  border-right: 1px solid var(--color-accent);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 10vw;
+  height: 100vh;
+  text-align: left;
+  transform: scale(0, 1);
+  transform-origin: left;
+  transition: transform 400ms ease-in-out;
+}
+
+nav * {
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+.navheader {
+  display: block;
+  margin: 0.95em 0.5em 0.95em 3.5em;
+  color: var(--color-white);
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.navlist {
+  display: grid;
+}
+
+
+.navitem {
+  margin: 0.5em auto 0 0;
+  padding: 0 1em;
+  color: var(--color-white);
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+nav a {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--color-accent);
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav * {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
 }
