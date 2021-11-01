@@ -1,6 +1,8 @@
 function Test() {
     return ( 
-        <h1>ANOTHER TEST</h1>
+        <div className="page">
+            <h1>Olet Testisivulla</h1>
+        </div>
      );
 }
 

@@ -14,13 +14,13 @@ function App() {
         <Sidebar/>
         <Switch>
 
-          <Route path="/Test">
-            <Test />
-          </Route>
+            <Route path="/Test">
+              <Test />
+            </Route>
 
-          <Route path="/">
-            <Home />
-          </Route>
+            <Route path="/">
+              <Home />
+            </Route>
 
         </Switch>
       </Router>

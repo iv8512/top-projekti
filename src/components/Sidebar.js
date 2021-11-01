@@ -4,8 +4,8 @@ function Sidebar() {
     return ( 
       <div className="sideBar">
         <div className="navList">
-          <div className="naviListItem navItem" data-tool-tip="test">Δ</div>
-          <div className="naviListItem navItem" data-tool-tip="wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww">Δ</div>
+          <Link to="/"><div className="naviListItem navItem" data-tool-tip="Linkki Kotisivulle">Δ</div></Link>
+          <Link to="/Test"><div className="naviListItem navItem" data-tool-tip="testi sivu">Δ</div></Link>
         </div>
       </div>
      );

@@ -1,6 +1,8 @@
 function Home() {
     return ( 
-        <h1>TEST</h1>
+        <div className="page">
+            <h1>Olet Kotisivulla</h1>
+        </div>
      );
 }
 
