@@ -17,11 +17,10 @@ function App() {
           <span className="navitem">navitem</span>
           <div className="navlist">
             <span className="navlist-item navitem">navlist-item</span>
-            <span className="navlist-item navitem"><a href="#">Link1</a></span>
-            <span className="navlist-item navitem"><a href="#">Link2</a></span>
-            <span className="navlist-item navitem"><a href="#">Link3</a></span>
-            <span className="navlist-item navitem"><a href="#">Link4</a></span>
-            <span className="navlist-item navitem"><a href="#">LoooooooooooongLink1</a></span>
+            <a href="#" className="navlist-item navitem">Link1</a>
+            <a href="#" className="navlist-item navitem">Link2</a>
+            <a href="#" className="navlist-item navitem">Link3</a>
+            <a href="#" className="navlist-item navitem">Link4</a>
           </div>
         </nav>
         <label for="nav-toggle" className="nav-toggle-label">
