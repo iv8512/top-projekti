@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+
 function Sidebar() {
     return ( 
         <header className="sidebar">
@@ -8,8 +9,8 @@ function Sidebar() {
             <span className="navitem">navitem</span>
             <div className="navlist">
             <span className="navlist-item navitem">navlist-item</span>
-            <a href="#" className="navlist-item navitem">Link1</a>
-            <a href="#" className="navlist-item navitem">Link2</a>
+            <Link to="/Home" className="navlist-item navitem">Home</Link>
+            <Link to="/Test" className="navlist-item navitem">Test</Link>
             <a href="#" className="navlist-item navitem">Link3</a>
             <a href="#" className="navlist-item navitem">Link4</a>
           </div>

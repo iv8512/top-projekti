@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 import Sidebar from './components/Sidebar';
 import Home from './components/Home';
+import Test from './components/Test';
 
 function App() {
   return (
@@ -12,6 +13,10 @@ function App() {
       <Router>
         <Sidebar/>
         <Switch>
+
+          <Route path="/Test">
+            <Test />
+          </Route>
 
           <Route path="/">
             <Home />
