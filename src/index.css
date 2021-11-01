@@ -87,7 +87,7 @@ navigation styles start here
   transition: 0.3s;
 }
 .navItem:hover::after {
-  content: "attr(data-tool-tip)";
+  content: attr(data-tool-tip);
   display: grid;
   place-content: center;
   background: linear-gradient(to right, var(--color-black), var(--color-dark1));
