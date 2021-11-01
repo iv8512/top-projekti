@@ -135,6 +135,8 @@ nav * {
 
 
 .navitem {
+  display: grid;
+  width: 100%;
   margin: 0.5em auto 0 0;
   padding: 0 1em;
   color: var(--color-white);
