@@ -1,27 +1,33 @@
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+
 function App() {
   return (
     <div className="App">
 
-      <header class="sidebar">
+      <header className="sidebar">
         <input type="checkbox" id="nav-toggle" class="nav-toggle"></input>
         <nav>
-          <span class="navheader">logo space</span>
-          <span class="navitem">navitem</span>
-          <span class="navlist">
-            <span class="navlist-item navitem">navlist-item</span>
-            <span class="navlist-item navitem"><a href="#">Link1</a></span>
-            <span class="navlist-item navitem"><a href="#">Link2</a></span>
-            <span class="navlist-item navitem"><a href="#">Link3</a></span>
-            <span class="navlist-item navitem"><a href="#">Link4</a></span>
-            <span class="navlist-item navitem"><a href="#">LoooooooooongLink1</a></span>
-          </span>
+          <div className="navheader">logo space</div>
+          <span className="navitem">navitem</span>
+          <div className="navlist">
+            <span className="navlist-item navitem">navlist-item</span>
+            <span className="navlist-item navitem"><a href="#">Link1</a></span>
+            <span className="navlist-item navitem"><a href="#">Link2</a></span>
+            <span className="navlist-item navitem"><a href="#">Link3</a></span>
+            <span className="navlist-item navitem"><a href="#">Link4</a></span>
+            <span className="navlist-item navitem"><a href="#">LoooooooooooongLink1</a></span>
+          </div>
         </nav>
-        <label for="nav-toggle" class="nav-toggle-label">
+        <label for="nav-toggle" className="nav-toggle-label">
           <span></span>
         </label>
       </header>
 
-      <div class="page">
+      <div className="page">
         <h2>Page content here</h2>
       </div>
 
