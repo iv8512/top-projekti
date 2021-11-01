@@ -46,118 +46,57 @@ code {
 navigation styles start here 
 */
 
-header {
-  text-align: center;
-  position: fixed;
-  z-index: 999;
-  width: 100%;
-}
-
-.nav-toggle {
-  position: absolute !important;
-  top: -9999px !important;
-  left: -9999px !important;
-}
-
-.nav-toggle:focus ~ .nav-toggle-label {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 3px;
-}
-
-.nav-toggle-label {
-  position: absolute;
-  top: 1em;
-  left: 1em;
-  height: 1.2em;
-  display: flex;
-  align-items: center;
-}
-
-.nav-toggle-label span,
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
+.sideBar {
   display: block;
-  background: var(--color-white);
-  height: 0.25em;
-  width: 2em;
-  border-radius: 2px;
-  position: relative;
-}
-
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-  content: '';
   position: absolute;
-}
-
-.nav-toggle-label span::before {
-  bottom: 7px;
-}
-
-.nav-toggle-label span::after {
-  top: 7px;
-}
-
-nav {
-  background: var(--color-dark2);
-  border-right: 1px solid var(--color-accent);
-  position: absolute;
-  top: 100%;
-  left: 0;
+  background-color: var(--color-dark2);
+  outline: 1px solid var(--color-black);
   min-width: 10vw;
+  width: 10vw;
   height: 100vh;
-  text-align: left;
-  transform: scale(0, 1);
-  transform-origin: left;
-  transition: transform 400ms ease-in-out;
+  left: 0;
+  top: 0;
+  transition: outline 0.3s;
 }
 
-nav * {
-  opacity: 0;
-  transition: opacity 150ms ease-in-out;
+.sideBar:hover {
+  width: max-content;
+  outline: 1px solid var(--color-accent);
 }
 
-.navheader {
-  display: grid;
-  height: 3.2em;
-  width: calc(100% - 4em);
-  margin: 0em 0.5em 0em 3.5em;
+.navItem {
+  position: relative;
   color: var(--color-white);
-  font-size: 1rem;
-  place-items: center left;
-  text-transform: uppercase;
-  vertical-align: middle;
-}
-
-.navlist {
-  display: grid;
-}
-
-
-.navitem {
-  display: grid;
+  background-color: var();
   width: 100%;
-  margin: 0.5em auto 0 0;
-  padding: 0 1em;
-  color: var(--color-white);
-  font-size: 1rem;
-  text-transform: uppercase;
+  height: 10vh;
+  display: grid;
+  place-content: center;
+  line-height: 1;
 }
 
-nav a {
-  color: var(--color-white);
-  text-decoration: none;
+.navItem:hover {
+  background-color: var(--color-dark1);
 }
 
-nav a:hover {
-  color: var(--color-accent);
+.navItem::after {
+  border: 1px solid transparent;
+  border-radius: 0 5px 5px 0;
+  width: 0px;
+  padding: 0 0.5em;
+  transition: 0.3s;
 }
-
-.nav-toggle:checked ~ nav {
-  transform: scale(1,1);
-}
-
-.nav-toggle:checked ~ nav * {
-  opacity: 1;
-  transition: opacity 250ms ease-in-out 250ms;
+.navItem:hover::after {
+  content: "attr(data-tool-tip)";
+  display: grid;
+  place-content: center;
+  background: linear-gradient(to right, var(--color-black), var(--color-dark1));
+  position: absolute;
+  border-top: 1px solid var(--color-pop);
+  border-bottom: 1px solid var(--color-pop);
+  border-left: 0px solid transparent;
+  border-right: 1px solid var(--color-pop);
+  width: max-content;
+  height: 100%;
+  left: 10vw;
 }
