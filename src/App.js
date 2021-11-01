@@ -6,6 +6,7 @@ import {
 import Sidebar from './components/Sidebar';
 import Home from './components/Home';
 import Test from './components/Test';
+import Gantt from './components/Gantt';
 
 function App() {
   return (
@@ -14,8 +15,12 @@ function App() {
         <Sidebar/>
         <Switch>
 
-            <Route path="/Test">
+            <Route path="/test">
               <Test />
+            </Route>
+
+            <Route path="/ganttchart">
+              <Gantt />
             </Route>
 
             <Route path="/">
