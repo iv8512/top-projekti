@@ -141,6 +141,23 @@ navigation styles start here
   left: var(--sidebar-width);
 }
 
+
+/*
+Chart styles
+*/
+
+.label {
+  margin-right: 0.5em;
+}
+
+.chartContent {
+  background-color: var(--color-pop);
+  display: inline-block;
+  height: 1em;
+  margin-right: 0;
+}
+
+
 /*
 media styles
 */

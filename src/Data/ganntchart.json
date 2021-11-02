@@ -1,26 +1,32 @@
 [
     {
-    "viikko": 
+    "week": 
         {
-        "viikkonum": 42,
-        "Suunnittelu": {"start": 0,"end": 2,"progress": 20},
-        "Github&Vscode": {"start": 0,"end": 1,"progress": 50}
+        "num": 42,
+        "rows": [
+            {"label": "suunnittelu","start": 0,"end": 2,"progress": 20},
+            {"label": "Git/VsCode","start": 0,"end": 1,"progress": 50}
+        ]
         }
     },
     {
-    "viikko": 
+    "week": 
         {
-        "viikkonum": 43,
-        "Suunnittelu": {"start": 0,"end": 2,"progress": 30},
-        "Github&Vscode": {"start": 0,"end": 1,"progress": 100}
+        "num": 43,
+        "rows": [
+            {"label": "suunnittelu","start": 0,"end": 2,"progress": 40},
+            {"label": "Git/VsCode","start": 0,"end": 1,"progress": 90}
+        ]
         }
     },
     {
-    "viikko": 
+    "week": 
         {
-        "viikkonum": 44,
-        "Suunnittelu": {"start": 0,"end": 2,"progress": 30},
-        "Github&Vscode": {"start": 0,"end": 1,"progress": 100}
+        "num": 43,
+        "rows": [
+            {"label": "suunnittelu","start": 0,"end": 2,"progress": 70},
+            {"label": "Git/VsCode","start": 0,"end": 1,"progress": 100}
+        ]
         }
     }
 ]

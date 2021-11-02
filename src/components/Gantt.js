@@ -11,11 +11,11 @@ function Gantt() {
                 <h2>Gantt Chart</h2>
                 <p>Gantt Charts show the flow of work during developement.</p>
                 {data.map((chartData, index) => (
-                    <Chartrow key={index} vnum={chartData.viikko.viikkonum} />
+                    <Chartrow key={index} vnum={chartData.week.num} label={chartData.week.rows[0].label} />
                 ))}
             </div>
         </div>
      );
 }
-
+/* start={chartData.week} end={chartData.week[index]} */
 export default Gantt;
