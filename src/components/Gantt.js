@@ -1,4 +1,4 @@
-import Data from "../Data/ganntchart"
+import data from "../Data/ganntchart.json"
 import Chartrow from "./Chartrow";
 
 function Gantt() {
@@ -10,11 +10,10 @@ function Gantt() {
             <div className="content">
                 <h2>Gantt Chart</h2>
                 <p>Gantt Charts show the flow of work <q>test</q> during developement.</p>
-                <Chartrow />
+                {data.map((chartData, index) => (
+                    <Chartrow key={index} vnum={chartData.viikko.viikkonum} />
+                ))}
             </div>
-            {Data.map((chartData, index) => (
-                <Chartrow key={index} vnum={chartData.viikko.viikkonum} start={chartData.viikko.progress.start} end={chartData.viikko.progress.end}/>
-            ))}
         </div>
      );
 }

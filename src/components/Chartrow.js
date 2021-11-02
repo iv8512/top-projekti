@@ -1,8 +1,8 @@
 function Chartrow(props) {
     return ( 
         <div className="row">
-            <span className="label">{props.label}</span>
-            <span style={{left: props.start, right: props.end }}></span>
+            <div className="label">Viikko {props.vnum}</div>
+            <div id={props.key} style={{left: props.start + 'em'}}></div>
         </div>
      );
 }

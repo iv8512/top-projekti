@@ -4,15 +4,23 @@
         {
         "viikkonum": 42,
         "Suunnittelu": {"start": 0,"end": 2,"progress": 20},
-        "Github & Vscode": {"start": 0,"end": 1,"progress": 50}
+        "Github&Vscode": {"start": 0,"end": 1,"progress": 50}
         }
     },
     {
     "viikko": 
         {
         "viikkonum": 43,
-        "Suunnittelu": {"start": 0,"end": 2,"progress": 20},
-        "Github & Vscode": {"start": 0,"end": 1,"progress": 50}
+        "Suunnittelu": {"start": 0,"end": 2,"progress": 30},
+        "Github&Vscode": {"start": 0,"end": 1,"progress": 100}
+        }
+    }
+    {
+    "viikko": 
+        {
+        "viikkonum": 44,
+        "Suunnittelu": {"start": 0,"end": 2,"progress": 30},
+        "Github&Vscode": {"start": 0,"end": 1,"progress": 100}
         }
     }
 ]
