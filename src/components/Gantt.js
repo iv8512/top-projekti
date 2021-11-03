@@ -1,4 +1,4 @@
-import data from "../data/ganntchart.json"
+import data from "../data/ganttchart.json";
 import Chartrow from "./Chartrow";
 
 function Gantt() {
