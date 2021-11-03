@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 import { useState } from "react";
 import data from "../data/ganttchart.json"
 import Chart from "./Chart";
 
+=======
+import data from "../data/ganttchart.json";
+import Chartrow from "./Chartrow";
+>>>>>>> 7c7b2f226b0bc70a10cc5f89c7546609af842866
 
 function Gantt() {
     const [Cpage, setCpage] = useState(42)
