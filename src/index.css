@@ -15,9 +15,6 @@ body {
   overflow-x: hidden;
 }
 
-.App {
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   monospace;
@@ -29,15 +26,46 @@ code {
   --color-black: #131313;
   --color-dark1: #1b1b1b;
   --color-dark2: #252526;
-  --color-main: #208080;
-  --color-accent: #00b8ae;
-  --color-pop: #f51546;
+  --color-main1: #208080;
+  --color-accent1: #00b8ae;
+  --color-main2: #be0930;
+  --color-accent2: #f51546;
+  --clr-gradient1: linear-gradient(90deg, var(--color-main1), var(--color-accent1));
+  --clr-gradient2: linear-gradient(90deg, var(--color-main2), var(--color-accent2));
 }
 
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
+
+/* 
+general styles
+*/
+
+.gradientText2, h1 {
+  background-image: var(--clr-gradient2);
+  background-clip: text;
+  color: transparent;
+}
+
+.gradientText1, h2 {
+  background-image: var(--clr-gradient1);
+  background-clip: text;
+  color: transparent;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--color-white);
+  border: 0px solid transparent;
+  transition: color 0.3s ease-out;
+}
+
+button:hover {
+  color: var(--color-accent1);
+}
 
 /*
 Main Page content starts here 
@@ -49,19 +77,22 @@ Main Page content starts here
   right: 0;
 }
 
-.page h1 {
-  color: var(--color-pop);
-}
 
 #TestiSivu {
   height: 2000px;
+}
+#TestiSivu::after{
+  display: block;
+  content: '';
+  width: 100%;
+  height: 100%;
   background: transparent url("http://localhost:3000/testt.svg") no-repeat center bottom;
 }
 
 .content {
   display: grid;
   place-items: start;
-  padding: 1em 4em;
+  word-wrap: break-word;
 }
 
 .header {
@@ -91,7 +122,7 @@ navigation styles start here
 }
 
 .sideBar:hover {
-  outline: 1px solid var(--color-accent);
+  outline: 1px solid var(--color-accent1);
 }
 
 .navList a {
@@ -132,10 +163,10 @@ navigation styles start here
   place-content: center;
   background: linear-gradient(to right, var(--color-black), var(--color-dark1));
   position: absolute;
-  border-top: 1px solid var(--color-pop);
-  border-bottom: 1px solid var(--color-pop);
+  border-top: 1px solid var(--color-accent2);
+  border-bottom: 1px solid var(--color-accent2);
   border-left: 0px solid transparent;
-  border-right: 1px solid var(--color-pop);
+  border-right: 1px solid var(--color-accent2);
   width: max-content;
   min-height: 100%;
   left: var(--sidebar-width);
@@ -150,11 +181,37 @@ Chart styles
   margin-right: 0.5em;
 }
 
+.chart {
+  background: var(--color-black);
+  outline: 1px solid var(--color-main2);
+  border-radius: 2em;
+  box-shadow: 0 0 25px -10px var(--color-accent2);
+  padding: 2em;
+  min-width: 500px;
+  min-height: 15em;
+  margin: 2em auto;
+}
+
 .chartContent {
-  background-color: var(--color-pop);
+  background-color: var(--color-accent2);
   display: inline-block;
   height: 1em;
   margin-right: 0;
+}
+
+.chart .buttonrow {
+  display: block;
+  width: max-content;
+  position: relative;
+  margin: auto;
+  font-size: 2em;
+  bottom: -2em;
+}
+
+
+.chart button {
+  height: 2em;
+  font-size: 1em;
 }
 
 
@@ -168,11 +225,17 @@ media styles
     --sidebar-width: 5vw;
     --sidebar-itemsize: 1.5em;
   }
+  .content {
+    padding: 1em 3em;
+  }
 }
 
 @media screen and (max-width: 599px) {
   :root {
     --sidebar-width: 10vw;
     --sidebar-itemsize: 1em;
+  }
+  .content {
+    padding: 1em;
   }
 }
