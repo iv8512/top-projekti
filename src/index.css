@@ -1,3 +1,11 @@
+* {
+  margin: 0;
+}
+
+* + * {
+  margin: 1em 0 0;
+}
+
 html {
   width: 100vw;
   height: 100vh;
@@ -43,6 +51,11 @@ code {
 general styles
 */
 
+.row,
+.row > * {
+  margin: 0;
+}
+
 .gradientText2, h1 {
   background-image: var(--clr-gradient2);
   background-clip: text;
@@ -60,7 +73,8 @@ button {
   background-color: transparent;
   color: var(--color-white);
   border: 0px solid transparent;
-  transition: color 0.3s ease-out;
+  transition: color 0.3s ease-in-out;
+  perspective: 500px;
 }
 
 button:hover {
@@ -116,8 +130,7 @@ navigation styles start here
   left: 0;
   top: 0;
   z-index: 100;
-  transition:
-    outline 0.3s;
+  transition: outline 0.3s;
   font-size: var(--sidebar-itemsize);
 }
 
@@ -132,29 +145,37 @@ navigation styles start here
 .navItem {
   position: relative;
   color: var(--color-white);
-  background-color: var();
   width: 100%;
   min-height: calc(var(--sidebar-itemsize) * 2);
   display: grid;
   place-content: center;
   line-height: 1;
+  transition: outline 0s;
+  z-index: 99;
 }
 
 .navItem img {
   max-width: var(--sidebar-itemsize);
+  max-height: var(--sidebar-itemsize);
 }
 
 .navItem:hover {
   background-color: var(--color-dark1);
+  outline: 1px solid var(--color-black);
 }
 
 .navItem::after {
+  content: '';
+  position: absolute;
   border: 1px solid transparent;
   max-width: calc(100vw - 5em);
   border-radius: 0 5px 5px 0;
-  width: 0px;
+  min-width: 100%;
   padding: 0 0.5em;
-  word-wrap: anywhere;
+  word-wrap: break-word;
+  color: transparent;
+  transition: opacity 0.3s ease-out, min-width 0.3s ease-in-out, color 0.3s 0.3s;
+  opacity: 0;
 }
 
 .navItem:hover::after {
@@ -162,14 +183,15 @@ navigation styles start here
   display: grid;
   place-content: center;
   background: linear-gradient(to right, var(--color-black), var(--color-dark1));
-  position: absolute;
   border-top: 1px solid var(--color-accent2);
   border-bottom: 1px solid var(--color-accent2);
   border-left: 0px solid transparent;
   border-right: 1px solid var(--color-accent2);
-  width: max-content;
+  min-width: 500%;
   min-height: 100%;
   left: var(--sidebar-width);
+  color: var(--color-white);
+  opacity: 1;
 }
 
 
@@ -202,15 +224,11 @@ Chart styles
 .chart .buttonrow {
   display: block;
   width: max-content;
-  position: relative;
   margin: auto;
   font-size: 2em;
-  bottom: -2em;
 }
 
-
 .chart button {
-  height: 2em;
   font-size: 1em;
 }
 

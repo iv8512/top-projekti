@@ -24,6 +24,66 @@
         {
         "num": 43,
         "rows": [
+            {"label": "suunnittelu","start": 0,"end": 2,"progress": 40},
+            {"label": "Git/VsCode","start": 0,"end": 1,"progress": 90}
+        ]
+        }
+    },
+    {
+    "week": 
+        {
+        "num": 44,
+        "rows": [
+            {"label": "suunnittelu","start": 0,"end": 2,"progress": 40},
+            {"label": "Git/VsCode","start": 0,"end": 1,"progress": 90}
+        ]
+        }
+    },
+    {
+    "week": 
+        {
+        "num": 45,
+        "rows": [
+            {"label": "suunnittelu","start": 0,"end": 2,"progress": 40},
+            {"label": "Git/VsCode","start": 0,"end": 1,"progress": 90}
+        ]
+        }
+    },
+    {
+    "week": 
+        {
+        "num": 46,
+        "rows": [
+            {"label": "suunnittelu","start": 0,"end": 2,"progress": 40},
+            {"label": "Git/VsCode","start": 0,"end": 1,"progress": 90}
+        ]
+        }
+    },
+    {
+    "week": 
+        {
+        "num": 47,
+        "rows": [
+            {"label": "suunnittelu","start": 0,"end": 2,"progress": 40},
+            {"label": "Git/VsCode","start": 0,"end": 1,"progress": 90}
+        ]
+        }
+    },
+    {
+    "week": 
+        {
+        "num": 48,
+        "rows": [
+            {"label": "suunnittelu","start": 0,"end": 2,"progress": 40},
+            {"label": "Git/VsCode","start": 0,"end": 1,"progress": 90}
+        ]
+        }
+    },
+    {
+    "week": 
+        {
+        "num": 49,
+        "rows": [
             {"label": "suunnittelu","start": 0,"end": 2,"progress": 70},
             {"label": "Git/VsCode","start": 0,"end": 1,"progress": 100}
         ]
