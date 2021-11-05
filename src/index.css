@@ -91,15 +91,11 @@ Main Page content starts here
   right: 0;
 }
 
-
-#TestiSivu {
-  height: 2000px;
-}
 #TestiSivu::after{
   display: block;
   content: '';
   width: 100%;
-  height: 100%;
+  height: 35em;
   background: transparent url("http://localhost:3000/testt.svg") no-repeat center bottom;
 }
 
