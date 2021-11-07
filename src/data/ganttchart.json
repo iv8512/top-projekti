@@ -1,92 +1,55 @@
 [
     {
-    "week": 
+    "top": [
         {
-        "num": 42,
+        "num": 43,
         "rows": [
-            {"label": "suunnittelu","start": 0,"end": 2,"progress": 20},
+            {"label": "Suunnittelu","start": 0,"end": 2,"progress": 20},
             {"label": "Git/VsCode","start": 0,"end": 1,"progress": 50}
         ]
-        }
-    },
-    {
-    "week": 
-        {
-        "num": 43,
-        "rows": [
-            {"label": "suunnittelu","start": 0,"end": 2,"progress": 40},
-            {"label": "Git/VsCode","start": 0,"end": 1,"progress": 90}
-        ]
-        }
-    },
-    {
-    "week": 
-        {
-        "num": 43,
-        "rows": [
-            {"label": "suunnittelu","start": 0,"end": 2,"progress": 40},
-            {"label": "Git/VsCode","start": 0,"end": 1,"progress": 90}
-        ]
-        }
-    },
-    {
-    "week": 
+        },
         {
         "num": 44,
         "rows": [
-            {"label": "suunnittelu","start": 0,"end": 2,"progress": 40},
-            {"label": "Git/VsCode","start": 0,"end": 1,"progress": 90}
+            {"label": "Suunnittelu","start": 0,"end": 2,"progress": 40},
+            {"label": "Git/VsCode","start": 0,"end": 1,"progress": 50}
         ]
-        }
-    },
-    {
-    "week": 
+        },
         {
         "num": 45,
         "rows": [
-            {"label": "suunnittelu","start": 0,"end": 2,"progress": 40},
-            {"label": "Git/VsCode","start": 0,"end": 1,"progress": 90}
+            {"label": "Suunnittelu","start": 0,"end": 2,"progress": 40},
+            {"label": "Git/VsCode","start": 0,"end": 1,"progress": 70}
         ]
-        }
-    },
-    {
-    "week": 
+        },
         {
         "num": 46,
         "rows": [
-            {"label": "suunnittelu","start": 0,"end": 2,"progress": 40},
+            {"label": "Suunnittelu","start": 0,"end": 2,"progress": 40},
             {"label": "Git/VsCode","start": 0,"end": 1,"progress": 90}
         ]
-        }
-    },
-    {
-    "week": 
+        },
         {
         "num": 47,
         "rows": [
-            {"label": "suunnittelu","start": 0,"end": 2,"progress": 40},
+            {"label": "Suunnittelu","start": 0,"end": 2,"progress": 40},
             {"label": "Git/VsCode","start": 0,"end": 1,"progress": 90}
         ]
-        }
-    },
-    {
-    "week": 
+        },
         {
         "num": 48,
         "rows": [
-            {"label": "suunnittelu","start": 0,"end": 2,"progress": 40},
+            {"label": "Suunnittelu","start": 0,"end": 2,"progress": 70},
             {"label": "Git/VsCode","start": 0,"end": 1,"progress": 90}
         ]
-        }
-    },
-    {
-    "week": 
+        },
         {
         "num": 49,
         "rows": [
-            {"label": "suunnittelu","start": 0,"end": 2,"progress": 70},
+            {"label": "Suunnittelu","start": 0,"end": 2,"progress": 100},
             {"label": "Git/VsCode","start": 0,"end": 1,"progress": 100}
         ]
         }
+    ]
     }
 ]

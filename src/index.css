@@ -211,10 +211,19 @@ Chart styles
 }
 
 .chartContent {
-  background-color: var(--color-accent2);
+  background-color: var(--color-accent1);
   display: inline-block;
   height: 1em;
   margin-right: 0;
+  outline: 1px solid var(--color-dark2);
+  border-radius: 0.25em;
+  transition: 0.3s;
+}
+
+.chart .row {
+  display: flex;
+  flex-direction: row;
+  place-items: end;
 }
 
 .chart .buttonrow {
