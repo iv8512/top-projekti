@@ -3,7 +3,7 @@
 }
 
 * + * {
-  margin: 1em 0 0;
+  margin: 0.5em 0 0;
 }
 
 html {
@@ -50,6 +50,10 @@ code {
 /* 
 general styles
 */
+
+:is(.tabFocus, button):focus-within {
+  outline: 1px solid var(--color-main2);
+}
 
 .row,
 .row > * {
@@ -130,7 +134,7 @@ navigation styles start here
   font-size: var(--sidebar-itemsize);
 }
 
-.sideBar:hover {
+.sideBar:hover, .sideBar:focus-within {
   outline: 1px solid var(--color-accent1);
 }
 
@@ -174,7 +178,7 @@ navigation styles start here
   opacity: 0;
 }
 
-.navItem:hover::after {
+.navItem:hover::after, .tabFocus:focus-within > .navItem::after {
   content: attr(data-tool-tip);
   display: grid;
   place-content: center;
@@ -195,10 +199,6 @@ navigation styles start here
 Chart styles
 */
 
-.label {
-  margin-right: 0.5em;
-}
-
 .chart {
   background: var(--color-black);
   outline: 1px solid var(--color-main2);
@@ -210,20 +210,45 @@ Chart styles
   margin: 2em auto;
 }
 
+.chart .row {
+  display: flex;
+  flex-direction: row;
+  place-items: center;
+  border-top: 1px solid var(--color-dark1);
+  padding: 0.25em 0;
+  position: relative;
+}
+
 .chartContent {
-  background-color: var(--color-accent1);
   display: inline-block;
   height: 1em;
   margin-right: 0;
   outline: 1px solid var(--color-dark2);
   border-radius: 0.25em;
-  transition: 0.3s;
 }
 
-.chart .row {
-  display: flex;
-  flex-direction: row;
-  place-items: end;
+.label {
+  margin: 0 1em 0 0.5em;
+  width: 15ch;
+  text-transform: uppercase;
+}
+
+.label::after {
+  content: '';
+  position: absolute;
+  height: 1.5em;
+  width: 0;
+  background: var(--color-accent2);
+  opacity: 0;
+  left: calc(15ch + 1em);
+  top: calc(50% - 0.75em);
+  transition: width 0.5s, opacity 0.5s;
+  border-radius: 0.5em;
+}
+
+.row:hover .label::after  {
+  width: calc(100% - 15ch - 0.5em);
+  opacity: 0.1;
 }
 
 .chart .buttonrow {
@@ -235,6 +260,7 @@ Chart styles
 
 .chart button {
   font-size: 1em;
+  outline-offset: -5px;
 }
 
 
