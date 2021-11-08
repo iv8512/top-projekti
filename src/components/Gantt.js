@@ -22,13 +22,10 @@ function Gantt() {
     
     return ( 
         <div className="page" id="GanttPage">
-            <div className="header">
-                <h1>Chart go down below ☺</h1>
-            </div>
             <div className="content">
                 <h2>Gantt Chart</h2>
                 <p>Gantt Charts show the flow of work during developement.</p>
-                <div className="chart" id={'week-' + Page }>
+                <div className="chart" id={'w' + Page}>
                     {data.map((chartData, index) => (
                         <Chart key={index} wnum={chartData.top[Page].num} data={chartData.top[Page]} Page={Page}/>
                     ))}

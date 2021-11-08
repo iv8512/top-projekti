@@ -34,6 +34,7 @@ code {
   --color-black: #131313;
   --color-dark1: #1b1b1b;
   --color-dark2: #252526;
+  --color-dark3: #2f2f31;
   --color-main1: #208080;
   --color-accent1: #00b8ae;
   --color-main2: #be0930;
@@ -52,7 +53,7 @@ general styles
 */
 
 :is(.tabFocus, button):focus-within {
-  outline: 1px solid var(--color-main2);
+  outline: 1px solid var(--color-white);
 }
 
 .row,
@@ -183,10 +184,10 @@ navigation styles start here
   display: grid;
   place-content: center;
   background: linear-gradient(to right, var(--color-black), var(--color-dark1));
-  border-top: 1px solid var(--color-accent2);
-  border-bottom: 1px solid var(--color-accent2);
+  border-top: 1px solid var(--color-accent1);
+  border-bottom: 1px solid var(--color-accent1);
   border-left: 0px solid transparent;
-  border-right: 1px solid var(--color-accent2);
+  border-right: 1px solid var(--color-accent1);
   min-width: 500%;
   min-height: 100%;
   left: var(--sidebar-width);
@@ -210,7 +211,7 @@ Chart styles
   margin: 2em auto;
 }
 
-.chart .row {
+.row {
   display: flex;
   flex-direction: row;
   place-items: center;
@@ -219,21 +220,25 @@ Chart styles
   position: relative;
 }
 
+
 .chartContent {
   display: inline-block;
+  position: relative;
   height: 1em;
   margin-right: 0;
   outline: 1px solid var(--color-dark2);
   border-radius: 0.25em;
+  z-index: 2;
 }
 
 .label {
   margin: 0 1em 0 0.5em;
   width: 15ch;
   text-transform: uppercase;
+  transition: margin 0.3s, color 0.3s;
 }
 
-.label::after {
+.label::after { /* chart content highlighter */
   content: '';
   position: absolute;
   height: 1.5em;
@@ -244,18 +249,28 @@ Chart styles
   top: calc(50% - 0.75em);
   transition: width 0.5s, opacity 0.5s;
   border-radius: 0.5em;
+  z-index: 1;
 }
 
-.row:hover .label::after  {
+.row:hover .label::after  { /* chart content highlighter */
   width: calc(100% - 15ch - 0.5em);
   opacity: 0.1;
 }
 
+.list .row:hover > .label { /* label highlighter */
+  margin: 0 0.75em 0 0.75em;
+  opacity: 1;
+}
+
+.list:hover .label { /* label highlighter */
+  opacity: 0.5;
+}
+
 .chart .buttonrow {
-  display: block;
-  width: max-content;
-  margin: auto;
-  font-size: 2em;
+  display: flex;
+  font-size: 1.5em;
+  justify-content: center;
+  border-bottom: 1px solid var(--color-dark1);
 }
 
 .chart button {

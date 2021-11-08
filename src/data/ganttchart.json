@@ -7,8 +7,8 @@
             {"label": "suunnittelu",            "start": 0,"end": 3,"progress": 0},
             {"label": "git/vscode",             "start": 0,"end": 1,"progress": 70},
             {"label": "custom browser protocol","start": 2,"end": 4,"progress": 0},
-            {"label": "html/react",             "start": 0,"end": 6,"progress": 0},
-            {"label": "css",                    "start": 1,"end": 7,"progress": 0},
+            {"label": "html/react",             "start": 0,"end": 6,"progress": 10},
+            {"label": "css",                    "start": 1,"end": 7,"progress": 5},
             {"label": "sivun käyttö-ohje",      "start": 4,"end": 7,"progress": 0},
             {"label": "hienompi chart",         "start": 0,"end": 4,"progress": 40}
         ]
@@ -19,8 +19,8 @@
             {"label": "suunnittelu",            "start": 0,"end": 3,"progress": 0},
             {"label": "git/vscode",             "start": 0,"end": 1,"progress": 100},
             {"label": "custom browser protocol","start": 2,"end": 4,"progress": 0},
-            {"label": "html/react",             "start": 0,"end": 6,"progress": 0},
-            {"label": "css",                    "start": 1,"end": 7,"progress": 0},
+            {"label": "html/react",             "start": 0,"end": 6,"progress": 20},
+            {"label": "css",                    "start": 1,"end": 7,"progress": 15},
             {"label": "sivun käyttö-ohje",      "start": 4,"end": 7,"progress": 0},
             {"label": "hienompi chart",         "start": 0,"end": 4,"progress": 70}
         ]
@@ -31,8 +31,8 @@
             {"label": "suunnittelu",            "start": 0,"end": 3,"progress": 0},
             {"label": "git/vscode",             "start": 0,"end": 1,"progress": 100},
             {"label": "custom browser protocol","start": 2,"end": 4,"progress": 0},
-            {"label": "html/react",             "start": 0,"end": 6,"progress": 0},
-            {"label": "css",                    "start": 1,"end": 7,"progress": 0},
+            {"label": "html/react",             "start": 0,"end": 6,"progress": 30},
+            {"label": "css",                    "start": 1,"end": 7,"progress": 20},
             {"label": "sivun käyttö-ohje",      "start": 4,"end": 7,"progress": 0},
             {"label": "hienompi chart",         "start": 0,"end": 4,"progress": 100}
         ]
