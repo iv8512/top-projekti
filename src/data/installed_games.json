@@ -1,0 +1,16 @@
+{
+    "info": {
+        "versions": {
+            "list games": 0,
+            "file": 0
+        }
+    },
+    "steam": {
+        "info": {
+            "games": "Run Gamefinder",
+            "soundtracks": 0
+        },
+        "games": [],
+        "soundtracks": []
+    }
+}
