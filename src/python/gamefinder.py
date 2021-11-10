@@ -1,10 +1,10 @@
-try: import vdf, json, requests, os
+try: import vdf, json, requests, os, winreg
 except ModuleNotFoundError:
     os.system('cmd /c "pip install vdf"')
     os.system('cmd /c "pip install requests"')
 
 # info
-list_games_v = 0.6
+gamefinder_v = 0.7
 file_v = 0.3
 visual = False
 
@@ -48,14 +48,42 @@ for item in steam_games:
     if "Redistributables" in item["name"]:
         steam_games.remove(item)
 
+# find ubisoft games
+ubisoft_games = []
+import winreg
+base_reg = winreg.ConnectRegistry(None, winreg.HKEY_LOCAL_MACHINE)
+sub_key = winreg.OpenKey(base_reg, "SOFTWARE\\WOW6432Node\\Ubisoft\\Launcher\\Installs\\")
+for i in range(50) :
+    try :
+        game_id = winreg.EnumKey(sub_key,i)
+        game_name_key = winreg.OpenKey(base_reg, "SOFTWARE\\WOW6432Node\\Ubisoft\\Launcher\\Installs\\" + game_id + "\\")
+        name = winreg.EnumValue(game_name_key, 1)
+        path = name[1]
+        path = os.path.dirname(path)
+        game_name = os.path.basename(path)
+        ubisoft_game = {"name": game_name, "id": game_id}
+        ubisoft_games.append(ubisoft_game)
+    except :
+        pass
+winreg.CloseKey(base_reg)
+
 # compile file contents
+versions = {"gamefinder": gamefinder_v, "file": file_v}
+file_info = {"versions": versions}
 steam_info = {"games": len(steam_games), "soundtracks": len(steam_soundtracks)}
 steam = {"info": steam_info, "games": steam_games, "soundtracks": steam_soundtracks}
-versions = {"list games": list_games_v, "file": file_v}
-file_info = {"versions": versions}
-main_list = {"info": file_info, "steam": steam}
+ubisoft_info = {"games": len(ubisoft_games)}
+ubisoft = {"info": ubisoft_info, "games": ubisoft_games}
+main_list = {"info": file_info, "steam": steam, "ubisoft": ubisoft}
 
 # create file
 file_path = "../data/installed_games.json"
 with open(file_path, "w") as file:
     json.dump(main_list, file, indent=4)
+
+
+
+
+
+
+

@@ -1,7 +1,7 @@
 {
     "info": {
         "versions": {
-            "list games": 0.6,
+            "gamefinder": 0.6,
             "file": 0.3
         }
     },
@@ -287,6 +287,33 @@
                 "name": "Subnautica Soundtrack",
                 "id": "1619300",
                 "drive": "E:"
+            }
+        ]
+    },
+    "ubisoft": {
+        "info": {
+            "games": 5
+        },
+        "games": [
+            {
+                "name": "Ghost Recon Breakpoint",
+                "id": "11903"
+            },
+            {
+                "name": "Hyper Scape",
+                "id": "11957"
+            },
+            {
+                "name": "Watch Dogs Legion",
+                "id": "3353"
+            },
+            {
+                "name": "Tom Clancy's The Division 2",
+                "id": "4932"
+            },
+            {
+                "name": "Assassin's Creed Unity",
+                "id": "720"
             }
         ]
     }
