@@ -1,62 +1,217 @@
 {
+    "file": 0.4,
     "steam": {
+        "info": {
+            "games": 49,
+            "soundtracks": 2
+        },
         "games": [
-            "Just Cause 3",
-            "HITMAN\u2122",
-            "Grand Theft Auto V",
-            "Block N Load",
-            "ARK: Survival Evolved",
-            "Project Highrise",
-            "Tom Clancy's Ghost Recon\u00ae Wildlands",
-            "Totally Accurate Battle Simulator",
-            "Assassin's Creed Origins",
-            "Ultimate Epic Battle Simulator",
-            "Splitgate",
-            "Totally Accurate Battlegrounds",
-            "Noita",
-            "Among Us",
-            "DRONE The Game",
-            "Teardown",
-            "Dorfromantik",
-            "Team Fortress 2",
-            "Portal 2",
-            "Counter-Strike: Global Offensive",
-            "Garry's Mod",
-            "Terraria",
-            "Universe Sandbox",
-            "Prison Architect",
-            "The Forest",
-            "Watch_Dogs",
-            "Rust",
-            "Cities: Skylines",
-            "Subnautica",
-            "Creativerse",
-            "Unturned",
-            "Dirty Bomb",
-            "Tom Clancy's Rainbow Six Siege",
-            "Poly Bridge",
-            "Scrap Mechanic",
-            "Voxel Turf",
-            "Forts",
-            "Wallpaper Engine",
-            "Watch_Dogs 2",
-            "Two Point Hospital",
-            "Deep Rock Galactic",
-            "Stormworks: Build and Rescue",
-            "Stick Fight: The Game",
-            "Planet Zoo",
-            "Generation Zero\u00ae",
-            "Subnautica: Below Zero",
-            "HITMAN\u2122 2",
-            "Control Ultimate Edition",
-            "Cyberpunk 2077",
-            "People Playground",
-            "Ghostrunner",
-            "Townscaper"
+            {
+                "name": "Just Cause 3",
+                "id": "225540"
+            },
+            {
+                "name": "HITMAN\u2122",
+                "id": "236870"
+            },
+            {
+                "name": "Grand Theft Auto V",
+                "id": "271590"
+            },
+            {
+                "name": "Block N Load",
+                "id": "299360"
+            },
+            {
+                "name": "ARK: Survival Evolved",
+                "id": "346110"
+            },
+            {
+                "name": "Project Highrise",
+                "id": "423580"
+            },
+            {
+                "name": "Tom Clancy's Ghost Recon\u00ae Wildlands",
+                "id": "460930"
+            },
+            {
+                "name": "Totally Accurate Battle Simulator",
+                "id": "508440"
+            },
+            {
+                "name": "Assassin's Creed Origins",
+                "id": "582160"
+            },
+            {
+                "name": "Ultimate Epic Battle Simulator",
+                "id": "616560"
+            },
+            {
+                "name": "Splitgate",
+                "id": "677620"
+            },
+            {
+                "name": "Totally Accurate Battlegrounds",
+                "id": "823130"
+            },
+            {
+                "name": "Noita",
+                "id": "881100"
+            },
+            {
+                "name": "Teardown",
+                "id": "1167630"
+            },
+            {
+                "name": "Team Fortress 2",
+                "id": "440"
+            },
+            {
+                "name": "Portal 2",
+                "id": "620"
+            },
+            {
+                "name": "Counter-Strike: Global Offensive",
+                "id": "730"
+            },
+            {
+                "name": "Garry's Mod",
+                "id": "4000"
+            },
+            {
+                "name": "Terraria",
+                "id": "105600"
+            },
+            {
+                "name": "Universe Sandbox",
+                "id": "230290"
+            },
+            {
+                "name": "Prison Architect",
+                "id": "233450"
+            },
+            {
+                "name": "The Forest",
+                "id": "242760"
+            },
+            {
+                "name": "Watch_Dogs",
+                "id": "243470"
+            },
+            {
+                "name": "Rust",
+                "id": "252490"
+            },
+            {
+                "name": "Cities: Skylines",
+                "id": "255710"
+            },
+            {
+                "name": "Subnautica",
+                "id": "264710"
+            },
+            {
+                "name": "Creativerse",
+                "id": "280790"
+            },
+            {
+                "name": "Unturned",
+                "id": "304930"
+            },
+            {
+                "name": "Dirty Bomb",
+                "id": "333930"
+            },
+            {
+                "name": "Tom Clancy's Rainbow Six Siege",
+                "id": "359550"
+            },
+            {
+                "name": "Poly Bridge",
+                "id": "367450"
+            },
+            {
+                "name": "Scrap Mechanic",
+                "id": "387990"
+            },
+            {
+                "name": "Voxel Turf",
+                "id": "404530"
+            },
+            {
+                "name": "Forts",
+                "id": "410900"
+            },
+            {
+                "name": "Wallpaper Engine",
+                "id": "431960"
+            },
+            {
+                "name": "Watch_Dogs 2",
+                "id": "447040"
+            },
+            {
+                "name": "Two Point Hospital",
+                "id": "535930"
+            },
+            {
+                "name": "Deep Rock Galactic",
+                "id": "548430"
+            },
+            {
+                "name": "Stormworks: Build and Rescue",
+                "id": "573090"
+            },
+            {
+                "name": "Stick Fight: The Game",
+                "id": "674940"
+            },
+            {
+                "name": "Planet Zoo",
+                "id": "703080"
+            },
+            {
+                "name": "Generation Zero\u00ae",
+                "id": "704270"
+            },
+            {
+                "name": "Subnautica: Below Zero",
+                "id": "848450"
+            },
+            {
+                "name": "HITMAN\u2122 2",
+                "id": "863550"
+            },
+            {
+                "name": "Control Ultimate Edition",
+                "id": "870780"
+            },
+            {
+                "name": "Cyberpunk 2077",
+                "id": "1091500"
+            },
+            {
+                "name": "People Playground",
+                "id": "1118200"
+            },
+            {
+                "name": "Ghostrunner",
+                "id": "1139900"
+            },
+            {
+                "name": "Townscaper",
+                "id": "1291340"
+            }
         ],
         "soundtracks": [
-            "Deep Rock Galactic - Original Soundtrack Volume I + II",
-            "Subnautica Soundtrack"
+            {
+                "name": "Deep Rock Galactic - Original Soundtrack Volume I + II",
+                "id": "802640"
+            },
+            {
+                "name": "Subnautica Soundtrack",
+                "id": "1619300"
+            }
         ]
     }
 }

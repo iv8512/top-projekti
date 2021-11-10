@@ -10,6 +10,7 @@ def temp():
     os.system('cmd /k "pip uninstall vdf"')
 
 visual_output = False
+v = 0.4
 
 game_index = requests.get("http://api.steampowered.com/ISteamApps/GetAppList/v2")
 game_index = json.loads(game_index.text)
@@ -45,15 +46,19 @@ else:
         for app_id in data["libraryfolders"][str(number)]["apps"]:
             for app in game_index["applist"]["apps"]:
                 if app["appid"] == int(app_id):
-                    installed_games.append(app["name"])
+                    #installed_games.append(app["name"])
+                    temp = {"name": app["name"], "id": app_id}
+                    installed_games.append(temp)
                     break
     for item in installed_games:
-        if "Soundtrack" in item:
+        if "Soundtrack" in item["name"]:
             soundtracks.append(item)
             installed_games.remove(item)
-        if "Redistributables" in item:
+        if "Redistributables" in item["name"]:
             installed_games.remove(item)
-    text = {"steam": {"games": installed_games, "soundtracks": soundtracks}}
+    info = {"games": len(installed_games), "soundtracks": len(soundtracks)}
+    steam = {"info": info, "games": installed_games, "soundtracks": soundtracks}
+    text = {"file": v, "steam": steam}
     with open("./data/installed_games.json", "w") as file:
         file.write(json.dumps(text, indent=4))
 
