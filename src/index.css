@@ -30,6 +30,7 @@ code {
   --color-black: #131313;
   --color-dark1: #1b1b1b;
   --color-dark2: #252526;
+  --color-transparent-dark2: #252526bb;
   --color-dark3: #2f2f31;
   --color-main1: #208080;
   --color-accent1: #00b8ae;
@@ -57,11 +58,11 @@ general styles
   margin: 0;
 }
 
-h1 {
+h1, .redtext {
   color: var(--color-accent2);
 }
 
-h2 {
+h2, .tealtext {
   color: var(--color-accent1);
 }
 
@@ -96,7 +97,6 @@ Games
 }
 
 .slideshow .slide {
-  padding: 0 1.5em;
   margin: 1em;
   background: var(--color-dark2);
   outline: 1px solid var(--color-black);
@@ -107,6 +107,11 @@ Games
   flex: 0 0 auto;
   overflow-y: auto;
   scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.slide > * {
+  padding: 1em 1.5em;
 }
 
 .slide * {
@@ -115,17 +120,38 @@ Games
 
 .slide .header {
   text-align: center;
+  background: var(--color-transparent-dark2);
+  backdrop-filter: blur(10px);
+  outline: 1px solid var(--color-black);
+  position: sticky;
+  top: 0;
+}
+
+.slide .header * {
+  display: inline-block;  
+}
+
+.slide .header::after {
+  content: attr(data-tool-tip);
+  font-size: 0.7em;
+  height: 0;
+  scale: 0;
+  opacity: 0.4;
+  transition: 0.3s cubic-bezier(1, 0, 0, 1);
+}
+.slide .header:hover::after,
+.slide .header:focus-within::after {
+  content: attr(data-tool-tip);
+  scale: 1;
 }
 
 .slide::-webkit-scrollbar {
   width: 0;
 }
 
-
 .gameGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 1em 0;
 }
 
 .gameCard {
@@ -140,6 +166,29 @@ Games
   padding-right: 0;
 }
 
+.gameCard img {
+  place-content: center;
+  text-align: center;
+  outline: 1px solid var(--color-black);
+}
+
+.gameCard a {
+  color: var(--color-white);
+}
+
+.gameCard img a {
+  color: var(--color-accent1);
+}
+
+.gameCard img:nth-child(odd) {
+  width: 200px;
+  height: 300px;
+}
+
+.gameCard img:nth-child(even) {
+  width: 200px;
+  height: 75px;
+}
 
 /*
 Main Page content starts here 
