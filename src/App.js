@@ -1,8 +1,5 @@
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from './components/Sidebar';
 import Home from './components/Home';
 import Test from './components/Test';
@@ -13,21 +10,11 @@ function App() {
     <div className="App">
       <Router>
         <Sidebar/>
-        <Switch>
-
-            <Route path="/test">
-              <Test />
-            </Route>
-
-            <Route path="/ganttchart">
-              <Gantt />
-            </Route>
-
-            <Route path="/">
-              <Home />
-            </Route>
-
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/test" element={<Test/>} />
+          <Route path="/ganttchart" element={<Gantt/>} />
+        </Routes>
       </Router>
     </div>
   );
