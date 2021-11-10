@@ -12,7 +12,7 @@ def temp():
 visual_output = False
 v = 0.4
 
-game_index = requests.get("http://api.steampowered.com/ISteamApps/GetAppList/v2")
+game_index = requests.get("http://api.steampowered.com/ISteamApps/GetAppList/v1")
 game_index = json.loads(game_index.text)
 
 if os.getlogin() == "iivar":
@@ -35,34 +35,58 @@ if visual_output:
         for app_id in data["libraryfolders"][str(number)]["apps"]:
             installed_games.append(app_id)
         for game in range(len(installed_games)):
-            for app in game_index["applist"]["apps"]:
+            for app in game_index["applist"]["apps"]["app"]:
                 if app["appid"] == int(installed_games[game]):
-                    print(f"{app['appid']:<7} {app['name']}")
+                    print(f"{game+1:<2} {app['appid']:<7} {app['name']}")
                     installed_games.append(app["name"])
                     break
         installed_games.clear()
 else:
     for number in range(drive):
         for app_id in data["libraryfolders"][str(number)]["apps"]:
-            for app in game_index["applist"]["apps"]:
+            for app in game_index["applist"]["apps"]["app"]:
                 if app["appid"] == int(app_id):
                     #installed_games.append(app["name"])
-                    temp = {"name": app["name"], "id": app_id}
-                    installed_games.append(temp)
+                    group = {"name": app["name"], "id": app_id}
+                    installed_games.append(group)
                     break
-    for item in installed_games:
-        if "Soundtrack" in item["name"]:
-            soundtracks.append(item)
-            installed_games.remove(item)
-        if "Redistributables" in item["name"]:
-            installed_games.remove(item)
+    #for item in installed_games:
+    #    if "Soundtrack" in item["name"]:
+    #        soundtracks.append(item)
+    #        installed_games.remove(item)
+    #    if "Redistributables" in item["name"]:
+    #        installed_games.remove(item)
     info = {"games": len(installed_games), "soundtracks": len(soundtracks)}
     steam = {"info": info, "games": installed_games, "soundtracks": soundtracks}
     text = {"file": v, "steam": steam}
-    with open("./data/installed_games.json", "w") as file:
+    with open("../data/installed_games.json", "w") as file:
         file.write(json.dumps(text, indent=4))
 
 
+def getUplayIDs():
+    import winreg
+    # ubisoftGameList = {}
+
+    baseReg = winreg.ConnectRegistry(None, winreg.HKEY_LOCAL_MACHINE)
+    subKey = winreg.OpenKey(baseReg, "SOFTWARE\\WOW6432Node\\Ubisoft\\Launcher\\Installs\\")
+
+    for i in range(50) :
+        try :
+            gameId = winreg.EnumKey(subKey,i)
+
+            gameNameKey = winreg.OpenKey(baseReg, "SOFTWARE\\WOW6432Node\\Ubisoft\\Launcher\\Installs\\" + gameId + "\\")
+            name = winreg.EnumValue(gameNameKey, 1)
+
+            path = name[1]
+            path = os.path.dirname(path)
+            gameName = os.path.basename(path)
+
+            print('\nThe Game name is: ' + gameName + ' \nThe Game ID is: ' + gameId)
+
+        except :
+            pass
+
+    winreg.CloseKey(baseReg)
 
 
 

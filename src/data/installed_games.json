@@ -1,216 +1,292 @@
 {
-    "file": 0.4,
+    "info": {
+        "versions": {
+            "list games": 0.6,
+            "file": 0.3
+        }
+    },
     "steam": {
         "info": {
-            "games": 49,
+            "games": 53,
             "soundtracks": 2
         },
         "games": [
             {
                 "name": "Just Cause 3",
-                "id": "225540"
+                "id": "225540",
+                "drive": "E:"
             },
             {
                 "name": "HITMAN\u2122",
-                "id": "236870"
+                "id": "236870",
+                "drive": "E:"
             },
             {
                 "name": "Grand Theft Auto V",
-                "id": "271590"
+                "id": "271590",
+                "drive": "E:"
             },
             {
                 "name": "Block N Load",
-                "id": "299360"
+                "id": "299360",
+                "drive": "E:"
             },
             {
                 "name": "ARK: Survival Evolved",
-                "id": "346110"
+                "id": "346110",
+                "drive": "E:"
             },
             {
                 "name": "Project Highrise",
-                "id": "423580"
+                "id": "423580",
+                "drive": "E:"
             },
             {
                 "name": "Tom Clancy's Ghost Recon\u00ae Wildlands",
-                "id": "460930"
+                "id": "460930",
+                "drive": "E:"
             },
             {
                 "name": "Totally Accurate Battle Simulator",
-                "id": "508440"
+                "id": "508440",
+                "drive": "E:"
             },
             {
                 "name": "Assassin's Creed Origins",
-                "id": "582160"
+                "id": "582160",
+                "drive": "E:"
             },
             {
                 "name": "Ultimate Epic Battle Simulator",
-                "id": "616560"
+                "id": "616560",
+                "drive": "E:"
             },
             {
                 "name": "Splitgate",
-                "id": "677620"
+                "id": "677620",
+                "drive": "E:"
             },
             {
                 "name": "Totally Accurate Battlegrounds",
-                "id": "823130"
+                "id": "823130",
+                "drive": "E:"
             },
             {
                 "name": "Noita",
-                "id": "881100"
+                "id": "881100",
+                "drive": "E:"
+            },
+            {
+                "name": "Among Us",
+                "id": "945360",
+                "drive": "E:"
+            },
+            {
+                "name": "DRONE The Game",
+                "id": "987020",
+                "drive": "E:"
             },
             {
                 "name": "Teardown",
-                "id": "1167630"
+                "id": "1167630",
+                "drive": "E:"
+            },
+            {
+                "name": "Dorfromantik",
+                "id": "1455840",
+                "drive": "E:"
             },
             {
                 "name": "Team Fortress 2",
-                "id": "440"
+                "id": "440",
+                "drive": "D:"
             },
             {
                 "name": "Portal 2",
-                "id": "620"
+                "id": "620",
+                "drive": "D:"
             },
             {
                 "name": "Counter-Strike: Global Offensive",
-                "id": "730"
+                "id": "730",
+                "drive": "D:"
             },
             {
                 "name": "Garry's Mod",
-                "id": "4000"
+                "id": "4000",
+                "drive": "D:"
             },
             {
                 "name": "Terraria",
-                "id": "105600"
+                "id": "105600",
+                "drive": "D:"
             },
             {
                 "name": "Universe Sandbox",
-                "id": "230290"
+                "id": "230290",
+                "drive": "D:"
             },
             {
                 "name": "Prison Architect",
-                "id": "233450"
+                "id": "233450",
+                "drive": "D:"
             },
             {
                 "name": "The Forest",
-                "id": "242760"
+                "id": "242760",
+                "drive": "D:"
             },
             {
                 "name": "Watch_Dogs",
-                "id": "243470"
+                "id": "243470",
+                "drive": "D:"
             },
             {
                 "name": "Rust",
-                "id": "252490"
+                "id": "252490",
+                "drive": "D:"
             },
             {
                 "name": "Cities: Skylines",
-                "id": "255710"
+                "id": "255710",
+                "drive": "D:"
             },
             {
                 "name": "Subnautica",
-                "id": "264710"
+                "id": "264710",
+                "drive": "D:"
             },
             {
                 "name": "Creativerse",
-                "id": "280790"
+                "id": "280790",
+                "drive": "D:"
             },
             {
                 "name": "Unturned",
-                "id": "304930"
+                "id": "304930",
+                "drive": "D:"
             },
             {
                 "name": "Dirty Bomb",
-                "id": "333930"
+                "id": "333930",
+                "drive": "D:"
             },
             {
                 "name": "Tom Clancy's Rainbow Six Siege",
-                "id": "359550"
+                "id": "359550",
+                "drive": "D:"
             },
             {
                 "name": "Poly Bridge",
-                "id": "367450"
+                "id": "367450",
+                "drive": "D:"
             },
             {
                 "name": "Scrap Mechanic",
-                "id": "387990"
+                "id": "387990",
+                "drive": "D:"
             },
             {
                 "name": "Voxel Turf",
-                "id": "404530"
+                "id": "404530",
+                "drive": "D:"
             },
             {
                 "name": "Forts",
-                "id": "410900"
+                "id": "410900",
+                "drive": "D:"
             },
             {
                 "name": "Wallpaper Engine",
-                "id": "431960"
+                "id": "431960",
+                "drive": "D:"
             },
             {
                 "name": "Watch_Dogs 2",
-                "id": "447040"
+                "id": "447040",
+                "drive": "D:"
             },
             {
                 "name": "Two Point Hospital",
-                "id": "535930"
+                "id": "535930",
+                "drive": "D:"
             },
             {
                 "name": "Deep Rock Galactic",
-                "id": "548430"
+                "id": "548430",
+                "drive": "D:"
             },
             {
                 "name": "Stormworks: Build and Rescue",
-                "id": "573090"
+                "id": "573090",
+                "drive": "D:"
             },
             {
                 "name": "Stick Fight: The Game",
-                "id": "674940"
+                "id": "674940",
+                "drive": "D:"
             },
             {
                 "name": "Planet Zoo",
-                "id": "703080"
+                "id": "703080",
+                "drive": "D:"
             },
             {
                 "name": "Generation Zero\u00ae",
-                "id": "704270"
+                "id": "704270",
+                "drive": "D:"
             },
             {
                 "name": "Subnautica: Below Zero",
-                "id": "848450"
+                "id": "848450",
+                "drive": "D:"
             },
             {
                 "name": "HITMAN\u2122 2",
-                "id": "863550"
+                "id": "863550",
+                "drive": "D:"
             },
             {
                 "name": "Control Ultimate Edition",
-                "id": "870780"
+                "id": "870780",
+                "drive": "D:"
             },
             {
                 "name": "Cyberpunk 2077",
-                "id": "1091500"
+                "id": "1091500",
+                "drive": "D:"
             },
             {
                 "name": "People Playground",
-                "id": "1118200"
+                "id": "1118200",
+                "drive": "D:"
             },
             {
                 "name": "Ghostrunner",
-                "id": "1139900"
+                "id": "1139900",
+                "drive": "D:"
+            },
+            {
+                "name": "",
+                "id": "1243740",
+                "drive": "D:"
             },
             {
                 "name": "Townscaper",
-                "id": "1291340"
+                "id": "1291340",
+                "drive": "D:"
             }
         ],
         "soundtracks": [
             {
                 "name": "Deep Rock Galactic - Original Soundtrack Volume I + II",
-                "id": "802640"
+                "id": "802640",
+                "drive": "E:"
             },
             {
                 "name": "Subnautica Soundtrack",
-                "id": "1619300"
+                "id": "1619300",
+                "drive": "E:"
             }
         ]
     }
