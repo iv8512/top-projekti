@@ -51,20 +51,23 @@ for item in steam_games:
 # find ubisoft games
 ubisoft_games = []
 import winreg
-base_reg = winreg.ConnectRegistry(None, winreg.HKEY_LOCAL_MACHINE)
-sub_key = winreg.OpenKey(base_reg, "SOFTWARE\\WOW6432Node\\Ubisoft\\Launcher\\Installs\\")
-for i in range(50) :
-    try :
-        game_id = winreg.EnumKey(sub_key,i)
-        game_name_key = winreg.OpenKey(base_reg, "SOFTWARE\\WOW6432Node\\Ubisoft\\Launcher\\Installs\\" + game_id + "\\")
-        name = winreg.EnumValue(game_name_key, 1)
-        path = name[1]
-        path = os.path.dirname(path)
-        game_name = os.path.basename(path)
-        ubisoft_game = {"name": game_name, "id": game_id}
-        ubisoft_games.append(ubisoft_game)
-    except :
-        pass
+try:
+    base_reg = winreg.ConnectRegistry(None, winreg.HKEY_LOCAL_MACHINE)
+    sub_key = winreg.OpenKey(base_reg, "SOFTWARE\\WOW6432Node\\Ubisoft\\Launcher\\Installs\\")
+    for i in range(50) :
+        try :
+            game_id = winreg.EnumKey(sub_key,i)
+            game_name_key = winreg.OpenKey(base_reg, "SOFTWARE\\WOW6432Node\\Ubisoft\\Launcher\\Installs\\" + game_id + "\\")
+            name = winreg.EnumValue(game_name_key, 1)
+            path = name[1]
+            path = os.path.dirname(path)
+            game_name = os.path.basename(path)
+            ubisoft_game = {"name": game_name, "id": game_id}
+            ubisoft_games.append(ubisoft_game)
+        except :
+            pass
+except FileNotFoundError:
+    pass
 winreg.CloseKey(base_reg)
 
 # compile file contents
