@@ -106,6 +106,7 @@ Games
   display: inline-block;
   flex: 0 0 auto;
   overflow-y: auto;
+  scrollbar-width: none;
 }
 
 .slide * {
@@ -116,6 +117,11 @@ Games
   text-align: center;
 }
 
+.slide::-webkit-scrollbar {
+  width: 0;
+}
+
+
 .gameGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -124,14 +130,14 @@ Games
 
 .gameCard {
   outline-offset: 1em;
-  margin: 0.5em;
+  padding: 0.5em;
 }
 
 .gameCard:nth-child(odd) {
-  margin-left: 0;
+  padding-left: 0;
 }
 .gameCard:nth-child(even) {
-  margin-right: 0;
+  padding-right: 0;
 }
 
 
