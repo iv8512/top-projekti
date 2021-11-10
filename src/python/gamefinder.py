@@ -4,7 +4,7 @@ except ModuleNotFoundError:
     os.system('cmd /c "pip install requests"')
 
 # info
-gamefinder_v = 0.7
+gamefinder_v = 0.8
 file_v = 0.3
 visual = False
 
@@ -48,10 +48,30 @@ for item in steam_games:
     if "Redistributables" in item["name"]:
         steam_games.remove(item)
 
+# find epic games
+epic_games = []
+try:
+    dat_path = r"C:\ProgramData\Epic\UnrealEngineLauncher\LauncherInstalled.dat"
+    with open(dat_path) as file:
+        dat_data = json.loads(file.read())
+
+    for game in dat_data["InstallationList"]:
+        if len(game["AppName"]) < 30:
+            game_name = os.path.basename(game["InstallLocation"])
+            game_id = game["AppName"]
+            game_v = game["AppVersion"]
+            library_path = game["InstallLocation"]
+            library_drive = os.path.splitdrive(library_path)[0]
+            epic_game = {"name": game_name, "id": game_id,
+                         "version": game_v, "drive": library_drive}
+            epic_games.append(epic_game)
+except FileNotFoundError:
+    pass
+
 # find ubisoft games
 ubisoft_games = []
-import winreg
 try:
+    import winreg
     base_reg = winreg.ConnectRegistry(None, winreg.HKEY_LOCAL_MACHINE)
     sub_key = winreg.OpenKey(base_reg, "SOFTWARE\\WOW6432Node\\Ubisoft\\Launcher\\Installs\\")
     for i in range(50) :
@@ -70,14 +90,28 @@ except FileNotFoundError:
     pass
 winreg.CloseKey(base_reg)
 
+# origin games
+origin_games = []
+try:
+    origin_path = r"C:\ProgramData\Origin\LocalContent"
+    for game_name in os.listdir(origin_path):
+        origin_game = {"name": game_name, "id": ""}
+        origin_games.append(origin_game)
+except FileNotFoundError:
+    pass
+
 # compile file contents
 versions = {"gamefinder": gamefinder_v, "file": file_v}
 file_info = {"versions": versions}
 steam_info = {"games": len(steam_games), "soundtracks": len(steam_soundtracks)}
 steam = {"info": steam_info, "games": steam_games, "soundtracks": steam_soundtracks}
+epic_info = {"games": len(epic_games)}
+epic = {"info": epic_info, "games": epic_games}
 ubisoft_info = {"games": len(ubisoft_games)}
 ubisoft = {"info": ubisoft_info, "games": ubisoft_games}
-main_list = {"info": file_info, "steam": steam, "ubisoft": ubisoft}
+origin_info = {"games": len(origin_games)}
+origin = {"info": origin_info, "games": origin_games}
+main_list = {"info": file_info, "steam": steam, "epic": epic, "ubisoft": ubisoft, "origin": origin}
 
 # create file
 file_path = "../data/installed_games.json"

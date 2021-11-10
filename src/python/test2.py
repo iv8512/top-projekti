@@ -63,33 +63,6 @@ else:
         file.write(json.dumps(text, indent=4))
 
 
-def getUplayIDs():
-    import winreg
-    # ubisoftGameList = {}
-
-    baseReg = winreg.ConnectRegistry(None, winreg.HKEY_LOCAL_MACHINE)
-    subKey = winreg.OpenKey(baseReg, "SOFTWARE\\WOW6432Node\\Ubisoft\\Launcher\\Installs\\")
-
-    for i in range(50) :
-        try :
-            gameId = winreg.EnumKey(subKey,i)
-
-            gameNameKey = winreg.OpenKey(baseReg, "SOFTWARE\\WOW6432Node\\Ubisoft\\Launcher\\Installs\\" + gameId + "\\")
-            name = winreg.EnumValue(gameNameKey, 1)
-
-            path = name[1]
-            path = os.path.dirname(path)
-            gameName = os.path.basename(path)
-
-            print('\nThe Game name is: ' + gameName + ' \nThe Game ID is: ' + gameId)
-
-        except :
-            pass
-
-    winreg.CloseKey(baseReg)
-
-
-
 
 
 
