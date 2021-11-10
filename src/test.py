@@ -9,5 +9,5 @@ games = []
 for item in os.listdir(path):
     games.append(item[:-4])
 
-with open("./data/steam_games.json", "w") as file:
+with open("./data/installed_games.json", "w") as file:
     file.write(json.dumps(games, indent=4))
