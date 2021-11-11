@@ -1,10 +1,11 @@
-try: import vdf, json, requests, os, winreg
+import os
+try: import vdf, json, requests, winreg
 except ModuleNotFoundError:
     os.system('cmd /c "pip install vdf"')
     os.system('cmd /c "pip install requests"')
 
 # info
-gamefinder_v = 0.8
+gamefinder_v = "0.8.1"
 file_v = 0.3
 visual = False
 
