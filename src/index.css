@@ -154,6 +154,21 @@ Games
   grid-template-columns: 1fr 1fr;
 }
 
+.gridHeader {
+  display: flex;
+  place-items: center;
+  text-transform: uppercase;
+}
+
+.gridHeader::after,
+.gridHeader::before {
+  content: '';
+  margin: 0 0.5em;
+  width: 100%;
+  padding: 0;
+  border-bottom: 1px solid var(--color-accent1);
+}
+
 .gameCard {
   outline-offset: 1em;
   padding: 0.5em;
