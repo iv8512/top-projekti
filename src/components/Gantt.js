@@ -24,7 +24,7 @@ function Gantt() {
         <div className="page" id="GanttPage">
             <div className="content">
                 <h2>Gantt Chart</h2>
-                <p>Gantt Charts show the flow of work during developement.</p>
+                <p>Gantt Chart on aikataulu joka näyttää työn edistymisen.</p>
                 <div className="chart" id={'w' + Page}>
                     {data.map((chartData, index) => (
                         <Chart key={index} wnum={chartData.top[Page].num} data={chartData.top[Page]} Page={Page}/>

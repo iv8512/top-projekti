@@ -4,10 +4,16 @@ function Sidebar() {
     return ( 
       <div className="sideBar">
         <div className="navList">
-          <Link to="/" className="tabFocus"><div className="naviListItem navItem" data-tool-tip="Linkki Kotisivulle">Δ</div></Link>
-          <Link to="/test" className="tabFocus"><div className="naviListItem navItem" data-tool-tip="testi sivu">Δ</div></Link>
-          <Link to="/ganttchart" className="tabFocus"><div className="naviListItem navItem" data-tool-tip="Gantt Chart Visualised">Δ</div></Link>
-          <Link to="/games" className="tabFocus"><div className="naviListItem navItem" data-tool-tip="The page with the content">Δ</div></Link>
+          <div className="navItem">Δ</div>
+          <div className="navItem">Δ</div>
+          <div className="navItem">Δ</div>
+          <div className="navItem">Δ</div>
+        </div>
+        <div className="extend">
+          <Link to="/" className="navItem">Linkki Kotisivulle</Link>
+          <Link to="/test" className="navItem">testi sivu</Link>
+          <Link to="/ganttchart" className="navItem">Gantt Chart Visualised</Link>
+          <Link to="/games" className="navItem">The page with the content</Link>
         </div>
       </div>
      );

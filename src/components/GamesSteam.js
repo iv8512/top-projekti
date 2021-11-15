@@ -5,30 +5,33 @@ function GamesSteam(props) {
 
     const [BigImg, setBigImg] = useState('none')
     const [SmallImg, setSmallImg] = useState('grid')
-    const [toggle, setToggle] = useState(0)
-
+    const [Toggle, setToggle] = useState(0)
+    const [Cols, setCols] = useState('1fr 1fr')
 
     function Switch() {
-        if (toggle === 0) {
+        if (Toggle === 0) {
             setBigImg('grid')
             setSmallImg('none')
+            setCols('1fr 1fr 1fr')
             setToggle(1)
         }
         else {
             setBigImg('none')
             setSmallImg('grid')
+            setCols('1fr 1fr')
             setToggle(0)
         }
     }
 
+    if (props.data.steam.info.games > 0)
     return ( 
         <div className="slide steam"> 
             <div className="header" data-tool-tip={tooltip}>
-                <span><span className="redtext">Steam Games</span> <button onClick={Switch}>Switch</button></span> 
+                <span><span className="redtext">Steam Games</span> <button onClick={Switch}>Switch</button></span>
             </div> 
 
 
-            <div className="gameGrid">
+            <div className="gameGrid" style={{ gridTemplateColumns: Cols }}>
                 {props.data.steam.games.map((data,index) => (
                     <div className="gameCard" key={index}>
                         <a href={"steam://run/" + data.id}>
@@ -41,7 +44,7 @@ function GamesSteam(props) {
             <div class="gridHeader tealtext">
                 Soundtracks
             </div>
-            <div className="gameGrid">
+            <div className="gameGrid" style={{ gridTemplateColumns: Cols }}>
                 {props.data.steam.soundtracks.map((data,index) => (
                     <div className="gameCard" key={index}>
                         <a href={"steam://run/" + data.id}>
@@ -53,6 +56,8 @@ function GamesSteam(props) {
             </div>
         </div>
      );
+    else
+    return (<></>)
 }
 
 export default GamesSteam;

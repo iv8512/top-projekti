@@ -1,7 +1,7 @@
 import { useState } from "react";
-function GamesEpic(props) {
+function GamesOrigin(props) {
     
-    var tooltip = "GameFinder " + props.data.info.versions.gamefinder + " - Games Found: " + props.data.epic.info.games
+    var tooltip = "GameFinder " + props.data.info.versions.gamefinder + " - Games Found: " + props.data.origin.info.games
 
     const [BigImg, setBigImg] = useState('none')
     const [SmallImg, setSmallImg] = useState('grid')
@@ -23,18 +23,18 @@ function GamesEpic(props) {
         }
     }
 
-    if (props.data.epic.info.games > 0)
+    if (props.data.origin.info.games > 0)
     return ( 
-        <div className="slide Epic"> 
+        <div className="slide Origin"> 
             <div className="header" data-tool-tip={tooltip}>
-                <span><span className="redtext">Epic Games</span> <button onClick={Switch}>Switch</button></span> 
+                <span><span className="redtext">Origin Games</span> <button onClick={Switch}>Switch</button></span> 
             </div> 
 
 
             <div className="gameGrid" style={{ gridTemplateColumns: Cols }}>
-                {props.data.epic.games.map((data,index) => (
+                {props.data.origin.games.map((data,index) => (
                     <div className="gameCard" key={index}>
-                        <a href={"com.epicgames.launcher://apps/" + data.id + "?action=launch&silent=true"}>
+                        <a href={"origin://launchgame/" + data.id}>
                             <img loading="lazy" src={ "https://cdn.cloudflare.steamstatic.com/steam/apps/" + data.id + "/library_600x900.jpg" } alt={data.name} style={{ display: BigImg }} />
                             <img loading="lazy" src={ "https://cdn.akamai.steamstatic.com/steam/apps/" + data.id + "/capsule_184x69.jpg" } alt={data.name} style={{ display: SmallImg }} />
                         </a>
@@ -47,4 +47,4 @@ function GamesEpic(props) {
     return (<></>)
 }
 
-export default GamesEpic;
+export default GamesOrigin;

@@ -5,22 +5,25 @@ function GamesUbisoft(props) {
 
     const [BigImg, setBigImg] = useState('none')
     const [SmallImg, setSmallImg] = useState('grid')
-    const [toggle, setToggle] = useState(0)
-
+    const [Toggle, setToggle] = useState(0)
+    const [Cols, setCols] = useState('1fr 1fr')
 
     function Switch() {
-        if (toggle === 0) {
+        if (Toggle === 0) {
             setBigImg('grid')
             setSmallImg('none')
+            setCols('1fr 1fr 1fr')
             setToggle(1)
         }
         else {
             setBigImg('none')
             setSmallImg('grid')
+            setCols('1fr 1fr')
             setToggle(0)
         }
     }
 
+    if (props.data.ubisoft.info.games > 0)
     return ( 
         <div className="slide Ubisoft"> 
             <div className="header" data-tool-tip={tooltip}>
@@ -28,7 +31,7 @@ function GamesUbisoft(props) {
             </div> 
 
 
-            <div className="gameGrid">
+            <div className="gameGrid" style={{ gridTemplateColumns: Cols }}>
                 {props.data.ubisoft.games.map((data,index) => (  
                     <div className="gameCard" key={index}>
                         <a href={"uplay://launch/" + data.id}>
@@ -40,6 +43,8 @@ function GamesUbisoft(props) {
             </div>
         </div>
      );
+    else
+    return (<></>)
 }
 
 export default GamesUbisoft;
