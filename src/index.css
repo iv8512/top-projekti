@@ -144,6 +144,10 @@ Games
   display: inline-block;  
 }
 
+.slide .header span > span {
+  font-weight: bold;
+}
+
 .slide .header::after {
   content: attr(data-tool-tip);
   font-size: 0.7em;
@@ -312,40 +316,6 @@ navigation styles start here
   color: var(--color-white);
   text-decoration: none;
 }
-
-
-
-/*
-.navItem::after {
-  content: '';
-  position: absolute;
-  border: 1px solid transparent;
-  max-width: calc(100vw - 5em);
-  border-radius: 0 5px 5px 0;
-  min-width: 100%;
-  padding: 0 0.5em;
-  word-wrap: break-word;
-  color: transparent;
-  transition: opacity 0.3s ease-out, min-width 0.3s ease-in-out, color 0.3s 0.3s;
-  opacity: 0;
-}
-
-.navItem:hover::after{
-  content: attr(data-tool-tip);
-  display: grid;
-  place-content: center;
-  background: linear-gradient(to right, var(--color-black), var(--color-dark1));
-  border-top: 1px solid var(--color-accent1);
-  border-bottom: 1px solid var(--color-accent1);
-  border-left: 0px solid transparent;
-  border-right: 1px solid var(--color-accent1);
-  min-width: 500%;
-  min-height: 100%;
-  left: var(--sidebar-width);
-  color: var(--color-white);
-  opacity: 1;
-} 
-*/
 
 /*
 Chart styles
