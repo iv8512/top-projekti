@@ -1,3 +1,3 @@
 import os
 
-os.system('cmd /k "npm install -g yarn"')
+os.system('cmd /c "npm install -g yarn"')
