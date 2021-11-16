@@ -1,12 +1,12 @@
 import { useState } from "react";
 function GamesSteam(props) {
     
-    var tooltip = "GameFinder " + props.data.info.versions.gamefinder + " - Games Found: " + props.data.steam.info.games
+    let tooltip = "GameFinder " + props.data.info.versions.gamefinder + " - Games Found: " + props.data.steam.info.games
 
-    const [BigImg, setBigImg] = useState('none')
-    const [SmallImg, setSmallImg] = useState('grid')
-    const [Toggle, setToggle] = useState(0)
-    const [Cols, setCols] = useState('1fr 1fr')
+    let [BigImg, setBigImg] = useState('none')
+    let [SmallImg, setSmallImg] = useState('grid')
+    let [Toggle, setToggle] = useState(0)
+    let [Cols, setCols] = useState('1fr 1fr')
 
     function Switch() {
         if (Toggle === 0) {

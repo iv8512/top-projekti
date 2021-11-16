@@ -3,20 +3,20 @@ import data from "../data/ganttchart.json"
 import Chart from "./Chart";
 
 function Gantt() {
-    const [Cpage, setCpage] = useState(43)
-    const [Page, setPage] = useState(0)
+    let [Cpage, setCpage] = useState(43)
+    let [Page, setPage] = useState(0)
 
     function decrementCpage() {
         if (Cpage > 43) {
-            setCpage(prevCpage => prevCpage - 1)
-            setPage(prevPage => prevPage - 1)
+            setCpage(Cpage - 1)
+            setPage(Page - 1)
         }
     }
     
     function incrementCpage() {
         if (Cpage < 49) {
-            setCpage(prevCpage => prevCpage + 1)
-            setPage(prevPage => prevPage + 1)
+            setCpage(Cpage + 1)
+            setPage(Page + 1)
         }
     }
     
