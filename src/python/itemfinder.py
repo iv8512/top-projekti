@@ -1,8 +1,11 @@
 from os import walk
 import os.path, json, time
 
+with open("./src/python/info.json") as file:
+    info = json.loads(file.read())
+
 visual = True
-v = "0.0.1"
+v = info["Versions"]["Itemfinder"]
 path = "C:\\"
 file_path = "..\\data\\item_database.json"
 item_index_test = {
@@ -35,19 +38,20 @@ def file_scan(names):
                 print(".", end="")
     return found_items
 
-#file_scan(item_index["Steam"][0])
-#create_file()
-
-def cmd_main():
+def input_collector():
     collector = []
-    text = "Please write the name of the file(s) you want to find \n"
-    print(text + "When ready press enter")
     while True:
         user_input = input(": ")
         if user_input != "":
             collector.append(user_input)
         else:
             break
+    return collector
+
+def cmd_main():
+    text = "Please write the name of the file(s) you want to find \n"
+    print(text + "When ready press enter")
+    collector = input_collector()
     print(collector)
     found_items = file_scan(collector)
     print(found_items)

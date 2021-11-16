@@ -5,7 +5,9 @@ except ModuleNotFoundError:
     os.system('cmd /c "pip install requests"')
 
 # info
-gamefinder_v = "0.8.1"
+with open("./src/python/info.json") as file:
+    info = json.loads(file.read())
+gamefinder_v = info["Versions"]["Gamefinder"]
 file_v = 0.3
 visual = False
 
