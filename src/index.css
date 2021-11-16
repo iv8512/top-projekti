@@ -272,9 +272,13 @@ navigation styles start here
   opacity: 1;
   width: 30ch;
 }
+.sideBar:hover .extend .navItem {
+  display: grid;
+}
 
 .extend .navItem {
   width: 30ch;
+  display: none;
   place-content: center start;
   padding: 0.5em 1em;
   position: relative;

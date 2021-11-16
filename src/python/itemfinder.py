@@ -2,7 +2,7 @@ from os import walk
 import os.path, json, time
 
 visual = True
-v = 0.0.1
+v = "0.0.1"
 path = "C:\\"
 file_path = "..\\data\\item_database.json"
 item_index_test = {
