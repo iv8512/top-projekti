@@ -7,13 +7,11 @@ function Sidebar() {
           <div className="navItem">Δ</div>
           <div className="navItem">Δ</div>
           <div className="navItem">Δ</div>
-          <div className="navItem">Δ</div>
         </div>
         <div className="extend">
-          <Link to="/" className="navItem">Linkki Kotisivulle</Link>
+          <Link to="/" className="navItem">Pelit</Link>
+          <Link to="/ganttchart" className="navItem">Gantt Chart</Link>
           <Link to="/test" className="navItem">testi sivu</Link>
-          <Link to="/ganttchart" className="navItem">Gantt Chart Visualised</Link>
-          <Link to="/games" className="navItem">The page with the content</Link>
         </div>
       </div>
      );
