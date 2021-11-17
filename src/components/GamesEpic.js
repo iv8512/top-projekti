@@ -1,31 +1,31 @@
 import { useState } from "react";
 function GamesEpic(props) {
-    
-    let tooltip = "GameFinder " + props.data.info.versions.gamefinder + " - Games Found: " + props.data.epic.info.games
 
-    let [BigImg, setBigImg] = useState('none')
-    let [SmallImg, setSmallImg] = useState('grid')
-    let [Toggle, setToggle] = useState(0)
-    let [Cols, setCols] = useState('1fr 1fr')
+    let tooltip = "GameFinder " + props.data.info.versions.gamefinder + " - Games Found: " + props.data.epic.info.games;
+
+    let [BigImg, setBigImg] = useState('none');
+    let [SmallImg, setSmallImg] = useState('grid');
+    let [Toggle, setToggle] = useState(0);
+    let [Cols, setCols] = useState('1fr 1fr');
 
     function Switch() {
         if (Toggle === 0) {
-            setBigImg('grid')
-            setSmallImg('none')
-            setCols('1fr 1fr 1fr')
-            setToggle(1)
+            setBigImg('grid');
+            setSmallImg('none');
+            setCols('1fr 1fr 1fr');
+            setToggle(1);
         }
         else {
-            setBigImg('none')
-            setSmallImg('grid')
-            setCols('1fr 1fr')
-            setToggle(0)
-        }
-    }
+            setBigImg('none');
+            setSmallImg('grid');
+            setCols('1fr 1fr');
+            setToggle(0);
+        };
+    };
 
     if (props.data.epic.info.games > 0)
     return ( 
-        <div className="slide Epic"> 
+        <div className="slide drag" id ="epic"> 
             <div className="header" data-tool-tip={tooltip}>
                 <span><span className="redtext">Epic Games</span> <button onClick={Switch}>Switch</button></span> 
             </div> 
@@ -44,7 +44,7 @@ function GamesEpic(props) {
         </div>
      );
     else
-    return (<></>)
-}
+    return (<></>);
+};
 
 export default GamesEpic;

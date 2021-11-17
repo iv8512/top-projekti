@@ -29,7 +29,7 @@ function Gantt() {
                     {data.map((chartData, index) => (
                         <Chart key={index} wnum={chartData.top[Page].num} data={chartData.top[Page]} Page={Page}/>
                     ))}
-                    <div className="buttonrow row">
+                    <div className="buttonRow row">
                         <button className="decrememt" onClick={decrementCpage}>«</button>
                         <span>{Cpage}</span>
                         <button className="increment" onClick={incrementCpage}>»</button>

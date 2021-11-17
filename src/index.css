@@ -19,6 +19,27 @@ body {
   overflow-x: hidden;
 }
 
+body::-webkit-scrollbar{
+  width: 10px;
+  height: 10px;
+  }
+
+body::-webkit-scrollbar-thumb{
+  background: var(--color-dark2);
+  border: 1px solid var(--color-black);
+  border-right: none;
+  border-radius: 1em 0 0 1em;
+  }
+
+body::-webkit-scrollbar-thumb:hover{
+  background: var(--color-dark2);
+  }
+
+body::-webkit-scrollbar-track{
+  background: var(--color-black);
+  outline: 1px solid var(--color-black);
+  }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   monospace;
@@ -58,6 +79,15 @@ code {
 general styles
 */
 
+.img {
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
 :is(.tabFocus, button):focus-within {
   outline: 1px solid var(--color-white);
 }
@@ -81,7 +111,7 @@ button {
   color: var(--color-white);
   border: 0px solid transparent;
   transition: color 0.3s ease-in-out;
-  perspective: 500px;
+  font-size: 1em;
 }
 
 button:hover {
@@ -89,38 +119,135 @@ button:hover {
 }
 
 /*
+CCM CustomContextMenu
+*/
+
+#CCMContainer {
+  display: none;
+  z-index: 101;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  padding: 1em 0;
+  background: var(--color-dark1);
+  outline: 1px solid var(--color-main2);
+  box-shadow: 0 0 20px -5px var(--color-main2);
+  border-radius: 0.5em;
+}
+
+.CCMItem {
+  display: grid;
+  padding: 0 1em 0 2em;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.CCMItem::before {
+  content: 'A';
+  position: absolute;
+  display: grid;
+  place-content: center;
+  left: 0.6em;
+  transform: translateY(25%);
+  z-index: 102;
+  width: 1em;
+  height: 1em;
+  background: var(--color-main2);
+  border-radius: 5px;
+}
+
+.CCMDivider {
+  display: block;
+  position: relative;
+  background: var(--color-dark3);
+  width: 90%;
+  left: 5%;
+  height: 1px;
+  margin: 0.5em 0;
+}
+
+/*
 Games
 */
 
-#Games .slideshow {
+#Home {
+  height: 100vh;
+}
+
+.banner {
+  position: sticky;
+  top: 0;
+  left: var(--sidebar-width);
+  height: var(--sidebar-width);
+  background: var(--color-transparent-main2);
+}
+
+.bannerList {
+  width: 100%;
+  height: inherit;
+  position: relative;
+}
+
+.bannerListItem {
+  height: inherit;
+  display: grid;
+  place-content: center;
+}
+
+#Search form input[type="text"] {
+  padding: 0.5em;
+  background: var(--color-black);
+  color: var(--color-white);
+  border: none;
+}
+
+#Search form input[type="submit"] {
+  padding: 0.5em;
+  margin: 0 0.5em;
+  background: var(--color-black);
+  color: var(--color-transparent-white);
+  border: none;
+  transition: color 0.3s;
+}
+
+#Search form input[type="submit"]:hover {
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.buttons {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.buttons button {
+  display: grid;
+  place-items: center;
+  font-size: 1em;
+}
+
+#Slides {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   overflow-x: auto;
-  position: fixed;
-  left: var(--sidebar-width);
-  top: 0;
-  bottom: 0;
-  right: 0;
+  position: relative;
+  height: 100vh;
   padding: 1em;
-  scrollbar-width: none;
   place-items: normal;
+  user-select: none;
 }
 
-.slideshow::-webkit-scrollbar {
-  width: 0px;
+.slideshow * {
+  user-select: none;
 }
 
 .slide {
   display: inline-block;
   flex: 0 0 auto;
   overflow-y: auto;
-  scrollbar-width: none;
-  scroll-behavior: smooth;
-}
-
-.slide::-webkit-scrollbar {
-  width: 0;
 }
 
 .slide > * {
@@ -318,6 +445,19 @@ navigation styles start here
 }
 
 /*
+drag/scrollbar styles
+*/
+
+.drag {
+  scrollbar-width: none;
+}
+
+.drag::-webkit-scrollbar {
+  width: 0;
+}
+
+
+/*
 Chart styles
 */
 
@@ -387,15 +527,13 @@ Chart styles
   opacity: 0.5;
 }
 
-.chart .buttonrow {
+.chart .buttonRow {
   display: flex;
   font-size: 1.5em;
   justify-content: center;
   border-bottom: 1px solid var(--color-dark1);
 }
 
-.chart button {
-  font-size: 1em;
+.chart .buttonRow button {
   outline-offset: -5px;
 }
-
