@@ -44,12 +44,14 @@ function Games() {
                         <div className="bannerListItem buttons">
                             <button className="settings">Settings</button>
                         </div>
-                        <div className="bannerListItem" id="Search">
+                        <div className="bannerListItem search">
+                            <div></div>
                             <form action="http://www.google.com/search" method="GET">
                                 <input type="text" name="q" size="31" maxLength="1000"></input>
                                 <input type="hidden" name="hl" value="en"></input>
                                 <input type="submit" name="btnG" value="Search"></input>
                             </form>
+                            <div></div>
                         </div>
                     </div>
                 </div>

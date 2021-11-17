@@ -176,11 +176,9 @@ Games
 }
 
 .banner {
-  position: sticky;
-  top: 0;
-  left: var(--sidebar-width);
-  height: var(--sidebar-width);
-  background: var(--color-transparent-main2);
+  position: absolute;
+  inset: 0;
+  height: inherit;
 }
 
 .bannerList {
@@ -191,27 +189,57 @@ Games
 
 .bannerListItem {
   height: inherit;
+}
+
+.search {
   display: grid;
-  place-content: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(10, 1fr);
+  place-items: center;
 }
 
-#Search form input[type="text"] {
-  padding: 0.5em;
-  background: var(--color-black);
-  color: var(--color-white);
-  border: none;
+.search form {
+  position: sticky;
+  top: 1em;
+  transform: translateX(calc(var(--sidebar-width) * -0.5));
+  margin: 1em;
+  border-radius: 999em;
+  outline: 1px solid var(--color-dark3);
+  transition: outline 0.3s, box-shadow 0.3s;
+  white-space: nowrap;
 }
 
-#Search form input[type="submit"] {
-  padding: 0.5em;
-  margin: 0 0.5em;
+.search form:focus-within {
+  outline: 1px solid var(--color-main2);
+  box-shadow: 0 0 25px -10px var(--color-accent2);
+}
+
+.search form input[type="text"] {
+  padding: 1em;
   background: var(--color-black);
   color: var(--color-transparent-white);
   border: none;
+  font-size: 100%;
+  border-radius: 999em 0 0 999em;
+  outline: none;
+  transition: color 0.3s;
+}
+.search form input[type="text"]:is(:hover, :focus) {
+  color: var(--color-white);
+}
+
+.search form input[type="submit"] {
+  padding: 1em;
+  background: var(--color-black);
+  color: var(--color-transparent-white);
+  border: none;
+  font-size: 100%;
+  border-radius: 0 999em 999em 0;
+  outline: none;
   transition: color 0.3s;
 }
 
-#Search form input[type="submit"]:hover {
+.search form input[type="submit"]:is(:hover, :focus) {
   color: var(--color-white);
   cursor: pointer;
 }
@@ -224,8 +252,11 @@ Games
 
 .buttons button {
   display: grid;
+  top: 0;
   place-items: center;
+  position: sticky;
   font-size: 1em;
+  padding: 1em
 }
 
 #Slides {
