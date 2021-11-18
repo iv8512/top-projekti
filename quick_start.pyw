@@ -64,5 +64,6 @@ create_label(f"{item_count['py']} Python files", "bottom")
 root.iconbitmap("./src/python/start/blume.ico")
 root.title("Quick Start")
 root.geometry("350x185")
+root.resizable(False, False)
 root.mainloop()
 

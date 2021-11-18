@@ -12,7 +12,8 @@ lang = "&lang=fi"
 url = f"https://api.openweathermap.org/data/2.5/{city}{units}{lang}&appid={key}"
 
 temp1 = "https://api.openweathermap.org/data/2.5/weather?q=Muurla&units=metric&lang=fi&appid={key}"
-temp2 = "https://www.weatherapi.com/"
+temp3 = "https://openweathermap.org/themes/openweathermap/assets/vendor/owm/img/widgets/03d.png"
+temp3 = "https://www.weatherapi.com/"
 
 weather_data = requests.get(url)
 weather_data = json.loads(weather_data.text)
