@@ -79,7 +79,7 @@ code {
 general styles
 */
 
-.img {
+img {
   user-drag: none;
   -webkit-user-drag: none;
   user-select: none;
@@ -97,11 +97,11 @@ general styles
   margin: 0;
 }
 
-h1, .redtext {
+h1, .accent2text {
   color: var(--color-accent2);
 }
 
-h2, .tealtext {
+h2, .accent1text {
   color: var(--color-accent1);
 }
 
@@ -185,78 +185,79 @@ Games
   width: 100%;
   height: inherit;
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
 }
 
 .bannerListItem {
   height: inherit;
 }
 
-.search {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(10, 1fr);
-  place-items: center;
+.g1 .spacer {
+  display: block;
+  height: calc(var(--sidebar-width) *  2);
+  width: inherit;
+}
+.g2 .spacer {
+  display: block;
+  height: calc(var(--sidebar-width) *  2);
+  width: inherit;
+}
+.g3 .spacer {
+  display: block;
+  height: calc(var(--sidebar-width) *  2);
+  width: inherit;
 }
 
-.search form {
+.sticky {
   position: sticky;
   top: 1em;
+}
+
+.weather {
+  margin: 1em auto;
+}
+
+
+form {
   transform: translateX(calc(var(--sidebar-width) * -0.5));
   margin: 1em;
+  background: var(--color-dark2);
+  outline: 1px solid var(--color-black);
   border-radius: 999em;
-  outline: 1px solid var(--color-dark3);
   transition: outline 0.3s, box-shadow 0.3s;
   white-space: nowrap;
 }
 
-.search form:focus-within {
+form:focus-within {
   outline: 1px solid var(--color-main2);
   box-shadow: 0 0 25px -10px var(--color-accent2);
 }
 
-.search form input[type="text"] {
+form input[type="text"]::selection {
+  color: var(--color-accent2);
+  background: var(--color-white);
+}
+
+form input[type="text"],
+form input[type="submit"] {
   padding: 1em;
-  background: var(--color-black);
   color: var(--color-transparent-white);
   border: none;
-  font-size: 100%;
-  border-radius: 999em 0 0 999em;
   outline: none;
+  border-radius: 999em 0 0 999em;
+  background: none;
+  font-size: 100%;
   transition: color 0.3s;
 }
-.search form input[type="text"]:is(:hover, :focus) {
+form input[type="text"]:is(:hover, :focus) {
   color: var(--color-white);
 }
 
-.search form input[type="submit"] {
-  padding: 1em;
-  background: var(--color-black);
-  color: var(--color-transparent-white);
-  border: none;
-  font-size: 100%;
-  border-radius: 0 999em 999em 0;
-  outline: none;
-  transition: color 0.3s;
-}
-
-.search form input[type="submit"]:is(:hover, :focus) {
+form input[type="submit"]:is(:hover, :focus) {
   color: var(--color-white);
   cursor: pointer;
-}
-
-.buttons {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.buttons button {
-  display: grid;
-  top: 0;
-  place-items: center;
-  position: sticky;
-  font-size: 1em;
-  padding: 1em
 }
 
 #Slides {
@@ -341,7 +342,7 @@ Games
   margin: 0 0.5em;
   width: 100%;
   padding: 0;
-  border-bottom: 1px solid var(--color-accent1);
+  border-bottom: 1px solid var(--color-accent2);
 }
 
 
@@ -407,7 +408,7 @@ navigation styles start here
 */
 
 .sideBar {
-  display: block;
+  display: grid;
   position: fixed;
   background-color: var(--color-dark2);
   outline: 1px solid var(--color-black);
@@ -428,6 +429,11 @@ navigation styles start here
   width: 0;
   transition: 0.2s;
   outline: 1px solid var(--color-black);
+}
+
+.extend > div {
+  height: 100%;
+  display: grid;
 }
 
 .sideBar:hover .extend {
@@ -462,10 +468,6 @@ navigation styles start here
   width: var(--sidebar-width);
 }
 
-.navList {
-  display: grid;
-}
-
 .navItem {
   display: grid;
   place-content: center;
@@ -473,6 +475,11 @@ navigation styles start here
   width: var(--sidebar-width);
   color: var(--color-white);
   text-decoration: none;
+}
+
+.listBottom {
+  display: grid;
+  align-content: end;
 }
 
 /*

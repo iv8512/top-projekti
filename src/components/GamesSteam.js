@@ -52,7 +52,7 @@ function GamesSteam(props) {
     return ( 
         <div className="slide drag" id="steam"> 
             <div className="header" data-tool-tip={tooltip}>
-                <span><span className="redtext">Steam Games</span> <button onClick={Switch}>Switch</button></span>
+                <span><span className="accent2text" onClick={Switch}>Steam Games</span></span>
             </div> 
 
 
@@ -66,7 +66,7 @@ function GamesSteam(props) {
                     </div>
                 ))}
             </div>
-            <div className="gridHeader tealtext">
+            <div className="gridHeader accent2text">
                 Soundtracks
             </div>
             <div className="gameGrid" style={{ gridTemplateColumns: Cols }}>

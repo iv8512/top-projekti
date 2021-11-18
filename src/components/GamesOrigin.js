@@ -27,7 +27,7 @@ function GamesOrigin(props) {
     return ( 
         <div className="slide drag" id ="origin"> 
             <div className="header" data-tool-tip={tooltip}>
-                <span><span className="redtext">Origin Games</span> <button onClick={Switch}>Switch</button></span> 
+                <span><span className="accent2text" onClick={Switch}>Origin Games</span></span> 
             </div> 
 
 

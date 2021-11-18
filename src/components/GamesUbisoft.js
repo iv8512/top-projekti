@@ -27,7 +27,7 @@ function GamesUbisoft(props) {
     return ( 
         <div className="slide drag" id="ubisoft"> 
             <div className="header" data-tool-tip={tooltip}>
-                <span><span className="redtext">Ubisoft Games</span> <button onClick={Switch}>Switch</button></span> 
+                <span><span className="accent2text" onClick={Switch}>Ubisoft Games</span></span> 
             </div> 
 
 

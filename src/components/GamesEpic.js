@@ -27,7 +27,7 @@ function GamesEpic(props) {
     return ( 
         <div className="slide drag" id ="epic"> 
             <div className="header" data-tool-tip={tooltip}>
-                <span><span className="redtext">Epic Games</span> <button onClick={Switch}>Switch</button></span> 
+                <span><span className="accent2text" onClick={Switch}>Epic Games</span></span> 
             </div> 
 
 
