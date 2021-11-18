@@ -54,6 +54,7 @@ def create_label(text, side="top"):
 create_label(f"QStart v{v}")
 create_label(f"Gamefinder v{info['Versions']['Gamefinder']}")
 create_label(f"Itemfinder v{info['Versions']['Itemfinder']}")
+create_label(f"Weatherfinder v{info['Versions']['Weatherfinder']}")
 item_count = count_items()
 create_label("", "bottom")
 create_label(f"{item_count['js']} Javascript files", "bottom")
@@ -62,6 +63,6 @@ create_label(f"{item_count['py']} Python files", "bottom")
 
 root.iconbitmap("./src/python/start/blume.ico")
 root.title("Quick Start")
-root.geometry("300x170")
+root.geometry("350x185")
 root.mainloop()
 
