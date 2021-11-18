@@ -66,7 +66,7 @@ function GamesSteam(props) {
                     </div>
                 ))}
             </div>
-            <div className="gridHeader accent2text">
+            <div className="gridHeader accent1text">
                 Soundtracks
             </div>
             <div className="gameGrid" style={{ gridTemplateColumns: Cols }}>
