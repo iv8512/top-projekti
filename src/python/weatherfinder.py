@@ -19,7 +19,6 @@ def get_data(user_input):
     weather_index = json.loads(weather_index.text)
     return weather_index
 
-"https://openweathermap.org/themes/openweathermap/assets/vendor/owm/img/widgets/03d.png"
 "https://www.weatherapi.com/"
 
 def convert_time(epoch_time):
@@ -28,9 +27,18 @@ def convert_time(epoch_time):
     converted_datetime = [converted_date, converted_time]
     return converted_datetime
 
+def deg_to_compass(num):
+    val = int((num/22.5)+.5)
+    arr = [
+        "N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE",
+        "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"
+        ]
+    print(arr[(val % 16)])
+
 def clean_data(weather_index):
     city = weather_index["name"]
     data = {
+        "city": city,
         "weather": {
             "description": weather_index["weather"][0]["description"],
             "icon": weather_index["weather"][0]["icon"]
@@ -63,7 +71,7 @@ def clean_data(weather_index):
                 }
             }
         }
-    clean_data = {city: data}
+    clean_data = [data]
     return clean_data
 
 clean_data = clean_data(get_data(city))

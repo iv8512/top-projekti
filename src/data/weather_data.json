@@ -1,34 +1,35 @@
-{
-    "Sauvo": {
+[
+    {
+        "city": "Sauvo",
         "weather": {
-            "description": "kohtalainen sade",
-            "icon": "10n"
+            "description": "pilvinen",
+            "icon": "04n"
         },
         "air": {
             "temperature": {
-                "current": 3.58,
-                "min": 2.12,
-                "max": 6.11,
-                "feels_like": 0.4
+                "current": 5.71,
+                "min": 3.47,
+                "max": 7.08,
+                "feels_like": 2.06
             },
             "wind": {
-                "speed": 3.55,
-                "deg": 236,
-                "gust": 10.96
+                "speed": 5.37,
+                "deg": 279,
+                "gust": 15.28
             },
             "clouds": {
                 "all": 100
             },
             "other": {
-                "pressure": 989,
-                "humidity": 95,
+                "pressure": 987,
+                "humidity": 96,
                 "visibility": 10000
             }
         },
         "dt": {
             "current": [
                 "2021-19-11",
-                "16:55:52"
+                "19:18:56"
             ],
             "sunrise": [
                 "2021-19-11",
@@ -47,4 +48,4 @@
             }
         }
     }
-}
+]
