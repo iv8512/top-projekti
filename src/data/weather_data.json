@@ -1,0 +1,50 @@
+{
+    "Sauvo": {
+        "weather": {
+            "description": "kohtalainen sade",
+            "icon": "10n"
+        },
+        "air": {
+            "temperature": {
+                "current": 3.58,
+                "min": 2.12,
+                "max": 6.11,
+                "feels_like": 0.4
+            },
+            "wind": {
+                "speed": 3.55,
+                "deg": 236,
+                "gust": 10.96
+            },
+            "clouds": {
+                "all": 100
+            },
+            "other": {
+                "pressure": 989,
+                "humidity": 95,
+                "visibility": 10000
+            }
+        },
+        "dt": {
+            "current": [
+                "2021-19-11",
+                "16:55:52"
+            ],
+            "sunrise": [
+                "2021-19-11",
+                "08:39:32"
+            ],
+            "sunset": [
+                "2021-19-11",
+                "15:50:00"
+            ]
+        },
+        "other": {
+            "country": {
+                "name": "FI",
+                "id": 2012701,
+                "timezone": 7200
+            }
+        }
+    }
+}
