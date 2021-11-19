@@ -42,7 +42,7 @@ function Games() {
             dragScroll.scrollLeft = scroll - (x - start);
         });
     });    
-
+    
     return ( 
         <div className="page" id="Games">
 

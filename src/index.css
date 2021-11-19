@@ -45,6 +45,21 @@ code {
   monospace;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 0px solid transparent;
+  -webkit-text-fill-color: var(--color-accent2);
+  -webkit-box-shadow: 0 0 0px 1000px var(--color-dark2) inset;
+  transition: background-color 50000s ease-in-out 0s;
+}
+
 :root {
   /* add css variables here */
   --sidebar-width: 4em;
@@ -231,6 +246,7 @@ form {
   margin: 1em;
   background: var(--color-dark2);
   outline: 1px solid var(--color-black);
+  outline-offset: -1px;
   border-radius: 999em;
   transition: outline 0.3s, box-shadow 0.3s;
   white-space: nowrap;
@@ -355,28 +371,28 @@ form input[type="submit"]:is(:hover, :focus) {
 }
 
 
+a.gameCard {
+  display: flex;
+  place-content: center;
+  color: var(--color-white);
+  text-decoration: none;
+  min-width: 100%;
+}
+
 .gameCard img {
   place-content: center;
   text-align: center;
   outline: 1px solid var(--color-black);
 }
 
-.gameCard a {
-  color: var(--color-white);
-}
-
-.gameCard img a {
-  color: var(--color-accent1);
-}
-
 .gameCard img:nth-child(odd) {
   width: 200px;
-  height: 300px;
 }
 
 .gameCard img:nth-child(even) {
-  width: 200px;
-  height: 75px;
+  min-width: 200px;
+  min-height: 75px;
+  width: 100%;
 }
 
 /*

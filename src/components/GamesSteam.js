@@ -58,12 +58,10 @@ function GamesSteam(props) {
 
             <div className="gameGrid" style={{ gridTemplateColumns: Cols }}>
                 {props.data.steam.games.map((data,index) => (
-                    <div className="gameCard" key={index}>
-                        <a href={"steam://run/" + data.id}>
-                            <img loading="lazy" src={ "https://cdn.cloudflare.steamstatic.com/steam/apps/" + data.id + "/library_600x900.jpg" } alt={data.name} style={{ display: BigImg }} />
-                            <img loading="lazy" src={ "https://cdn.akamai.steamstatic.com/steam/apps/" + data.id + "/capsule_184x69.jpg" } alt={data.name} style={{ display: SmallImg }} />
-                        </a>
-                    </div>
+                    <a href={"steam://run/" + data.id} className="gameCard" key={index}>
+                        <img loading="lazy" src={ "https://cdn.cloudflare.steamstatic.com/steam/apps/" + data.id + "/library_600x900.jpg" } alt={data.name} style={{ display: BigImg }} />
+                        <img loading="lazy" src={ "https://cdn.akamai.steamstatic.com/steam/apps/" + data.id + "/capsule_184x69.jpg" } alt={data.name} style={{ display: SmallImg }} />
+                    </a>
                 ))}
             </div>
             <div className="gridHeader accent1text">
@@ -71,12 +69,10 @@ function GamesSteam(props) {
             </div>
             <div className="gameGrid" style={{ gridTemplateColumns: Cols }}>
                 {props.data.steam.soundtracks.map((data,index) => (
-                    <div className="gameCard" key={index}>
-                        <a href={"steam://run/" + data.id}>
-                            <img loading="lazy" src={ "https://cdn.cloudflare.steamstatic.com/steam/apps/" + data.id + "/library_600x900.jpg" } alt={data.name} style={{ display: BigImg }} />
-                            <img loading="lazy" src={ "https://cdn.akamai.steamstatic.com/steam/apps/" + data.id + "/capsule_184x69.jpg" } alt={data.name} style={{ display: SmallImg }} />
-                        </a>
-                    </div>
+                    <a href={"steam://run/" + data.id} className="gameCard" key={index}>
+                        <img loading="lazy" src={ "https://cdn.cloudflare.steamstatic.com/steam/apps/" + data.id + "/library_600x900.jpg" } alt={data.name} style={{ display: BigImg }} />
+                        <img loading="lazy" src={ "https://cdn.akamai.steamstatic.com/steam/apps/" + data.id + "/capsule_184x69.jpg" } alt={data.name} style={{ display: SmallImg }} />
+                    </a>
                 ))}
             </div>
         </div>
