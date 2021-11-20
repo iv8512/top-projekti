@@ -7,44 +7,144 @@
         },
         "air": {
             "temperature": {
-                "current": 5.71,
-                "min": 3.47,
-                "max": 7.08,
-                "feels_like": 2.06
+                "current": 2.84,
+                "min": 1.56,
+                "max": 4.44,
+                "feels_like": -2.02
             },
             "wind": {
-                "speed": 5.37,
-                "deg": 279,
-                "gust": 15.28
+                "speed": 6.39,
+                "deg": 329,
+                "gust": 14.47
             },
             "clouds": {
-                "all": 100
+                "all": 97
             },
             "other": {
-                "pressure": 987,
-                "humidity": 96,
+                "pressure": 992,
+                "humidity": 93,
                 "visibility": 10000
             }
         },
         "dt": {
             "current": [
-                "2021-19-11",
-                "19:18:56"
+                "2021-20-11",
+                "02:14:22"
             ],
             "sunrise": [
-                "2021-19-11",
-                "08:39:32"
+                "2021-20-11",
+                "08:42:01"
             ],
             "sunset": [
-                "2021-19-11",
-                "15:50:00"
+                "2021-20-11",
+                "15:48:00"
             ]
         },
         "other": {
             "country": {
                 "name": "FI",
                 "id": 2012701,
-                "timezone": 7200
+                "timezone": 7200,
+                "base": "stations"
+            }
+        }
+    },
+    {
+        "city": "Turku",
+        "weather": {
+            "description": "pieni sade",
+            "icon": "10n"
+        },
+        "air": {
+            "temperature": {
+                "current": 3.13,
+                "min": 1.68,
+                "max": 4.56,
+                "feels_like": -0.18
+            },
+            "wind": {
+                "speed": 3.6,
+                "deg": 330
+            },
+            "clouds": {
+                "all": 90
+            },
+            "other": {
+                "pressure": 992,
+                "humidity": 93,
+                "visibility": 10000
+            }
+        },
+        "dt": {
+            "current": [
+                "2021-20-11",
+                "02:14:23"
+            ],
+            "sunrise": [
+                "2021-20-11",
+                "08:44:30"
+            ],
+            "sunset": [
+                "2021-20-11",
+                "15:48:57"
+            ]
+        },
+        "other": {
+            "country": {
+                "name": "FI",
+                "id": 1364,
+                "timezone": 7200,
+                "base": "stations"
+            }
+        }
+    },
+    {
+        "city": "Muurla",
+        "weather": {
+            "description": "pieni sade",
+            "icon": "10n"
+        },
+        "air": {
+            "temperature": {
+                "current": 2.6,
+                "min": 1.44,
+                "max": 3.75,
+                "feels_like": -2.26
+            },
+            "wind": {
+                "speed": 6.24,
+                "deg": 329,
+                "gust": 13.55
+            },
+            "clouds": {
+                "all": 98
+            },
+            "other": {
+                "pressure": 991,
+                "humidity": 95,
+                "visibility": 10000
+            }
+        },
+        "dt": {
+            "current": [
+                "2021-20-11",
+                "02:16:58"
+            ],
+            "sunrise": [
+                "2021-20-11",
+                "08:39:43"
+            ],
+            "sunset": [
+                "2021-20-11",
+                "15:45:37"
+            ]
+        },
+        "other": {
+            "country": {
+                "name": "FI",
+                "id": 2022765,
+                "timezone": 7200,
+                "base": "stations"
             }
         }
     }

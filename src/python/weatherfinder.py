@@ -6,11 +6,11 @@ with open("info.json") as file:
 v = info["Versions"]["Weatherfinder"]
 
 #user_input = input("City: ")
-city = "sauvo"
+cities = ["sauvo", "turku", "muurla"]
 
-def get_data(user_input):
+def get_data(city):
     key = "b307815b6413828f9862092e5d4add4b"
-    city = f"weather?q={user_input}"
+    city = f"weather?q={city}"
     units = "&units=metric"
     lang = "&lang=fi"
     appid = f"&appid={key}"
@@ -37,7 +37,7 @@ def deg_to_compass(num):
 
 def clean_data(weather_index):
     city = weather_index["name"]
-    data = {
+    clean_data = {
         "city": city,
         "weather": {
             "description": weather_index["weather"][0]["description"],
@@ -67,29 +67,20 @@ def clean_data(weather_index):
             "country": {
                 "name": weather_index["sys"]["country"],
                 "id": weather_index["sys"]["id"],
-                "timezone": weather_index["timezone"]
+                "timezone": weather_index["timezone"],
+                "base": weather_index["base"]
                 }
             }
         }
-    clean_data = [data]
     return clean_data
 
-clean_data = clean_data(get_data(city))
-#final_data = {city_name: weather_data}
-#final_data[city_name].pop("name")
-
-#converted_date = time.strftime('%Y-%d-%m', time.localtime(weather_data["dt"]))
-#converted_time = time.strftime('%H:%M:%S', time.localtime(weather_data["dt"]))
-#final_data[city_name]["dt"] = {"date": converted_date, "time": converted_time}
-
-#sunrise = time.strftime('%H:%M:%S', time.localtime(weather_data["sys"]["sunrise"]))
-#sunset = time.strftime('%H:%M:%S', time.localtime(weather_data["sys"]["sunset"]))
-#final_data[city_name]["sys"]["sunrise"] = sunrise
-#final_data[city_name]["sys"]["sunset"] = sunset
+final_data = []
+for city in cities:
+    final_data.append(clean_data(get_data(city)))
 
 file_path = "../data/weather_data.json"
 with open(file_path, "w") as file:
-    json.dump(clean_data, file, indent=4)
+    json.dump(final_data, file, indent=4)
     #json.dump(get_data(city), file, indent=4)
 
 print("done")
