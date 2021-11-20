@@ -2,10 +2,10 @@ import WeatherData from '../data/weather_data.json'
 
 function Weather() {
 
-    let currentPage = 0;
-    let shownPage = 'weather0';
+    let currentPage = 1;
+    let shownPage = 'weather1';
     let ele;
-    let pages = 2;
+    let pages = WeatherData.length;
     
     function next() {
         ele = document.getElementById(shownPage);
@@ -15,7 +15,7 @@ function Weather() {
             currentPage++;
         }
         else {
-            currentPage = 0;
+            currentPage = 1;
         };
         
         shownPage = 'weather' + currentPage;
@@ -27,7 +27,7 @@ function Weather() {
         ele = document.getElementById(shownPage);
         ele.style.display = 'none';
 
-        if(currentPage > 0) {
+        if(currentPage > 1) {
             currentPage--;
         }
         else {
@@ -43,7 +43,7 @@ function Weather() {
     return ( 
             <>
             {WeatherData.map((data,index) => (
-                <div className="weather" key={index} id={'weather' + index}>
+                <div className="weather" key={index} id={'weather' + (index + 1)}>
                     <div className="header">
                         <span>{data.city} - {data.weather.description}</span>
                         <span className="icon">
@@ -52,11 +52,16 @@ function Weather() {
                         <span>{data.air.temperature.current}°C</span>
                     </div>
                     <div className="info">
-                        <div className="icon">
-                            <div className="arrow" style={{ transform: 'rotate(' + data.air.wind.deg + 'deg)'}}>
-                                <div className="tip"></div>
-                                <div className="shaft" style={{ height: 'calc(' + data.air.wind.speed + 'em / 7.5)' }}></div>
+                        <div className="wind row">
+                            <span>Wind: </span>
+                            <span>{data.air.wind.speed}m/s</span>
+                            <div className="icon">
+                                <div className="arrow" style={{ transform: 'rotate(' + data.air.wind.deg + 'deg)'}}>
+                                    <div className="tip"></div>
+                                    <div className="shaft" style={{ height: data.air.wind.speed / 10 + 'em' }}></div>
+                                </div>
                             </div>
+                            <span>{data.air.wind.deg}deg</span>
                         </div>
                     </div>
                     <div className="footer">

@@ -160,12 +160,13 @@ button:hover {
   border-radius: 0 0 2px 2px;
   background: var(--color-main2);
   height: 0.5em;
-  max-height: 3em;
+  max-height: 2em;
 }
 
 .arrow > * {
   width: 0;
 }
+
 /*
 CCM CustomContextMenu
 */
@@ -301,6 +302,14 @@ Games
 
 .weather .info {
 
+}
+
+.weather .row {
+  place-content: center;
+}
+
+.weather .info * :not(.icon, .icon *) {
+  margin: 0 0.2em;
 }
 
 .weather .footer {
@@ -626,12 +635,15 @@ Chart styles
   margin: 2em auto;
 }
 
+.chart .row {
+  border-top: 1px solid var(--color-dark1);
+  padding: 0.25em 0;
+}
+
 .row {
   display: flex;
   flex-direction: row;
   place-items: center;
-  border-top: 1px solid var(--color-dark1);
-  padding: 0.25em 0;
   position: relative;
 }
 
