@@ -11,6 +11,30 @@ function Games() {
     const [searchString, setSearchString] = useState();
 
     React.useEffect(() => {
+        
+        //let sideBar;
+        //let search;
+        //sideBar = document.querySelector('.sideBar');
+        //search = document.querySelector('.search');
+        //
+        //function togglesearch(params) {
+        //    if(sideBar.style.display === 'none') {
+        //        search.style.left = 'translateX(calc(var(--sidebar-width) * -0.5))';
+        //    }
+        //    else {
+        //        search.style.transform = 'none';
+        //    };
+        //};
+        //
+        //document.onkeydown = function(e) {
+        //    console.log(e);
+        //    if(e.altKey === true & e.key === 'q') {
+        //    togglesearch();
+        //    }
+        //};
+        //
+        //togglesearch();
+
         const dragScroll = document.querySelector('.slideshow');
         let start;
         let scroll;
@@ -60,10 +84,10 @@ function Games() {
                         <div className="bannerListItem g2">
                             <div className="spacer"></div>
                             <div className="sticky">
-                                <form action="http://www.google.com/search" method="GET">
+                                <form action="http://www.google.com/search" method="GET" className="search">
                                     <input type="text" name="q" size="50" maxLength="1000" value={searchString} onChange={(e) => setSearchString(e.target.value)}></input>
                                     <input type="hidden" name="hl" value="en"></input>
-                                    <input type="submit" name="btnG" value="Search"></input>
+                                    <input type="submit" name="btnG" value="Search" className="clickable"></input>
                                 </form>
                             </div>
                         </div>

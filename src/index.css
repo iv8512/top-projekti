@@ -134,6 +134,38 @@ button:hover {
   color: var(--color-accent1);
 }
 
+.clickable {
+  cursor: pointer;
+}
+
+.arrow{
+  display: grid;
+  height: min-content;
+  width: min-content;
+  grid-template-rows: auto auto;
+  place-items: center;
+}
+
+.arrow .tip {
+  display: inline-block;
+  border: 0.5em solid transparent;
+  border-bottom: 0.5em solid var(--color-main2);
+  border-top: none;
+  height: 0;
+}
+
+.arrow .shaft {
+  display: inline-block;
+  border: 0.25em solid var(--color-main2);
+  border-radius: 0 0 2px 2px;
+  background: var(--color-main2);
+  height: 0.5em;
+  max-height: 3em;
+}
+
+.arrow > * {
+  width: 0;
+}
 /*
 CCM CustomContextMenu
 */
@@ -210,21 +242,25 @@ Games
 
 .bannerListItem {
   height: inherit;
+  padding: 0 0.5em 1em
 }
 
 .g1 .spacer {
   display: block;
-  height: calc(var(--sidebar-width) *  2);
+  height: 25%;
   width: inherit;
+}
+.g1 .sticky {
+  padding: 0 1em;
 }
 .g2 .spacer {
   display: block;
-  height: calc(var(--sidebar-width) *  2);
+  height: calc(var(--sidebar-width) *  1.5);
   width: inherit;
 }
 .g3 .spacer {
   display: block;
-  height: calc(var(--sidebar-width) *  2);
+  height: 25%;
   width: inherit;
 }
 
@@ -234,10 +270,64 @@ Games
   margin: 1em 0;
 }
 
-.weather {
-  margin: 1em auto;
+.weather:first-child {
+  display: grid;
 }
 
+.weather {
+  display: none;
+  grid-template-rows: auto 1fr auto;
+  width: clamp(18em, 65%, 40em);
+  min-height: 50vh;
+  margin: 1em auto;
+  padding: 1em;
+  background: var(--color-transparent-black);
+  backdrop-filter: blur(5px);
+  border-radius: 2em;
+}
+
+.weather .header {
+  display: flex;
+  place-items: center;
+}
+
+.weather .header *:first-child {
+  margin-left: auto;
+}
+
+.weather .header *:last-child {
+  margin-right: auto;
+}
+
+.weather .info {
+
+}
+
+.weather .footer {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  place-content: center;
+  text-align: center;
+}
+
+.weather .footer button {
+  display: grid;
+  font-size: 200%;
+  text-align: center;
+}
+
+.icon {
+  aspect-ratio: 1;
+  width: 2em;
+  max-width: 2em;
+  display: grid;
+  place-content: center;
+}
+
+.icon img {
+  width: 2em;
+  height: 2em;
+}
 
 form {
   display: grid;
@@ -280,7 +370,6 @@ form input[type="text"]:is(:hover, :focus) {
 
 form input[type="submit"]:is(:hover, :focus) {
   color: var(--color-white);
-  cursor: pointer;
 }
 
 #Slides {
@@ -317,7 +406,7 @@ form input[type="submit"]:is(:hover, :focus) {
 .slide .header {
   text-align: center;
   background: var(--color-transparent-dark2);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
   outline: 1px solid var(--color-black);
   position: sticky;
   top: 0;
@@ -387,6 +476,8 @@ a.gameCard {
 
 .gameCard img:nth-child(odd) {
   width: 200px;
+  min-width: 200px;
+  min-height: 300px;
 }
 
 .gameCard img:nth-child(even) {
@@ -481,7 +572,7 @@ navigation styles start here
 .extend .navItem:hover {
   background: var(--color-transparent-main2);
   outline: 1px solid var(--color-black);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
 }
 
 .extend .navItem::after {
