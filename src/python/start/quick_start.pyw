@@ -4,11 +4,12 @@ import os, json
 
 root = Tk()
 
-with open("./src/python/info.json") as file:
+with open("../info.json") as file:
     info = json.loads(file.read())
 
 v = info["Versions"]["QStart"]
-path = ".\\src\\python\\start\\"
+#node_modules = os.path.exists(f"..\\..\\..\\node_modules")
+#if not node_modules:
 
 left = Frame(root)
 left.pack(side="left", fill="both", expand=True)
@@ -17,24 +18,27 @@ right.pack(side="right", fill="both", expand=True)
 right.config(bg="#1B1B1B")
 
 def start(item):
-    path = f".\\src\\python\\start\\{item}"
-    os.startfile(path)
+    os.startfile(item)
     if "start" in item: quit()
+    if "quick_setup" in item: quit()
 
-def create_button(text, item, expand=False):
+def create_button(text, item, state=NORMAL, frame=left, expand=False):
     button = Button(
-        left, text=text, bg="#252526", fg="white",
+        frame, text=text, state=state,
+        bg="#252526", fg="white",
         activebackground="#1B1B1B", activeforeground="white",
         command=lambda: start(item))
     button.pack(fill="both", expand=expand)
 
-create_button("Start", "yarn_start.py", True)
-create_button("Install react-router", "react_router.py")
-create_button("Install global yarn", "yarn_install.py")
+create_button("Start", "yarn_start.pyw", NORMAL, left, True)
+if os.path.exists("../setup/quick_setup.py"):
+    create_button("Open QSetup", "..\\setup\\quick_setup.pyw", NORMAL)
+else:
+    create_button("Open QSetup", "..\\setup\\quick_setup.pyw", DISABLED)
 
 def count_items():
     count = {"py": 0, "json": 0, "js": 0}
-    for (dirpath, folders, files) in walk("./"):
+    for (dirpath, folders, files) in walk("../../../"):
         if "node_modules" not in dirpath:
             for file in files:
                 if ".py" in file:
@@ -51,19 +55,18 @@ def create_label(text, side="top"):
     label = Label(right, text=text, bg="#1B1B1B", fg="white")
     label.pack(side=side)
 
-create_label(f"QStart v{v}")
-create_label(f"Gamefinder v{info['Versions']['Gamefinder']}")
-create_label(f"Itemfinder v{info['Versions']['Itemfinder']}")
-create_label(f"Weatherfinder v{info['Versions']['Weatherfinder']}")
-item_count = count_items()
-create_label("", "bottom")
-create_label(f"{item_count['js']} Javascript files", "bottom")
-create_label(f"{item_count['json']} Json files", "bottom")
-create_label(f"{item_count['py']} Python files", "bottom")
+for name in info["Versions"]:
+    create_label(f"{name} v{info['Versions'][name]}")
 
-root.iconbitmap("./src/python/start/blume.ico")
+item_count = count_items()
+create_label("")
+create_label(f"{item_count['py']} Python files")
+create_label(f"{item_count['json']} Json files")
+create_label(f"{item_count['js']} Javascript files")
+
+root.iconbitmap("../blume.ico")
 root.title("Quick Start")
-root.geometry("350x185")
+root.geometry("350x210")
 root.resizable(False, False)
 root.mainloop()
 
