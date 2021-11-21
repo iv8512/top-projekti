@@ -45,7 +45,10 @@ def clean_data(weather_index):
             },
         "air": {
             "temperature": {
-                "current": weather_index["main"]["temp"],
+                "current": [
+                    round(weather_index["main"]["temp"]),
+                    weather_index["main"]["temp"]
+                    ],
                 "min": weather_index["main"]["temp_min"],
                 "max": weather_index["main"]["temp_max"],
                 "feels_like": weather_index["main"]["feels_like"]
