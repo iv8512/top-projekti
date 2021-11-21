@@ -8,8 +8,6 @@ with open("../info.json") as file:
     info = json.loads(file.read())
 
 v = info["Versions"]["QStart"]
-#node_modules = os.path.exists(f"..\\..\\..\\node_modules")
-#if not node_modules:
 
 left = Frame(root)
 left.pack(side="left", fill="both", expand=True)
@@ -31,7 +29,7 @@ def create_button(text, item, state=NORMAL, frame=left, expand=False):
     button.pack(fill="both", expand=expand)
 
 create_button("Start", "yarn_start.pyw", NORMAL, left, True)
-if os.path.exists("../setup/quick_setup.py"):
+if os.path.exists("../setup/quick_setup.pyw"):
     create_button("Open QSetup", "..\\setup\\quick_setup.pyw", NORMAL)
 else:
     create_button("Open QSetup", "..\\setup\\quick_setup.pyw", DISABLED)
@@ -57,16 +55,14 @@ def create_label(text, side="top"):
 
 for name in info["Versions"]:
     create_label(f"{name} v{info['Versions'][name]}")
-
 item_count = count_items()
-create_label("")
-create_label(f"{item_count['py']} Python files")
-create_label(f"{item_count['json']} Json files")
-create_label(f"{item_count['js']} Javascript files")
+create_label(f"{item_count['js']} Javascript files", "bottom")
+create_label(f"{item_count['json']} Json files", "bottom")
+create_label(f"{item_count['py']} Python files", "bottom")
 
 root.iconbitmap("../blume.ico")
 root.title("Quick Start")
-root.geometry("350x210")
+root.geometry("350x180")
 root.resizable(False, False)
 root.mainloop()
 
