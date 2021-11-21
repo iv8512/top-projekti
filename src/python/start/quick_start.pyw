@@ -28,7 +28,7 @@ def create_button(text, item, state=NORMAL, frame=left, expand=False):
         command=lambda: start(item))
     button.pack(fill="both", expand=expand)
 
-create_button("Start", "yarn_start.pyw", NORMAL, left, True)
+create_button("Start", "yarn_start.py", NORMAL, left, True)
 if os.path.exists("../setup/quick_setup.pyw"):
     create_button("Open QSetup", "..\\setup\\quick_setup.pyw", NORMAL)
 else:
