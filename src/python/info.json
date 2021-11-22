@@ -2,7 +2,7 @@
     "Versions": {
         "QStart": "0.3.5.1",
         "QSetup": "0.1",
-        "Gamefinder": "0.8.1",
+        "Gamefinder": "0.9",
         "Itemfinder": "0.0.1",
         "Weatherfinder": "0.4.2"
     }

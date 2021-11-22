@@ -5,7 +5,8 @@ except ModuleNotFoundError:
     os.system('cmd /c "pip install requests"')
 
 # info
-with open("./src/python/info.json") as file:
+# "os.startfile()" doesnt like "with open()"?
+with open("info.json") as file:
     info = json.loads(file.read())
 gamefinder_v = info["Versions"]["Gamefinder"]
 file_v = 0.3
@@ -103,18 +104,61 @@ try:
 except FileNotFoundError:
     pass
 
+# reorder games
+for game in steam_games:
+    if game["name"] == "":
+        game["name"] = "X - Name not found"
+steam_games = sorted(steam_games, key=lambda game: game["name"])
+epic_games = sorted(epic_games, key=lambda game: game["name"])
+ubisoft_games = sorted(ubisoft_games, key=lambda game: game["name"])
+origin_games= sorted(origin_games, key=lambda game: game["name"])
+
 # compile file contents
-versions = {"gamefinder": gamefinder_v, "file": file_v}
-file_info = {"versions": versions}
-steam_info = {"games": len(steam_games), "soundtracks": len(steam_soundtracks)}
-steam = {"info": steam_info, "games": steam_games, "soundtracks": steam_soundtracks}
-epic_info = {"games": len(epic_games)}
-epic = {"info": epic_info, "games": epic_games}
-ubisoft_info = {"games": len(ubisoft_games)}
-ubisoft = {"info": ubisoft_info, "games": ubisoft_games}
-origin_info = {"games": len(origin_games)}
-origin = {"info": origin_info, "games": origin_games}
-main_list = {"info": file_info, "steam": steam, "epic": epic, "ubisoft": ubisoft, "origin": origin}
+#versions = {"gamefinder": gamefinder_v, "file": file_v}
+#file_info = {"versions": versions}
+#steam_info = {"games": len(steam_games), "soundtracks": len(steam_soundtracks)}
+#steam = {"info": steam_info, "games": steam_games, "soundtracks": steam_soundtracks}
+#epic_info = {"games": len(epic_games)}
+#epic = {"info": epic_info, "games": epic_games}
+#ubisoft_info = {"games": len(ubisoft_games)}
+#ubisoft = {"info": ubisoft_info, "games": ubisoft_games}
+#origin_info = {"games": len(origin_games)}
+#origin = {"info": origin_info, "games": origin_games}
+#main_list = {"info": file_info, "steam": steam, "epic": epic, "ubisoft": ubisoft, "origin": origin}
+main_list = {
+    "info": {
+        "versions": {
+            "gamefinder": gamefinder_v,
+            "file": file_v
+            }
+        },
+    "steam": {
+        "info": {
+            "games": len(steam_games),
+            "soundtracks": len(steam_soundtracks)
+            },
+        "games": steam_games,
+        "soundtracks": steam_soundtracks
+        },
+    "epic": {
+        "info": {
+            "games": len(epic_games)
+            },
+        "games": epic_games
+        },
+    "ubisoft": {
+        "info": {
+            "games": len(ubisoft_games)
+            },
+        "games": ubisoft_games
+        },
+    "origin": {
+        "info": {
+            "games": len(origin_games)
+            },
+        "games": origin_games
+        }
+    }
 
 # create file
 file_path = "../data/installed_games.json"
