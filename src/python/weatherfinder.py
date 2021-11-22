@@ -1,5 +1,12 @@
 from datetime import datetime
-import requests, json, time
+import requests, json, time, os
+
+if not os.path.exists("key.txt"):
+    print("key.txt missing")
+    os.system("pause")
+
+with open("key.txt") as file:
+    key = file.read()
 
 with open("info.json") as file:
     info = json.loads(file.read())
@@ -9,7 +16,7 @@ v = info["Versions"]["Weatherfinder"]
 cities = ["sauvo", "turku", "muurla"]
 
 def get_data(city):
-    key = "b307815b6413828f9862092e5d4add4b"
+    print(f"getting data: {city}")
     city = f"weather?q={city}"
     units = "&units=metric"
     lang = "&lang=fi"
@@ -19,7 +26,7 @@ def get_data(city):
     weather_index = json.loads(weather_index.text)
     return weather_index
 
-"https://www.weatherapi.com/"
+temp = "https://www.weatherapi.com/"
 
 def convert_time(epoch_time):
     converted_date = time.strftime('%Y-%d-%m', time.localtime(epoch_time))
@@ -80,6 +87,7 @@ def clean_data(weather_index):
 final_data = []
 for city in cities:
     final_data.append(clean_data(get_data(city)))
+    time.sleep(1)
 
 file_path = "../data/weather_data.json"
 with open(file_path, "w") as file:
@@ -87,3 +95,4 @@ with open(file_path, "w") as file:
     #json.dump(get_data(city), file, indent=4)
 
 print("done")
+time.sleep(3)
