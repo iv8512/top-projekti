@@ -2,8 +2,12 @@ from datetime import datetime
 import requests, json, time, os
 
 if not os.path.exists("key.txt"):
-    print("key.txt missing")
-    os.system("pause")
+    print("No key found")
+    key = input("Input key: ")
+    with open("key.txt", "w") as file:
+        file.write(key)
+    print("Key saved \n")
+    #os.system("pause")
 
 with open("key.txt") as file:
     key = file.read()
@@ -13,10 +17,10 @@ with open("info.json") as file:
 v = info["Versions"]["Weatherfinder"]
 
 #user_input = input("City: ")
-cities = ["sauvo", "turku", "muurla"]
+cities = ["Sauvo", "Turku", "Muurla"]
 
 def get_data(city):
-    print(f"getting data: {city}")
+    print(f"Getting data: {city}")
     city = f"weather?q={city}"
     units = "&units=metric"
     lang = "&lang=fi"
@@ -94,5 +98,8 @@ with open(file_path, "w") as file:
     json.dump(final_data, file, indent=4)
     #json.dump(get_data(city), file, indent=4)
 
-print("done")
-time.sleep(3)
+print("Done \n")
+seconds = (3, 2, 1)
+for number in seconds:
+    print(f"Exiting in {number}.. ")
+    time.sleep(1)
