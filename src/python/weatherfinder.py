@@ -1,16 +1,22 @@
 from datetime import datetime
 import requests, json, time, os
 
-if not os.path.exists("key.txt"):
-    print("No key found")
-    key = input("Input key: ")
+def save_key():
+    key = ""
+    while len(key) != 32:
+        key = input("Input API key: ")
     with open("key.txt", "w") as file:
         file.write(key)
-    print("Key saved \n")
+
+if not os.path.exists("key.txt"):
+    print("Key not found")
+    save_key()
     #os.system("pause")
 
-with open("key.txt") as file:
-    key = file.read()
+def get_key():
+    with open("key.txt") as file:
+        key = file.read()
+    return key
 
 with open("info.json") as file:
     info = json.loads(file.read())
@@ -19,15 +25,18 @@ v = info["Versions"]["Weatherfinder"]
 #user_input = input("City: ")
 cities = ["Sauvo", "Turku", "Muurla"]
 
-def get_data(city):
-    print(f"Getting data: {city}")
-    city = f"weather?q={city}"
+def get_data(input_city):
+    key = get_key()
+    city = f"weather?q={input_city}"
     units = "&units=metric"
     lang = "&lang=fi"
     appid = f"&appid={key}"
     url = f"https://api.openweathermap.org/data/2.5/{city}{units}{lang}{appid}"
     weather_index = requests.get(url)
     weather_index = json.loads(weather_index.text)
+    if weather_index.get("cod") == 401:
+        save_key()
+        weather_index = get_data(input_city)
     return weather_index
 
 temp = "https://www.weatherapi.com/"
@@ -91,6 +100,7 @@ def clean_data(weather_index):
 final_data = []
 for city in cities:
     final_data.append(clean_data(get_data(city)))
+    print(f"Getting data: {city}")
     time.sleep(1)
 
 file_path = "../data/weather_data.json"
