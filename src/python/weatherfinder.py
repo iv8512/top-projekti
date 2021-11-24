@@ -56,9 +56,8 @@ def deg_to_compass(num):
     return arr[(val % 16)]
 
 def clean_data(weather_index):
-    city = weather_index["name"]
     clean_data = {
-        "city": city,
+        "city": weather_index["name"],
         "weather": {
             "description": weather_index["weather"][0]["description"],
             "icon": weather_index["weather"][0]["icon"]
@@ -97,9 +96,12 @@ def clean_data(weather_index):
             "country": {
                 "name": weather_index["sys"]["country"],
                 "id": weather_index["sys"]["id"],
-                "timezone": weather_index["timezone"],
-                "base": weather_index["base"]
-                }
+                "timezone": weather_index["timezone"]
+                },
+            "coord": weather_index["coord"],
+            "id": weather_index["id"],
+            "base": weather_index["base"],
+            "cod": weather_index["cod"]
             }
         }
     return clean_data
