@@ -53,7 +53,7 @@ def deg_to_compass(num):
         "N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE",
         "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"
         ]
-    print(arr[(val % 16)])
+    return arr[(val % 16)]
 
 def clean_data(weather_index):
     city = weather_index["name"]
@@ -73,7 +73,14 @@ def clean_data(weather_index):
                 "max": weather_index["main"]["temp_max"],
                 "feels_like": weather_index["main"]["feels_like"]
                 },
-            "wind": weather_index["wind"],
+            "wind": {
+                "speed": weather_index["wind"]["speed"],
+                "deg": [
+                    weather_index["wind"]["deg"],
+                    deg_to_compass(weather_index["wind"]["deg"])
+                    ],
+                "gust": weather_index["wind"].get("gust")
+                },
             "clouds": weather_index["clouds"],
             "other": {
                 "pressure": weather_index["main"]["pressure"],
@@ -109,7 +116,7 @@ with open(file_path, "w") as file:
     #json.dump(get_data(city), file, indent=4)
 
 print("Done \n")
-seconds = (3, 2, 1)
+seconds = (2, 1)
 for number in seconds:
     print(f"Exiting in {number}.. ")
     time.sleep(1)
