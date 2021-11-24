@@ -37,9 +37,9 @@ create_button("Weatherfinder", "weatherfinder.py", NORMAL, left, True)
 create_button("Gamefinder", "gamefinder.py", NORMAL, left, True)
 create_button("Itemfinder", "itemfinder.py", DISABLED, left, True)
 if os.path.exists("setup/quick_setup.pyw"):
-    create_button("Open QSetup", "..\\setup\\quick_setup.pyw", NORMAL)
+    create_button("Open QSetup", "setup\\quick_setup.pyw", NORMAL)
 else:
-    create_button("Open QSetup", "..\\setup\\quick_setup.pyw", DISABLED)
+    create_button("Open QSetup", "", DISABLED)
 
 def count_items():
     count = {"py": 0, "json": 0, "js": 0}

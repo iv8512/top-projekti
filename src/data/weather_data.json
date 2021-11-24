@@ -8,153 +8,181 @@
         "air": {
             "temperature": {
                 "current": [
-                    -1,
-                    -0.56
+                    0,
+                    0.42
                 ],
-                "min": -1.77,
-                "max": 4.44,
-                "feels_like": -3.4
+                "min": -0.66,
+                "max": 4.3,
+                "feels_like": 0.42
             },
             "wind": {
-                "speed": 2.24,
-                "deg": 310,
-                "gust": 7
+                "speed": 1.12,
+                "deg": [
+                    7,
+                    "N"
+                ],
+                "gust": 1.35
             },
             "clouds": {
-                "all": 46
+                "all": 30
             },
             "other": {
-                "pressure": 995,
-                "humidity": 95,
+                "pressure": 1007,
+                "humidity": 87,
                 "visibility": 10000
             }
         },
         "dt": {
             "current": [
-                "2021-21-11",
-                "02:16:22"
+                "2021-24-11",
+                "16:16:47"
             ],
             "sunrise": [
-                "2021-21-11",
-                "08:44:29"
+                "2021-24-11",
+                "08:51:41"
             ],
             "sunset": [
-                "2021-21-11",
-                "15:46:03"
+                "2021-24-11",
+                "15:40:31"
             ]
         },
         "other": {
             "country": {
                 "name": "FI",
                 "id": 2012701,
-                "timezone": 7200,
-                "base": "stations"
-            }
+                "timezone": 7200
+            },
+            "coord": {
+                "lon": 22.6964,
+                "lat": 60.3431
+            },
+            "id": 637400,
+            "base": "stations",
+            "cod": 200
         }
     },
     {
         "city": "Turku",
         "weather": {
-            "description": "v\u00e4h\u00e4n pilvi\u00e4",
-            "icon": "02n"
+            "description": "taivas on selke\u00e4",
+            "icon": "01n"
         },
         "air": {
             "temperature": {
                 "current": [
-                    0,
-                    -0.09
+                    1,
+                    1.1
                 ],
-                "min": -1.65,
+                "min": 0.01,
                 "max": 4.56,
-                "feels_like": -1.92
+                "feels_like": 1.1
             },
             "wind": {
-                "speed": 1.54,
-                "deg": 310
+                "speed": 1.03,
+                "deg": [
+                    250,
+                    "WSW"
+                ],
+                "gust": null
             },
             "clouds": {
-                "all": 20
+                "all": 0
             },
             "other": {
-                "pressure": 995,
+                "pressure": 1006,
                 "humidity": 100,
                 "visibility": 10000
             }
         },
         "dt": {
             "current": [
-                "2021-21-11",
-                "02:11:48"
+                "2021-24-11",
+                "16:13:21"
             ],
             "sunrise": [
-                "2021-21-11",
-                "08:46:58"
+                "2021-24-11",
+                "08:54:14"
             ],
             "sunset": [
-                "2021-21-11",
-                "15:46:59"
+                "2021-24-11",
+                "15:41:24"
             ]
         },
         "other": {
             "country": {
                 "name": "FI",
                 "id": 1364,
-                "timezone": 7200,
-                "base": "stations"
-            }
+                "timezone": 7200
+            },
+            "coord": {
+                "lon": 22.2687,
+                "lat": 60.4515
+            },
+            "id": 633679,
+            "base": "stations",
+            "cod": 200
         }
     },
     {
         "city": "Muurla",
         "weather": {
-            "description": "hajanaisia pilvi\u00e4",
-            "icon": "04n"
+            "description": "ajoittaisia pilvi\u00e4",
+            "icon": "03n"
         },
         "air": {
             "temperature": {
                 "current": [
-                    0,
-                    0.09
+                    1,
+                    0.6
                 ],
-                "min": -1.89,
-                "max": 2.52,
-                "feels_like": -2.29
+                "min": -0.78,
+                "max": 2.73,
+                "feels_like": -1.25
             },
             "wind": {
-                "speed": 1.95,
-                "deg": 295,
-                "gust": 6.94
+                "speed": 1.62,
+                "deg": [
+                    344,
+                    "NNW"
+                ],
+                "gust": 3.17
             },
             "clouds": {
-                "all": 56
+                "all": 27
             },
             "other": {
-                "pressure": 995,
-                "humidity": 96,
+                "pressure": 1007,
+                "humidity": 88,
                 "visibility": 10000
             }
         },
         "dt": {
             "current": [
-                "2021-21-11",
-                "02:16:22"
+                "2021-24-11",
+                "16:16:50"
             ],
             "sunrise": [
-                "2021-21-11",
-                "08:42:11"
+                "2021-24-11",
+                "08:49:24"
             ],
             "sunset": [
-                "2021-21-11",
-                "15:43:40"
+                "2021-24-11",
+                "15:38:07"
             ]
         },
         "other": {
             "country": {
                 "name": "FI",
                 "id": 2022765,
-                "timezone": 7200,
-                "base": "stations"
-            }
+                "timezone": 7200
+            },
+            "coord": {
+                "lon": 23.2833,
+                "lat": 60.35
+            },
+            "id": 645370,
+            "base": "stations",
+            "cod": 200
         }
     }
 ]
