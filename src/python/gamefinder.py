@@ -1,5 +1,5 @@
 import os
-try: import vdf, json, requests, winreg
+try: import vdf, json, requests, winreg, time
 except ModuleNotFoundError:
     os.system('cmd /c "pip install vdf"')
     os.system('cmd /c "pip install requests"')
@@ -19,6 +19,7 @@ else:
 with open(vdf_path) as file:
     vdf_data = vdf.loads(file.read())
 
+print("Finding installed Steam games")
 url = "http://api.steampowered.com/ISteamApps/GetAppList/v2"
 game_index = requests.get(url)
 game_index = json.loads(game_index.text)
@@ -52,6 +53,7 @@ for item in steam_games:
     if "Redistributables" in item["name"]:
         steam_games.remove(item)
 
+print("Finding other games")
 # find epic games
 epic_games = []
 try:
@@ -165,9 +167,8 @@ file_path = "../data/installed_games.json"
 with open(file_path, "w") as file:
     json.dump(main_list, file, indent=4)
 
-
-
-
-
-
-
+print("Done \n")
+seconds = (3, 2, 1)
+for number in seconds:
+    print(f"Exiting in {number}.. ")
+    time.sleep(1)
