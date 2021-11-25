@@ -2,48 +2,51 @@
     {
         "city": "Sauvo",
         "weather": {
-            "description": "ajoittaisia pilvi\u00e4",
-            "icon": "03n"
+            "description": "kova sade",
+            "icon": "10d"
         },
         "air": {
             "temperature": {
                 "current": [
-                    0,
-                    0.42
+                    4,
+                    4.36
                 ],
-                "min": -0.66,
-                "max": 4.3,
-                "feels_like": 0.42
+                "min": 3.79,
+                "max": 5.98,
+                "feels_like": 2.47
             },
             "wind": {
-                "speed": 1.12,
+                "speed": 2.15,
                 "deg": [
-                    7,
-                    "N"
+                    269,
+                    "W"
                 ],
-                "gust": 1.35
+                "gust": 4.8
             },
             "clouds": {
-                "all": 30
+                "all": 100
             },
             "other": {
-                "pressure": 1007,
-                "humidity": 87,
+                "pressure": 996,
+                "humidity": 91,
                 "visibility": 10000
             }
         },
         "dt": {
             "current": [
-                "2021-24-11",
-                "16:16:47"
+                49206,
+                "2021-25-11",
+                "13:40:06"
             ],
             "sunrise": [
-                "2021-24-11",
-                "08:51:41"
+                32042,
+                "2021-25-11",
+                "08:54:02"
             ],
             "sunset": [
-                "2021-24-11",
-                "15:40:31"
+                56327,
+                "2021-25-11",
+                "15:38:47"
             ]
         },
         "other": {
@@ -64,48 +67,51 @@
     {
         "city": "Turku",
         "weather": {
-            "description": "taivas on selke\u00e4",
-            "icon": "01n"
+            "description": "ajoittaisia pilvi\u00e4",
+            "icon": "03d"
         },
         "air": {
             "temperature": {
                 "current": [
-                    1,
-                    1.1
+                    4,
+                    4.21
                 ],
-                "min": 0.01,
-                "max": 4.56,
-                "feels_like": 1.1
+                "min": 3.91,
+                "max": 5.66,
+                "feels_like": 2.99
             },
             "wind": {
-                "speed": 1.03,
+                "speed": 1.54,
                 "deg": [
-                    250,
-                    "WSW"
+                    280,
+                    "W"
                 ],
                 "gust": null
             },
             "clouds": {
-                "all": 0
+                "all": 40
             },
             "other": {
-                "pressure": 1006,
-                "humidity": 100,
+                "pressure": 994,
+                "humidity": 87,
                 "visibility": 10000
             }
         },
         "dt": {
             "current": [
-                "2021-24-11",
-                "16:13:21"
+                49008,
+                "2021-25-11",
+                "13:36:48"
             ],
             "sunrise": [
-                "2021-24-11",
-                "08:54:14"
+                32195,
+                "2021-25-11",
+                "08:56:35"
             ],
             "sunset": [
-                "2021-24-11",
-                "15:41:24"
+                56379,
+                "2021-25-11",
+                "15:39:39"
             ]
         },
         "other": {
@@ -126,48 +132,51 @@
     {
         "city": "Muurla",
         "weather": {
-            "description": "ajoittaisia pilvi\u00e4",
-            "icon": "03n"
+            "description": "kohtalainen sade",
+            "icon": "10d"
         },
         "air": {
             "temperature": {
                 "current": [
-                    1,
-                    0.6
+                    5,
+                    4.79
                 ],
-                "min": -0.78,
-                "max": 2.73,
-                "feels_like": -1.25
+                "min": 3.67,
+                "max": 5.86,
+                "feels_like": 2.77
             },
             "wind": {
-                "speed": 1.62,
+                "speed": 2.37,
                 "deg": [
-                    344,
-                    "NNW"
+                    261,
+                    "W"
                 ],
-                "gust": 3.17
+                "gust": 6.27
             },
             "clouds": {
-                "all": 27
+                "all": 100
             },
             "other": {
-                "pressure": 1007,
-                "humidity": 88,
+                "pressure": 996,
+                "humidity": 97,
                 "visibility": 10000
             }
         },
         "dt": {
             "current": [
-                "2021-24-11",
-                "16:16:50"
+                49208,
+                "2021-25-11",
+                "13:40:08"
             ],
             "sunrise": [
-                "2021-24-11",
-                "08:49:24"
+                31904,
+                "2021-25-11",
+                "08:51:44"
             ],
             "sunset": [
-                "2021-24-11",
-                "15:38:07"
+                56183,
+                "2021-25-11",
+                "15:36:23"
             ]
         },
         "other": {

@@ -1,4 +1,4 @@
-from datetime import datetime
+#from datetime import datetime
 import requests, json, time, os
 
 def save_key():
@@ -44,8 +44,16 @@ temp = "https://www.weatherapi.com/"
 def convert_time(epoch_time):
     converted_date = time.strftime('%Y-%d-%m', time.localtime(epoch_time))
     converted_time = time.strftime('%H:%M:%S', time.localtime(epoch_time))
-    converted_datetime = [converted_date, converted_time]
+    converted_datetime = [
+        get_sec(converted_time),
+        converted_date,
+        converted_time
+        ]
     return converted_datetime
+
+def get_sec(time_str):
+    h, m, s = time_str.split(':')
+    return int(h) * 3600 + int(m) * 60 + int(s)
 
 def deg_to_compass(num):
     val = int((num/22.5)+.5)
