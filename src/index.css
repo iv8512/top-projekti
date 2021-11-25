@@ -283,7 +283,7 @@ Games
 }
 
 .weather {
-  display: none;
+  display: grid;
   grid-template-rows: auto 1fr auto;
   width: clamp(20em, 65%, 40em);
   min-height: 50vh;
@@ -363,14 +363,24 @@ Games
   left: 100%;
   height: 100%;
   margin-left: 0.5em;
-  background: var(--color-black);
-  min-width: calc(var(--sidebar-width) * 1.5);
+  min-width: calc(var(--sidebar-width) * 1.15);
   padding: 1em;
+  border-left: 1px solid var(--color-main1);
+  color: var(--color-accent1)
+}
+
+.timeBar .dot::before {
+  content: '';
+  position: absolute;
+  left: -1.25em;
+  border: 0.25em solid var(--color-main1);
+  border-radius: 999em;
+  transform: translateY(100%);
 }
 
 .statics {
   display: grid;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: auto 1fr auto;
   position: absolute;
   height: 100%;
   top: 0;
