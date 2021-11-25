@@ -26,7 +26,7 @@ function GamesUbisoft(props) {
     if (props.data.ubisoft.info.games > 0)
     return ( 
         <div className="slide drag" id="ubisoft"> 
-            <div className="header" data-tool-tip={tooltip}>
+            <div className="header dataToolTip" data-tool-tip={tooltip}>
                 <span><span className="accent2text" onClick={Switch}>Ubisoft Games</span></span> 
             </div> 
 

@@ -113,6 +113,13 @@ img {
   margin: 0;
 }
 
+.line {
+  margin: auto;
+  height: 0;
+  width: calc(100% - 1em);
+  border-bottom: 1px solid var(--color-transparent-white);
+}
+
 h1, .accent2text {
   color: var(--color-accent2);
 }
@@ -278,13 +285,13 @@ Games
 .weather {
   display: none;
   grid-template-rows: auto 1fr auto;
-  width: clamp(18em, 65%, 40em);
+  width: clamp(20em, 65%, 40em);
   min-height: 50vh;
-  margin: 1em auto;
-  padding: 1em;
-  background: var(--color-transparent-black);
+  margin: 1em auto 1em 0;
+  padding: 0 1em 1em;
   backdrop-filter: blur(5px);
-  border-radius: 2em;
+  background: var(--color-transparent-dark2);
+  border-radius: 1em;
 }
 
 .weather .header {
@@ -301,18 +308,44 @@ Games
 }
 
 .weather .info {
-
+  background: var(--color-transparent-black);
+  border-radius: inherit;
+  padding: 1em 0.5em;
+  display: grid;
 }
 
 .weather .row {
+  display: grid;
+  grid-auto-flow: column;
   place-content: center;
 }
 
+.temperature {
+  display: grid;
+  grid-template-columns: 2fr 3fr 3fr;
+}
+
+.temperature > .row:last-child {
+  display: grid;
+  font-size: 12px;
+  grid-template-rows: repeat(3,1fr);
+  height: 100%;
+}
+
+.temperature .row .row {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  place-content: center start;
+  white-space: nowrap;
+}
+
 .weather .info * :not(.icon, .icon *) {
-  margin: 0 0.2em;
+  margin: 0 0.3em;
 }
 
 .weather .footer {
+  margin-top: 1em;
   display: grid;
   grid-template-columns: auto 1fr auto;
   place-content: center;
@@ -325,6 +358,29 @@ Games
   text-align: center;
 }
 
+.timeBar {
+  position: absolute;
+  left: 100%;
+  height: 100%;
+  margin-left: 0.5em;
+  background: var(--color-black);
+  min-width: calc(var(--sidebar-width) * 1.5);
+  padding: 1em;
+}
+
+.statics {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  padding: 1em 0;
+}
+
+.times > * {
+  position: absolute;
+}
+
 .icon {
   aspect-ratio: 1;
   width: 2em;
@@ -334,8 +390,16 @@ Games
 }
 
 .icon img {
-  width: 2em;
-  height: 2em;
+  width: 100%;
+}
+
+.icon.big {
+  width: 8em;
+  max-width: 8em;
+}
+
+.icon.tempDegs {
+  font-size: 48px;
 }
 
 form {
@@ -429,17 +493,19 @@ form input[type="submit"]:is(:hover, :focus) {
   font-weight: bold;
 }
 
-.slide .header::after {
+.dataToolTip::after {
   content: attr(data-tool-tip);
-  font-size: 0.7em;
+  position: absolute;
+  bottom: 30%;
+  font-size: clamp(10px, 0.7em, 20px);
   height: 0;
   transform: scale(0);
   opacity: 0.4;
   transition: 0.3s cubic-bezier(1, 0, 0, 1);
 }
 
-.slide .header:hover::after,
-.slide .header:focus-within::after {
+.dataToolTip:hover::after,
+.dataToolTip:focus-within::after {
   content: attr(data-tool-tip);
   transform: scale(1);
 }
@@ -501,7 +567,7 @@ Main Page content starts here
 
 .page {
   position:absolute;
-  left: var(--sidebar-width);
+  left: 0;
   right: 0;
 }
 
@@ -533,7 +599,7 @@ navigation styles start here
 */
 
 .sideBar {
-  display: grid;
+  display: none;
   position: fixed;
   background-color: var(--color-dark2);
   outline: 1px solid var(--color-black);

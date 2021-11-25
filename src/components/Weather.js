@@ -1,4 +1,5 @@
-import WeatherData from '../data/weather_data.json'
+import WeatherData from '../data/weather_data.json';
+import TimeBar from './TimeBar.js';
 
 function Weather() {
 
@@ -44,34 +45,54 @@ function Weather() {
             <>
             {WeatherData.map((data,index) => (
                 <div className="weather" key={index} id={'weather' + (index + 1)}>
+
+
                     <div className="header">
-                        <span>{data.city} - {data.weather.description}</span>
-                        <span className="icon">
+                        <span className="icon big">
                             <img src={'https://openweathermap.org/themes/openweathermap/assets/vendor/owm/img/widgets/' + data.weather.icon + '.png'}></img>
                         </span>
-                        <span>{data.air.temperature.current}°C</span>
+                        <span></span>
                     </div>
+
                     <div className="info">
-                        <div className="wind row">
+                        
+                        <div className="row temperature">
+                            <div className="row">{data.city}</div>
+                            <div className="row icon tempDegs dataToolTip" data-tool-tip={data.air.temperature.current[1] + '°C'}>{data.air.temperature.current[0]}°C</div>
+                            <div className="row">
+                                <div className="row">max: {data.air.temperature.max}°C</div>
+                                <div className="row">feels: {data.air.temperature.feels_like}°C</div>
+                                <div className="row">min: {data.air.temperature.min}°C</div>
+                            </div>
+                        </div>
+                        <div className="line"></div>
+                        <div className="row wind">
                             <span>Wind: </span>
                             <span>{data.air.wind.speed}m/s</span>
                             <div className="icon">
-                                <div className="arrow" style={{ transform: 'rotate(' + data.air.wind.deg + 'deg)'}}>
+                                <div className="arrow" style={{ transform: 'rotate(' + data.air.wind.deg[0] + 'deg)'}}>
                                     <div className="tip"></div>
                                     <div className="shaft" style={{ height: data.air.wind.speed / 10 + 'em' }}></div>
                                 </div>
                             </div>
-                            <span>{data.air.wind.deg}deg</span>
+                            <span>{data.air.wind.deg[0]}deg</span>
+                        </div>
+                        <div className="line"></div>
+                        <div className="row">
+                            something here
                         </div>
                     </div>
                     <div className="footer">
                         <button onClick={previous}>«</button>
                         <div>
                             <div>Last updated:</div>
-                            {data.dt.current[0]} -:- {data.dt.current[1]}
+                            {data.dt.current[1]} -:- {data.dt.current[2]}
                         </div>
                         <button onClick={next}>»</button>
                     </div>
+
+                    <TimeBar data={data.dt} />
+
                 </div>
             ))}
             </>

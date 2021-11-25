@@ -26,7 +26,7 @@ function GamesEpic(props) {
     if (props.data.epic.info.games > 0)
     return ( 
         <div className="slide drag" id ="epic"> 
-            <div className="header" data-tool-tip={tooltip}>
+            <div className="header dataToolTip" data-tool-tip={tooltip}>
                 <span><span className="accent2text" onClick={Switch}>Epic Games</span></span> 
             </div> 
 

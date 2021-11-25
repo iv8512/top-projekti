@@ -26,7 +26,7 @@ function GamesOrigin(props) {
     if (props.data.origin.info.games > 0)
     return ( 
         <div className="slide drag" id ="origin"> 
-            <div className="header" data-tool-tip={tooltip}>
+            <div className="header dataToolTip" data-tool-tip={tooltip}>
                 <span><span className="accent2text" onClick={Switch}>Origin Games</span></span> 
             </div> 
 
