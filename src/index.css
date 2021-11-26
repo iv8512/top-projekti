@@ -283,7 +283,7 @@ Games
 }
 
 .weather {
-  display: grid;
+  display: none;
   grid-template-rows: auto 1fr auto;
   width: clamp(20em, 65%, 40em);
   min-height: 50vh;
