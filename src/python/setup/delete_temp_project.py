@@ -1,5 +1,4 @@
-from os import walk
-import os, shutil, stat
+import os, shutil, stat, time
 
 print("Starting")
 
@@ -11,4 +10,6 @@ def del_rw(action, name, exc):
 
 shutil.rmtree(path, onerror=del_rw)
 
-os.system('pause')
+print("All items removed")
+#os.system('pause')
+time.sleep(3)
