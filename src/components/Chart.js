@@ -32,6 +32,7 @@ function Chart(props) {
                 <span className="label">{props.data.rows[6].label}</span>
                 <span className="chartContent" style={{ marginLeft: props.data.rows[6].start * widthMultiplier + 'em', width: props.data.rows[6].end * widthMultiplier - props.data.rows[6].start * widthMultiplier + 'em', background: 'linear-gradient(90deg, var(--color-accent2) ' + props.data.rows[6].progress + '% , var(--color-dark1) ' + props.data.rows[6].progress + '%' }}></span>
             </div>
+            <div className="vL"></div>
         </div>
      );
 }

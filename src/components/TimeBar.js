@@ -28,9 +28,9 @@ function TimeBar(props) {
             currentstr = currentstr.substring(0, 5);
 
             // place cut strings into elements
-            sunset.innerHTML = sunsetstr
-            sunrise.innerHTML = sunrisestr
-            current.innerHTML = currentstr
+            sunset.innerHTML = sunsetstr;
+            sunrise.innerHTML = sunrisestr;
+            current.innerHTML = currentstr;
         });
         
     return (
