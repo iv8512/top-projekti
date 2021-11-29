@@ -1,29 +1,28 @@
 #from datetime import datetime
 import requests, json, time, os
 
+key_path = "../data/key.txt"
+
 def save_key():
     key = ""
     while len(key) != 32:
         key = input("Input API key: ")
-    with open("key.txt", "w") as file:
+    with open(key_path, "w") as file:
         file.write(key)
 
-if not os.path.exists("key.txt"):
+if not os.path.exists(key_path):
     print("Key not found")
     save_key()
     #os.system("pause")
 
 def get_key():
-    with open("key.txt") as file:
+    with open(key_path) as file:
         key = file.read()
     return key
 
 with open("info.json") as file:
     info = json.loads(file.read())
 v = info["Versions"]["Weatherfinder"]
-
-#user_input = input("City: ")
-cities = ["Sauvo", "Turku", "Muurla"]
 
 def get_data(input_city):
     key = get_key()
@@ -113,6 +112,13 @@ def clean_data(weather_index):
             }
         }
     return clean_data
+
+cities_path = "../data/cities.json"
+if os.path.exists(cities_path):
+    with open(cities_path) as file:
+        cities = json.loads(file.read())
+else:
+    cities = "Sauvo"
 
 final_data = []
 for city in cities:
