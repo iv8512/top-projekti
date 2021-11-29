@@ -2,51 +2,63 @@
     {
         "city": "Sauvo",
         "weather": {
-            "description": "kova sade",
-            "icon": "10d"
+            "description": "pilvinen",
+            "icon": "04n"
         },
         "air": {
             "temperature": {
                 "current": [
-                    4,
-                    4.36
+                    -7,
+                    -7.41
                 ],
-                "min": 3.79,
-                "max": 5.98,
-                "feels_like": 2.47
+                "min": [
+                    -8,
+                    -8.15
+                ],
+                "max": [
+                    -7,
+                    -6.53
+                ],
+                "feels_like": [
+                    -13,
+                    -13.18
+                ]
             },
             "wind": {
-                "speed": 2.15,
-                "deg": [
-                    269,
-                    "W"
+                "speed": [
+                    3.77,
+                    "Gentle breeze"
                 ],
-                "gust": 4.8
+                "deg": [
+                    17,
+                    "NNE"
+                ],
+                "gust": 9
             },
             "clouds": {
                 "all": 100
             },
             "other": {
-                "pressure": 996,
-                "humidity": 91,
-                "visibility": 10000
+                "pressure": "998hPa",
+                "humidity": "89%",
+                "visibility": "10.0km"
             }
         },
         "dt": {
             "current": [
-                49206,
-                "2021-25-11",
-                "13:40:06"
+                84417,
+                "2021-29-11",
+                "23:26:57"
             ],
             "sunrise": [
-                32042,
-                "2021-25-11",
-                "08:54:02"
+                32581,
+                "2021-29-11",
+                "09:03:01"
             ],
             "sunset": [
-                56327,
-                "2021-25-11",
-                "15:38:47"
+                55947,
+                "2021-29-11",
+                "15:32:27"
             ]
         },
         "other": {
@@ -67,51 +79,63 @@
     {
         "city": "Turku",
         "weather": {
-            "description": "ajoittaisia pilvi\u00e4",
-            "icon": "03d"
+            "description": "kevyt lumi suihku",
+            "icon": "13n"
         },
         "air": {
             "temperature": {
                 "current": [
-                    4,
-                    4.21
+                    -7,
+                    -7.28
                 ],
-                "min": 3.91,
-                "max": 5.66,
-                "feels_like": 2.99
+                "min": [
+                    -8,
+                    -8.03
+                ],
+                "max": [
+                    -6,
+                    -6.41
+                ],
+                "feels_like": [
+                    -12,
+                    -12.34
+                ]
             },
             "wind": {
-                "speed": 1.54,
+                "speed": [
+                    3.09,
+                    "Light breeze"
+                ],
                 "deg": [
-                    280,
-                    "W"
+                    20,
+                    "NNE"
                 ],
                 "gust": null
             },
             "clouds": {
-                "all": 40
+                "all": 90
             },
             "other": {
-                "pressure": 994,
-                "humidity": 87,
-                "visibility": 10000
+                "pressure": "997hPa",
+                "humidity": "79%",
+                "visibility": "10.0km"
             }
         },
         "dt": {
             "current": [
-                49008,
-                "2021-25-11",
-                "13:36:48"
+                84347,
+                "2021-29-11",
+                "23:25:47"
             ],
             "sunrise": [
-                32195,
-                "2021-25-11",
-                "08:56:35"
+                32738,
+                "2021-29-11",
+                "09:05:38"
             ],
             "sunset": [
-                56379,
-                "2021-25-11",
-                "15:39:39"
+                55995,
+                "2021-29-11",
+                "15:33:15"
             ]
         },
         "other": {
@@ -132,51 +156,63 @@
     {
         "city": "Muurla",
         "weather": {
-            "description": "kohtalainen sade",
-            "icon": "10d"
+            "description": "pilvinen",
+            "icon": "04n"
         },
         "air": {
             "temperature": {
                 "current": [
-                    5,
-                    4.79
+                    -7,
+                    -7.26
                 ],
-                "min": 3.67,
-                "max": 5.86,
-                "feels_like": 2.77
+                "min": [
+                    -8,
+                    -8.27
+                ],
+                "max": [
+                    -6,
+                    -6.35
+                ],
+                "feels_like": [
+                    -13,
+                    -13.14
+                ]
             },
             "wind": {
-                "speed": 2.37,
-                "deg": [
-                    261,
-                    "W"
+                "speed": [
+                    3.93,
+                    "Gentle breeze"
                 ],
-                "gust": 6.27
+                "deg": [
+                    21,
+                    "NNE"
+                ],
+                "gust": 9.47
             },
             "clouds": {
                 "all": 100
             },
             "other": {
-                "pressure": 996,
-                "humidity": 97,
-                "visibility": 10000
+                "pressure": "997hPa",
+                "humidity": "91%",
+                "visibility": "10.0km"
             }
         },
         "dt": {
             "current": [
-                49208,
-                "2021-25-11",
-                "13:40:08"
+                84420,
+                "2021-29-11",
+                "23:27:00"
             ],
             "sunrise": [
-                31904,
-                "2021-25-11",
-                "08:51:44"
+                32444,
+                "2021-29-11",
+                "09:00:44"
             ],
             "sunset": [
-                56183,
-                "2021-25-11",
-                "15:36:23"
+                55803,
+                "2021-29-11",
+                "15:30:03"
             ]
         },
         "other": {

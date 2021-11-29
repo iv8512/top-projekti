@@ -1,5 +1,10 @@
-#from datetime import datetime
-import requests, json, time, os
+# Weatherfinder IV8512
+
+import os, time
+try:
+    import requests, json
+except ModuleNotFoundError:
+    os.system('cmd /c "pip install requests"')
 
 key_path = "../data/key.txt"
 
@@ -62,6 +67,20 @@ def deg_to_compass(num):
         ]
     return arr[(val % 16)]
 
+def speed_to_name(speed):
+    if speed < 0.5: return "Calm"
+    if 0.5 <= speed <= 1.5: return "Light air"
+    if 1.6 <= speed <= 3.3: return "Light breeze"
+    if 3.4 <= speed <= 5.5: return "Gentle breeze"
+    if 5.5 <= speed <= 7.9: return "Moderate breeze"
+    if 8.0 <= speed <= 10.7: return "Fresh breeze"
+    if 10.8 <= speed <= 13.8: return "Strong breeze"
+    if 17.2 <= speed <= 20.7: return "Strong wind"
+    if 20.8 <= speed <= 24.4: return "Severe wind"
+    if 24.5 <= speed <= 28.4: return "Storm"
+    if 28.5 <= speed <= 32.6: return "Violent storm"
+    if 32.7 <= speed: return "Hurricane"
+
 def clean_data(weather_index):
     clean_data = {
         "city": weather_index["name"],
@@ -75,12 +94,24 @@ def clean_data(weather_index):
                     round(weather_index["main"]["temp"]),
                     weather_index["main"]["temp"]
                     ],
-                "min": weather_index["main"]["temp_min"],
-                "max": weather_index["main"]["temp_max"],
-                "feels_like": weather_index["main"]["feels_like"]
+                "min": [
+                    round(weather_index["main"]["temp_min"]),
+                    weather_index["main"]["temp_min"]
+                    ],
+                "max": [
+                    round(weather_index["main"]["temp_max"]),
+                    weather_index["main"]["temp_max"]
+                    ],
+                "feels_like": [
+                    round(weather_index["main"]["feels_like"]),
+                    weather_index["main"]["feels_like"]
+                    ]
                 },
             "wind": {
-                "speed": weather_index["wind"]["speed"],
+                "speed": [
+                    weather_index["wind"]["speed"],
+                    speed_to_name(weather_index["wind"]["speed"])
+                    ],
                 "deg": [
                     weather_index["wind"]["deg"],
                     deg_to_compass(weather_index["wind"]["deg"])
@@ -89,9 +120,9 @@ def clean_data(weather_index):
                 },
             "clouds": weather_index["clouds"],
             "other": {
-                "pressure": weather_index["main"]["pressure"],
-                "humidity": weather_index["main"]["humidity"],
-                "visibility": weather_index["visibility"]
+                "pressure": str(weather_index["main"]["pressure"]) + "hPa",
+                "humidity": str(weather_index["main"]["humidity"]) + "%",
+                "visibility": str(weather_index["visibility"] / 1000) + "km"
                 }
             },
         "dt": {
@@ -129,7 +160,7 @@ for city in cities:
 file_path = "../data/weather_data.json"
 with open(file_path, "w") as file:
     json.dump(final_data, file, indent=4)
-    #json.dump(get_data(city), file, indent=4)
+    #json.dump(get_data("Sauvo"), file, indent=4)
 
 print("Done \n")
 seconds = (2, 1)
