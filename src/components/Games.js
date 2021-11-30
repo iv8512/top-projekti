@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import GameData from "../data/installed_games.json"
 import Weather from "./Weather"
+import Shortcuts from "./Shortcuts"
 import GamesSteam from "./GamesSteam";
 import GamesUbisoft from "./GamesUbisoft";
 import GamesEpic from "./GamesEpic";
@@ -94,7 +95,9 @@ function Games() {
 
                         <div className="bannerListItem g3">
                             <div className="spacer"></div>
-                            <div className="sticky"></div>
+                            <div className="sticky">
+                                <Shortcuts />
+                            </div>
                         </div>
                     </div>
                 </div>

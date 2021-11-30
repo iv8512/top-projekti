@@ -262,9 +262,6 @@ Games
   height: 25%;
   width: inherit;
 }
-.g1 .sticky {
-  padding: 0 1em;
-}
 .g2 .spacer {
   display: block;
   height: calc(var(--sidebar-width) *  1.5);
@@ -276,11 +273,51 @@ Games
   width: inherit;
 }
 
+:is(.g1, .g3) .sticky {
+  padding: 0 1em;
+}
+
 .sticky {
   position: sticky;
   top: 1em;
   margin: 1em 0;
 }
+
+.info {
+  background: var(--color-transparent-black);
+  border-radius: inherit;
+  padding: 1em 0.5em;
+  display: grid;
+}
+
+.shortcuts {
+  display: grid;
+  width: 20em;
+  margin: 1em 0 1em auto;
+  padding: 0 1em 1em;
+  backdrop-filter: blur(5px);
+  background: var(--color-transparent-dark2);
+  border-radius: 1em;
+}
+
+.shortcuts .header {
+  height: 4em;
+  place-content: center;
+}
+
+
+.shortcutGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto-fill, 4em);
+  outline: 1px solid var(--color-dark3);
+  border-radius: 1em;
+  gap: 1em;
+  padding: 1em;
+  min-height: 0;
+  transition: min-height 0.2s;
+}
+
 
 .weather:first-child {
   display: grid;
@@ -307,12 +344,6 @@ Games
   margin: 0 0 1em 0;
 }
 
-.weather .info {
-  background: var(--color-transparent-black);
-  border-radius: inherit;
-  padding: 1em 0.5em;
-  display: grid;
-}
 
 .weather .row {
   display: grid;
@@ -394,13 +425,13 @@ Games
 .icon {
   aspect-ratio: 1;
   width: 2em;
-  max-width: 2em;
   display: grid;
   place-content: center;
 }
 
 .icon img {
   width: 100%;
+  height: 100%
 }
 
 .icon.big {
@@ -412,10 +443,24 @@ Games
   font-size: 48px;
 }
 
+.icon.shortcutIcon {
+  width: 4em;
+  height: 4em;
+  margin: auto;
+  border-radius: 0.5em;
+  background: transparent;
+  transition: 0.2s;
+}
+
+.icon.shortcutIcon:hover {
+  background: var(--color-transparent-accent2);
+  outline: 0.25em solid var(--color-transparent-accent2);
+}
+
 form {
   display: grid;
   grid-template-columns: 1fr auto;
-  transform: translateX(calc(var(--sidebar-width) * -0.5));
+  /* transform: translateX(calc(var(--sidebar-width) * -0.5)); */
   margin: 1em;
   background: var(--color-dark2);
   outline: 1px solid var(--color-black);
