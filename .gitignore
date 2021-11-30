@@ -23,6 +23,4 @@ yarn-debug.log*
 yarn-error.log*
 yarn.lock
 src/data/installed_games.json
-src/python/test.py
 src/data/key.txt
-src/python/weatherfinder_test.py

@@ -2,63 +2,63 @@
     {
         "city": "Sauvo",
         "weather": {
-            "description": "pilvinen",
-            "icon": "04n"
+            "description": "taivas on selke\u00e4",
+            "icon": "01n"
         },
         "air": {
             "temperature": {
                 "current": [
-                    -7,
-                    -7.41
+                    -8,
+                    -7.66
                 ],
                 "min": [
-                    -8,
-                    -8.15
+                    -9,
+                    -9.02
                 ],
                 "max": [
-                    -7,
-                    -6.53
+                    -4,
+                    -3.89
                 ],
                 "feels_like": [
-                    -13,
-                    -13.18
+                    -15,
+                    -14.66
                 ]
             },
             "wind": {
                 "speed": [
-                    3.77,
-                    "Gentle breeze"
+                    5.57,
+                    "Moderate breeze"
                 ],
                 "deg": [
-                    17,
-                    "NNE"
+                    332,
+                    "NNW"
                 ],
-                "gust": 9
+                "gust": 13.73
             },
             "clouds": {
-                "all": 100
+                "all": 8
             },
             "other": {
-                "pressure": "998hPa",
-                "humidity": "89%",
+                "pressure": "989hPa",
+                "humidity": "88%",
                 "visibility": "10.0km"
             }
         },
         "dt": {
             "current": [
-                84417,
-                "2021-29-11",
-                "23:26:57"
+                3632,
+                "2021-01-12",
+                "01:00:32"
             ],
             "sunrise": [
-                32581,
-                "2021-29-11",
-                "09:03:01"
+                32835,
+                "2021-01-12",
+                "09:07:15"
             ],
             "sunset": [
-                55947,
-                "2021-29-11",
-                "15:32:27"
+                55780,
+                "2021-01-12",
+                "15:29:40"
             ]
         },
         "other": {
@@ -79,63 +79,63 @@
     {
         "city": "Turku",
         "weather": {
-            "description": "kevyt lumi suihku",
-            "icon": "13n"
+            "description": "taivas on selke\u00e4",
+            "icon": "01n"
         },
         "air": {
             "temperature": {
                 "current": [
                     -7,
-                    -7.28
+                    -7.15
                 ],
                 "min": [
-                    -8,
-                    -8.03
+                    -9,
+                    -8.87
                 ],
                 "max": [
-                    -6,
-                    -6.41
+                    -4,
+                    -3.77
                 ],
                 "feels_like": [
-                    -12,
-                    -12.34
+                    -13,
+                    -12.7
                 ]
             },
             "wind": {
                 "speed": [
-                    3.09,
-                    "Light breeze"
+                    3.6,
+                    "Gentle breeze"
                 ],
                 "deg": [
-                    20,
-                    "NNE"
+                    310,
+                    "NW"
                 ],
                 "gust": null
             },
             "clouds": {
-                "all": 90
+                "all": 0
             },
             "other": {
-                "pressure": "997hPa",
-                "humidity": "79%",
+                "pressure": "988hPa",
+                "humidity": "86%",
                 "visibility": "10.0km"
             }
         },
         "dt": {
             "current": [
-                84347,
-                "2021-29-11",
-                "23:25:47"
+                3701,
+                "2021-01-12",
+                "01:01:41"
             ],
             "sunrise": [
-                32738,
-                "2021-29-11",
-                "09:05:38"
+                32993,
+                "2021-01-12",
+                "09:09:53"
             ],
             "sunset": [
-                55995,
-                "2021-29-11",
-                "15:33:15"
+                55827,
+                "2021-01-12",
+                "15:30:27"
             ]
         },
         "other": {
@@ -156,69 +156,69 @@
     {
         "city": "Muurla",
         "weather": {
-            "description": "pilvinen",
+            "description": "hajanaisia pilvi\u00e4",
             "icon": "04n"
         },
         "air": {
             "temperature": {
                 "current": [
-                    -7,
-                    -7.26
+                    -9,
+                    -8.53
                 ],
                 "min": [
-                    -8,
-                    -8.27
+                    -10,
+                    -10.36
                 ],
                 "max": [
-                    -6,
-                    -6.35
+                    -7,
+                    -6.81
                 ],
                 "feels_like": [
-                    -13,
-                    -13.14
+                    -16,
+                    -15.53
                 ]
             },
             "wind": {
                 "speed": [
-                    3.93,
+                    5.3,
                     "Gentle breeze"
                 ],
                 "deg": [
-                    21,
-                    "NNE"
+                    326,
+                    "NW"
                 ],
-                "gust": 9.47
+                "gust": 13.52
             },
             "clouds": {
-                "all": 100
+                "all": 66
             },
             "other": {
-                "pressure": "997hPa",
-                "humidity": "91%",
+                "pressure": "988hPa",
+                "humidity": "72%",
                 "visibility": "10.0km"
             }
         },
         "dt": {
             "current": [
-                84420,
-                "2021-29-11",
-                "23:27:00"
+                3634,
+                "2021-01-12",
+                "01:00:34"
             ],
             "sunrise": [
-                32444,
-                "2021-29-11",
-                "09:00:44"
+                32697,
+                "2021-01-12",
+                "09:04:57"
             ],
             "sunset": [
-                55803,
-                "2021-29-11",
-                "15:30:03"
+                55636,
+                "2021-01-12",
+                "15:27:16"
             ]
         },
         "other": {
             "country": {
                 "name": "FI",
-                "id": 2022765,
+                "id": 2016390,
                 "timezone": 7200
             },
             "coord": {

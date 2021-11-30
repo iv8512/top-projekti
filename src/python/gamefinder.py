@@ -6,7 +6,7 @@ except ModuleNotFoundError:
 
 # info
 # "os.startfile()" doesnt like "with open()"?
-with open("info.json") as file:
+with open("../data/info.json") as file:
     info = json.loads(file.read())
 gamefinder_v = info["Versions"]["Gamefinder"]
 file_v = 0.3

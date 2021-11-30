@@ -25,7 +25,7 @@ def get_key():
         key = file.read()
     return key
 
-with open("info.json") as file:
+with open("../data/info.json") as file:
     info = json.loads(file.read())
 v = info["Versions"]["Weatherfinder"]
 
