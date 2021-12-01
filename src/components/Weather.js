@@ -13,6 +13,7 @@ function Weather() {
     }
     
     React.useEffect(() => {
+        cut();
     });
 
 
@@ -35,7 +36,6 @@ function Weather() {
         shownPage = 'weather' + currentPage;
         ele = document.getElementById(shownPage);
         ele.style.display = 'grid';
-        cut();
     };
 
     function previous() {
@@ -52,7 +52,6 @@ function Weather() {
         shownPage = 'weather' + currentPage;
         ele = document.getElementById(shownPage);
         ele.style.display = 'grid';
-        cut();
     };
 
 
