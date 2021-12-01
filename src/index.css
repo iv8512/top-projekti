@@ -385,11 +385,11 @@ Games
 }
 
 .holo::after {
-  content: attr(rounded);
+  content: attr(default-data);
 }
 
 .holo:hover::after {
- content: attr(full);
+ content: attr(hover-data);
 }
 
 .temperature .dataToolTip::after {
@@ -399,6 +399,10 @@ Games
 .wind {
   display: grid;
   grid-template-columns: auto 1fr;
+}
+
+#WindHolo {
+  margin: 0;
 }
 
 .wind .icon {
@@ -412,7 +416,7 @@ Games
 .wind .rowContainer:last-child {
   display: flex;
   flex-direction: column;
-  place-content: end;
+  place-content: center;
 }
 
 .wind .rowContainer:last-child .row {

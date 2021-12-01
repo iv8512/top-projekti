@@ -1,7 +1,20 @@
+import React from 'react';
 import WeatherData from '../data/weather_data.json';
 import TimeBar from './TimeBar.js';
 
 function Weather() {
+
+
+    function cut() {
+        let upd = document.querySelector('.updated');
+        let updstr = upd.innerHTML;
+        updstr = updstr.substring(5,20);
+        upd.innerHTML = updstr;
+    }
+    
+    React.useEffect(() => {
+    });
+
 
     let currentPage = 1;
     let shownPage = 'weather1';
@@ -22,6 +35,7 @@ function Weather() {
         shownPage = 'weather' + currentPage;
         ele = document.getElementById(shownPage);
         ele.style.display = 'grid';
+        cut();
     };
 
     function previous() {
@@ -38,6 +52,7 @@ function Weather() {
         shownPage = 'weather' + currentPage;
         ele = document.getElementById(shownPage);
         ele.style.display = 'grid';
+        cut();
     };
 
 
@@ -60,9 +75,9 @@ function Weather() {
                                 
                                 <div className="row icon tempDegs dataToolTip" data-tool-tip={data.air.temperature.current[1] + '°C'}>{data.air.temperature.current[0]}°C</div>
                                 <div className="row">
-                                    <div className="row tempRows">max: <div className="holo" rounded={data.air.temperature.max[0] + '°C'} full={data.air.temperature.max[1] + '°C'}></div></div>
-                                    <div className="row tempRows">feels:<div className="holo" rounded={data.air.temperature.feels_like[0] + '°C'} full={data.air.temperature.feels_like[1] + '°C'}></div></div>
-                                    <div className="row tempRows">min:<div className="holo" rounded={data.air.temperature.min[0] + '°C'} full={data.air.temperature.min[1] + '°C'}></div></div>
+                                    <div className="row tempRows">max: <div className="holo" default-data={data.air.temperature.max[0] + '°C'} hover-data={data.air.temperature.max[1] + '°C'}></div></div>
+                                    <div className="row tempRows">feels:<div className="holo" default-data={data.air.temperature.feels_like[0] + '°C'} hover-data={data.air.temperature.feels_like[1] + '°C'}></div></div>
+                                    <div className="row tempRows">min:<div className="holo" default-data={data.air.temperature.min[0] + '°C'} hover-data={data.air.temperature.min[1] + '°C'}></div></div>
                                 </div>
                             </div>
 
@@ -87,12 +102,12 @@ function Weather() {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="row">{data.air.wind.deg[1]}</div>
+                                    <div className="row holo" id="WindHolo" default-data={data.air.wind.deg[1]} hover-data={data.air.wind.deg[0] + ' deg'}></div>
                                 </div>
                                 
                                 <div className="rowContainer">
-                                    <div className="row">{data.air.wind.speed[0]} m/s</div>
-                                    <div className="row">{data.air.wind.deg[0]} deg</div>
+                                    <div className="row">wind: {data.air.wind.speed[0]} m/s</div>
+                                    <div className="row">gust: {data.air.wind.gust} m/s</div>
                                     <div className="row">{data.air.wind.speed[1]}</div>
                                 </div>
 
@@ -102,8 +117,12 @@ function Weather() {
                         <div className="footer">
                             <button onClick={previous}>«</button>
                             <div>
-                                <div>Last updated:</div>
-                                {data.dt.current[1]} -:- {data.dt.current[2]}
+                                <div>
+                                    Last updated:
+                                </div>
+                                <div className="updated">
+                                    {data.dt.current[1]} -:- {data.dt.current[2]}
+                                </div>
                             </div>
                             <button onClick={next}>»</button>
                         </div>
