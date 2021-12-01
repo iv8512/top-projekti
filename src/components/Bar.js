@@ -4,6 +4,8 @@ function Bar() {
 
     return ( 
       <div className="bar">
+
+
         <div className="list listTop">
 
           <div className="dropDown">
@@ -16,6 +18,9 @@ function Bar() {
           </div>
 
         </div>
+        <div className="logo">
+          <img className="icon navItem" src="http://localhost:3000/favicon.ico" alt="set all to default" />
+        </div>
         <div className="list listBottom">
 
           <div className="dropDown">
@@ -26,6 +31,8 @@ function Bar() {
           </div>
 
         </div>
+
+
       </div>
      );
 }
