@@ -6,10 +6,13 @@ function Weather() {
 
 
     function cut() {
-        let upd = document.querySelector('.updated');
-        let updstr = upd.innerHTML;
-        updstr = updstr.substring(5,20);
-        upd.innerHTML = updstr;
+        let upd = document.querySelectorAll('.updated');
+        upd.forEach(element => {
+            let updstr = element.innerHTML;
+            updstr = updstr.substring(5,20);
+            element.innerHTML = updstr;
+            
+        });
     }
     
     React.useEffect(() => {

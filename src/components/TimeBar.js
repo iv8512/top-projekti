@@ -1,36 +1,37 @@
 import React from 'react';
 
 function TimeBar(props) {
-
-    React.useEffect(() => {
-        // get list of required elements
-        let sunset = document.querySelector('.sunset');
-        let sunrise = document.querySelector('.sunrise');
-        let current = document.querySelector('.current');
-
-        // one second is % of day (100% / amount of seconds in a day)
+    
+    function times() {
         let secondsFraction = (100 / 86400);
         
-        // position the values in the timebar
-        sunset.style.top = (sunset.getAttribute('seconds') * secondsFraction + '%');
-        sunrise.style.top = (sunrise.getAttribute('seconds') * secondsFraction + '%');
-        current.style.top = (current.getAttribute('seconds') * secondsFraction + '%');
-
-        // cut out seconds to make timebar slimmer
-            // get strings that will be cut
+        let sunsets = document.querySelectorAll('.sunset');
+        sunsets.forEach(sunset => {
+            sunset.style.top = (sunset.getAttribute('seconds') * secondsFraction + '%');
             let sunsetstr = sunset.innerHTML;
-            let sunrisestr = sunrise.innerHTML;
-            let currentstr = current.innerHTML;
-
-            // cut them
             sunsetstr = sunsetstr.substring(0, 5);
-            sunrisestr = sunrisestr.substring(0, 5);
-            currentstr = currentstr.substring(0, 5);
-
-            // place cut strings into elements
             sunset.innerHTML = sunsetstr;
+        });
+
+        let sunrises = document.querySelectorAll('.sunrise');
+        sunrises.forEach(sunrise => {
+            sunrise.style.top = (sunrise.getAttribute('seconds') * secondsFraction + '%');
+            let sunrisestr = sunrise.innerHTML;
+            sunrisestr = sunrisestr.substring(0, 5);
             sunrise.innerHTML = sunrisestr;
+        });
+        
+        let currents = document.querySelectorAll('.current');
+        currents.forEach(current => {
+            current.style.top = (current.getAttribute('seconds') * secondsFraction + '%');
+            let currentstr = current.innerHTML;
+            currentstr = currentstr.substring(0, 5);
             current.innerHTML = currentstr;
+        });
+    }
+
+    React.useEffect(() => {
+            times();
         });
         
     return (
