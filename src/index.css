@@ -327,6 +327,7 @@ Games
   display: none;
   grid-template-columns: 1fr 4em;
   grid-template-rows: auto 1fr auto;
+  width: min-content;
   margin: 1em auto 1em 0;
   padding: 0 1em 1em;
   backdrop-filter: blur(5px);
