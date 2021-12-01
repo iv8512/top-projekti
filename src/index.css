@@ -696,21 +696,20 @@ navigation styles start here
 }
 
 .list {
-  display: grid;
+  display: flex;
   place-content: center;
   height: inherit;
-  width: 30ch;
-  padding: 1.5em;
+  width: 50ch;
 }
 
-.list:hover {
+/* .list:hover {
   background: var(--color-dark1);
   outline: 1px solid var(--color-black)
-}
+} */
 
 .navItem {
-  width: 30ch;
-  height: 0;
+  width: 17.5ch;
+  /* height: 0; */
   display: grid;
   place-content: center;
   padding: 0;
@@ -728,8 +727,16 @@ navigation styles start here
   left: unset;
   right: 0;
 }
+.listBottom {
+  place-content: end;
+}
 
-.list:hover .navItem{
+.list .navItem:hover {
+  background: var(--color-transparent-dark1);
+  outline: 1px solid var(--color-transparent-black);
+}
+
+/* .list:hover .navItem{
   height: var(--bar-thickness);
   display: grid;
   background: var(--color-transparent-black);
@@ -737,14 +744,15 @@ navigation styles start here
   outline: 1px solid var(--color-black);
   backdrop-filter: blur(5px);
   left: inherit;
-}
+} */
 
-.navItem::before {
+/* .navItem::before {
   content: '';
-}
-.list:hover .navItem::before {
+} */
+
+/* .list:hover .navItem::before {
   content: attr(text);
-}
+} */
 
 .dropDown .navItem:hover {
   display: grid;
@@ -842,12 +850,12 @@ Chart styles
   opacity: 0.1;
 }
 
-.list .row:hover > .label { /* label highlighter */
+.chartList .row:hover > .label { /* label highlighter */
   margin: 0 0.75em 0 0.75em;
   opacity: 1;
 }
 
-.list:hover .label { /* label highlighter */
+.chartList:hover .label { /* label highlighter */
   opacity: 0.5;
 }
 
