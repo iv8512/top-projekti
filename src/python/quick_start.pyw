@@ -49,6 +49,8 @@ def title_info(text):
             root.title(f"Quick Start - Search for currently installed games")
         case "QSetup":
             root.title(f"Quick Start - Open Quick Setup")
+        case _:
+            root.title(f"Quick Start - No info for this button")
     root.after(5000, reset_title)
 
 def create_button(text, item, frame=middle, expand=False):

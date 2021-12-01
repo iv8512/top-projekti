@@ -18,7 +18,6 @@ def save_key():
 if not os.path.exists(key_path):
     print("Key not found")
     save_key()
-    #os.system("pause")
 
 def get_key():
     with open(key_path) as file:
@@ -43,8 +42,6 @@ def get_data(input_city):
         weather_index = get_data(input_city)
     return weather_index
 
-temp = "https://www.weatherapi.com/"
-
 def convert_time(epoch_time):
     converted_date = time.strftime('%Y-%d-%m', time.localtime(epoch_time))
     converted_time = time.strftime('%H:%M:%S', time.localtime(epoch_time))
@@ -68,6 +65,7 @@ def deg_to_compass(num):
     return arr[(val % 16)]
 
 def speed_to_name(speed):
+    speed = round(speed, 1)
     if speed < 0.5: return "Calm"
     if 0.5 <= speed <= 1.5: return "Light air"
     if 1.6 <= speed <= 3.3: return "Light breeze"
@@ -160,7 +158,6 @@ for city in cities:
 file_path = "../data/weather_data.json"
 with open(file_path, "w") as file:
     json.dump(final_data, file, indent=4)
-    #json.dump(get_data("Sauvo"), file, indent=4)
 
 print("Done \n")
 seconds = (2, 1)
