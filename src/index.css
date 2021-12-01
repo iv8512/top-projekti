@@ -295,7 +295,7 @@ Games
   width: 20em;
   margin: 1em 0 1em auto;
   padding: 0 1em 1em;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px) brightness(75%);
   background: var(--color-transparent-dark2);
   border-radius: 1em;
 }
@@ -330,7 +330,7 @@ Games
   width: 23em;
   margin: 1em auto 1em 0;
   padding: 0 1em 1em;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px) brightness(75%);
   background: var(--color-transparent-dark2);
   border-radius: 1em;
 }
@@ -366,17 +366,38 @@ Games
 
 .temperature > .row:last-child {
   display: grid;
-  font-size: 12px;
+  place-content: start;
   grid-template-rows: repeat(3,1fr);
   height: 100%;
+  width: 100%;
 }
 
-.temperature .row .row {
+.weather .tempRows {
   height: 100%;
-  width: 100%;
+  width: 8em;
   max-width: 100%;
   place-content: center start;
   white-space: nowrap;
+  padding-left: 1em;
+  grid-template-columns: auto 1fr;
+}
+
+.holo {
+  width: 100%;
+  display: grid;
+  place-content: end;
+}
+
+.holo::after {
+  content: attr(rounded);
+}
+
+.holo:hover::after {
+ content: attr(full);
+}
+
+.temperature .dataToolTip::after {
+  bottom: 25%;
 }
 
 .rowContainer > * + * {

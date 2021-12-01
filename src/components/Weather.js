@@ -60,9 +60,9 @@ function Weather() {
                                 
                                 <div className="row icon tempDegs dataToolTip" data-tool-tip={data.air.temperature.current[1] + '°C'}>{data.air.temperature.current[0]}°C</div>
                                 <div className="row">
-                                    <div className="row">max: {data.air.temperature.max[1]}°C</div>
-                                    <div className="row">feels: {data.air.temperature.feels_like[1]}°C</div>
-                                    <div className="row">min: {data.air.temperature.min[1]}°C</div>
+                                    <div className="row tempRows">max: <div className="holo" rounded={data.air.temperature.max[0] + '°C'} full={data.air.temperature.max[1] + '°C'}></div></div>
+                                    <div className="row tempRows">feels:<div className="holo" rounded={data.air.temperature.feels_like[0] + '°C'} full={data.air.temperature.feels_like[1] + '°C'}></div></div>
+                                    <div className="row tempRows">min:<div className="holo" rounded={data.air.temperature.min[0] + '°C'} full={data.air.temperature.min[1] + '°C'}></div></div>
                                 </div>
                             </div>
 
