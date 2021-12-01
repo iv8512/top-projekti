@@ -1,15 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import GameData from "../data/installed_games.json"
-import Weather from "./Weather"
-import Shortcuts from "./Shortcuts"
 import GamesSteam from "./GamesSteam";
 import GamesUbisoft from "./GamesUbisoft";
 import GamesEpic from "./GamesEpic";
 import GamesOrigin from "./GamesOrigin";
 
 function Games() {
-
-    const [searchString, setSearchString] = useState();
 
     React.useEffect(() => {
         
@@ -67,51 +63,15 @@ function Games() {
             dragScroll.scrollLeft = scroll - (x - start);
         });
     });    
-    
+
     return ( 
-        <div className="page" id="Games">
-
-            <div id="Home">
-                <div className="banner">
-                    <div className="bannerList">
-
-                        <div className="bannerListItem g1">
-                            <div className="spacer"></div>
-                            <div className="sticky">
-                                <Weather />
-                            </div>
-                        </div>
-
-                        <div className="bannerListItem g2">
-                            <div className="spacer"></div>
-                            <div className="sticky">
-                                <form action="http://www.google.com/search" method="GET" className="search">
-                                    <input type="text" name="q" size="50" maxLength="1000" value={searchString} onChange={(e) => setSearchString(e.target.value)}></input>
-                                    <input type="hidden" name="hl" value="en"></input>
-                                    <input type="submit" name="btnG" value="Search" className="clickable"></input>
-                                </form>
-                            </div>
-                        </div>
-
-                        <div className="bannerListItem g3">
-                            <div className="spacer"></div>
-                            <div className="sticky">
-                                <Shortcuts />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="slideshow content drag" id="Slides">
-                <GamesSteam data={GameData} />
-                <GamesEpic data={GameData} />
-                <GamesUbisoft data={GameData} />
-                <GamesOrigin data={GameData} />
-            </div>
-
+        <div className="slideshow content drag" id="Slides">
+            <GamesSteam data={GameData} />
+            <GamesEpic data={GameData} />
+            <GamesUbisoft data={GameData} />
+            <GamesOrigin data={GameData} />
         </div>
      );
-};
+}
 
 export default Games;

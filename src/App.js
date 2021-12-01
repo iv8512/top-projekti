@@ -1,23 +1,12 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CustomContextMenu from './components/CCM';
-import Sidebar from './components/Sidebar';
-import Test from './components/Test';
-import Gantt from './components/Gantt';
-import Games from './components/Games';
+import Home from './components/Home';
 
 function App() {
   return (
     <div className="App">
       <CustomContextMenu />
-      <Router>
-        <Sidebar />
-        <Routes>
-          <Route path="/" element={<Games />} />
-          <Route path="/ganttchart" element={<Gantt />} />
-          <Route path="/test" element={<Test />} />
-        </Routes>
-      </Router>
+      <Home />
     </div>
   );
 }
