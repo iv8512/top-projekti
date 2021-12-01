@@ -2,63 +2,63 @@
     {
         "city": "Sauvo",
         "weather": {
-            "description": "taivas on selke\u00e4",
-            "icon": "01n"
+            "description": "pilvinen",
+            "icon": "04n"
         },
         "air": {
             "temperature": {
                 "current": [
                     -8,
-                    -7.66
+                    -8.18
                 ],
                 "min": [
-                    -9,
-                    -9.02
+                    -11,
+                    -10.97
                 ],
                 "max": [
-                    -4,
-                    -3.89
+                    -7,
+                    -6.83
                 ],
                 "feels_like": [
-                    -15,
-                    -14.66
+                    -11,
+                    -11.24
                 ]
             },
             "wind": {
                 "speed": [
-                    5.57,
-                    "Moderate breeze"
+                    1.58,
+                    "Light breeze"
                 ],
                 "deg": [
-                    332,
-                    "NNW"
+                    124,
+                    "SE"
                 ],
-                "gust": 13.73
+                "gust": 2.91
             },
             "clouds": {
-                "all": 8
+                "all": 88
             },
             "other": {
-                "pressure": "989hPa",
-                "humidity": "88%",
+                "pressure": "993hPa",
+                "humidity": "90%",
                 "visibility": "10.0km"
             }
         },
         "dt": {
             "current": [
-                3632,
-                "2021-01-12",
-                "01:00:32"
+                2204,
+                "2021-02-12",
+                "00:36:44"
             ],
             "sunrise": [
-                32835,
-                "2021-01-12",
-                "09:07:15"
+                32957,
+                "2021-02-12",
+                "09:09:17"
             ],
             "sunset": [
-                55780,
-                "2021-01-12",
-                "15:29:40"
+                55703,
+                "2021-02-12",
+                "15:28:23"
             ]
         },
         "other": {
@@ -79,63 +79,63 @@
     {
         "city": "Turku",
         "weather": {
-            "description": "taivas on selke\u00e4",
-            "icon": "01n"
+            "description": "pilvinen",
+            "icon": "04n"
         },
         "air": {
             "temperature": {
                 "current": [
-                    -7,
-                    -7.15
+                    -8,
+                    -7.63
                 ],
                 "min": [
                     -9,
-                    -8.87
+                    -8.63
                 ],
                 "max": [
-                    -4,
-                    -3.77
+                    -7,
+                    -6.71
                 ],
                 "feels_like": [
-                    -13,
-                    -12.7
+                    -11,
+                    -10.54
                 ]
             },
             "wind": {
                 "speed": [
-                    3.6,
-                    "Gentle breeze"
+                    1.54,
+                    "Light air"
                 ],
                 "deg": [
-                    310,
-                    "NW"
+                    110,
+                    "ESE"
                 ],
                 "gust": null
             },
             "clouds": {
-                "all": 0
+                "all": 90
             },
             "other": {
-                "pressure": "988hPa",
-                "humidity": "86%",
+                "pressure": "992hPa",
+                "humidity": "93%",
                 "visibility": "10.0km"
             }
         },
         "dt": {
             "current": [
-                3701,
-                "2021-01-12",
-                "01:01:41"
+                2240,
+                "2021-02-12",
+                "00:37:20"
             ],
             "sunrise": [
-                32993,
-                "2021-01-12",
-                "09:09:53"
+                33116,
+                "2021-02-12",
+                "09:11:56"
             ],
             "sunset": [
-                55827,
-                "2021-01-12",
-                "15:30:27"
+                55749,
+                "2021-02-12",
+                "15:29:09"
             ]
         },
         "other": {
@@ -163,62 +163,62 @@
             "temperature": {
                 "current": [
                     -9,
-                    -8.53
+                    -8.72
                 ],
                 "min": [
                     -10,
-                    -10.36
+                    -9.83
                 ],
                 "max": [
                     -7,
-                    -6.81
+                    -6.95
                 ],
                 "feels_like": [
-                    -16,
-                    -15.53
+                    -9,
+                    -8.72
                 ]
             },
             "wind": {
                 "speed": [
-                    5.3,
-                    "Gentle breeze"
+                    1.22,
+                    "Light air"
                 ],
                 "deg": [
-                    326,
-                    "NW"
+                    131,
+                    "SE"
                 ],
-                "gust": 13.52
+                "gust": 1.5
             },
             "clouds": {
-                "all": 66
+                "all": 78
             },
             "other": {
-                "pressure": "988hPa",
-                "humidity": "72%",
+                "pressure": "994hPa",
+                "humidity": "92%",
                 "visibility": "10.0km"
             }
         },
         "dt": {
             "current": [
-                3634,
-                "2021-01-12",
-                "01:00:34"
+                2206,
+                "2021-02-12",
+                "00:36:46"
             ],
             "sunrise": [
-                32697,
-                "2021-01-12",
-                "09:04:57"
+                32820,
+                "2021-02-12",
+                "09:07:00"
             ],
             "sunset": [
-                55636,
-                "2021-01-12",
-                "15:27:16"
+                55559,
+                "2021-02-12",
+                "15:25:59"
             ]
         },
         "other": {
             "country": {
                 "name": "FI",
-                "id": 2016390,
+                "id": 2022765,
                 "timezone": 7200
             },
             "coord": {
