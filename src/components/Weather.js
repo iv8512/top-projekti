@@ -46,7 +46,7 @@ function Weather() {
             {WeatherData.map((data,index) => (
                 <div className="weather" key={index} id={'weather' + (index + 1)}>
 
-                    <div className="weatherContainer">
+                    <div className="weatherContent">
                         <div className="header">
                             <span className="icon big">
                                 <img src={'https://openweathermap.org/themes/openweathermap/assets/vendor/owm/img/widgets/' + data.weather.icon + '.png'} alt=''></img>
@@ -68,7 +68,7 @@ function Weather() {
 
                             <div className="line"></div>
 
-                            <div className="row">
+                            <div className="others rowContainer">
                                 <div className="row">humidity: {data.air.other.humidity}</div>
                                 <div className="row">pressure: {data.air.other.pressure}</div>
                                 <div className="row">visibility: {data.air.other.visibility}</div>
@@ -76,16 +76,23 @@ function Weather() {
                             
                             <div className="line"></div>
 
-                            <div className="row wind">
-                                <div className="icon row dataToolTip" data-tool-tip={data.air.wind.deg[1]}>
+                            <div className="wind rowContainer">
+                                <div className="row">
+                                <div className="icon dataToolTip" data-tool-tip={data.air.wind.deg[1]}>
                                     <div className="arrow" style={{ transform: 'rotate(' + data.air.wind.deg[0] + 'deg)'}}>
                                         <div className="tip"></div>
                                         <div className="shaft" style={{ height: data.air.wind.speed / 10 + 'em' }}></div>
                                     </div>
                                 </div>
-                                <span>Wind: </span>
-                                <span>{data.air.wind.speed}m/s</span>
-                                <span>{data.air.wind.deg[0]}deg</span>
+                                
+                                    <span>Wind: </span>
+                                    <span>m/s</span>
+                                    <span>{data.air.wind.deg[0]}deg</span>
+                                </div>
+
+                                <div className="row">
+                                    {data.air.wind.speed[1]}
+                                </div>
                             </div>
 
                         </div>

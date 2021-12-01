@@ -22,9 +22,12 @@ function Gantt() {
     
     return ( 
         <div className="page" id="GanttPage">
+            <div className="header">
+                <h1>Gantt Chart</h1>
+            </div>
             <div className="content">
-                <h2>Gantt Chart</h2>
-                <p>Gantt Chart on aikataulu joka näyttää työn edistymisen.</p>
+                <h2>Description</h2>
+                <p>A Gantt Chart is a Schedule combined with a Chart, that shows the progression of work.</p>
                 <div className="chart" id={'w' + Page}>
                     {data.map((chartData, index) => (
                         <Chart key={index} wnum={chartData.top[Page].num} data={chartData.top[Page]} Page={Page}/>

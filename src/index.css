@@ -114,7 +114,7 @@ img {
 }
 
 .line {
-  margin: auto;
+  margin: 0.75em auto;
   height: 0;
   width: calc(100% - 1em);
   border-bottom: 1px solid var(--color-transparent-white);
@@ -351,6 +351,14 @@ Games
   place-content: center;
 }
 
+.others {
+  padding: 0 1em;
+}
+
+.others .row {
+  place-content: start;
+}
+
 .temperature {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -369,6 +377,10 @@ Games
   max-width: 100%;
   place-content: center start;
   white-space: nowrap;
+}
+
+.rowContainer > * + * {
+  padding-top: 1em;
 }
 
 .weather .info * :not(.icon, .icon *) {
