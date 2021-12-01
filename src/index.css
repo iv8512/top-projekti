@@ -174,10 +174,6 @@ button:hover {
   width: 0;
 }
 
-.wind .dataToolTip::after {
-  font-size: 25px;
-}
-
 /*
 CCM CustomContextMenu
 */
@@ -284,10 +280,10 @@ Games
 }
 
 .info {
-  background: var(--color-transparent-black);
-  border-radius: inherit;
+  border-radius: 1em;
   padding: 1em 0.5em;
   display: grid;
+  backdrop-filter: brightness(25%);
 }
 
 .shortcuts {
@@ -400,8 +396,31 @@ Games
   bottom: 25%;
 }
 
+.wind {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.wind .icon {
+  width: 4em;
+  height: 4em;
+  outline: 1px solid var(--color-transparent-dark3);
+  border-radius: 9999em;
+  box-shadow: 0 0 25px -20px var(--color-white) inset;
+}
+
+.wind .rowContainer:last-child {
+  display: flex;
+  flex-direction: column;
+  place-content: end;
+}
+
+.wind .rowContainer:last-child .row {
+  place-content: start;
+}
+
 .rowContainer > * + * {
-  padding-top: 1em;
+  padding-top: 0.5em;
 }
 
 .weather .info * :not(.icon, .icon *) {

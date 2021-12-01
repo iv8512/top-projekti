@@ -76,23 +76,26 @@ function Weather() {
                             
                             <div className="line"></div>
 
-                            <div className="wind rowContainer">
-                                <div className="row">
-                                <div className="icon dataToolTip" data-tool-tip={data.air.wind.deg[1]}>
-                                    <div className="arrow" style={{ transform: 'rotate(' + data.air.wind.deg[0] + 'deg)'}}>
-                                        <div className="tip"></div>
-                                        <div className="shaft" style={{ height: data.air.wind.speed / 10 + 'em' }}></div>
+                            <div className="wind">
+                                
+                                <div className="rowContainer">
+                                    <div className="row">
+                                        <div className="icon">
+                                            <div className="arrow" style={{ transform: 'rotate(' + data.air.wind.deg[0] + 'deg)'}}>
+                                                <div className="tip"></div>
+                                                <div className="shaft" style={{ height: data.air.wind.speed[0] / 5 + 'em' }}></div>
+                                            </div>
+                                        </div>
                                     </div>
+                                    <div className="row">{data.air.wind.deg[1]}</div>
                                 </div>
                                 
-                                    <span>Wind: </span>
-                                    <span>m/s</span>
-                                    <span>{data.air.wind.deg[0]}deg</span>
+                                <div className="rowContainer">
+                                    <div className="row">{data.air.wind.speed[0]} m/s</div>
+                                    <div className="row">{data.air.wind.deg[0]} deg</div>
+                                    <div className="row">{data.air.wind.speed[1]}</div>
                                 </div>
 
-                                <div className="row">
-                                    {data.air.wind.speed[1]}
-                                </div>
                             </div>
 
                         </div>
