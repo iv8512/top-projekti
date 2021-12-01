@@ -16,42 +16,49 @@ if os.getlogin() == "iivar":
     vdf_path = r"E:\Steam\steamapps\libraryfolders.vdf"
 else:
     vdf_path = r"C:\Program Files (x86)\Steam\steamapps\libraryfolders.vdf"
-with open(vdf_path) as file:
-    vdf_data = vdf.loads(file.read())
+try:
+    with open(vdf_path) as file:
+        vdf_data = vdf.loads(file.read())
+    steam = True
+except FileNotFoundError:
+    steam = False
 
-print("Finding installed Steam games")
-url = "http://api.steampowered.com/ISteamApps/GetAppList/v2"
-game_index = requests.get(url)
-game_index = json.loads(game_index.text)
+if steam:
+    print("Finding installed Steam games")
+    url = "http://api.steampowered.com/ISteamApps/GetAppList/v2"
+    game_index = requests.get(url)
+    game_index = json.loads(game_index.text)
 
 # steam game id to name
 steam_games = []
-count = 1
-drives = len(vdf_data["libraryfolders"]) - 1
-for folder in range(drives):
-    library_path = vdf_data["libraryfolders"][str(folder)]["path"]
-    library_drive = os.path.splitdrive(library_path)[0]
-    if visual: print(library_path)
-    for app_id in vdf_data["libraryfolders"][str(folder)]["apps"]:
-        app_name = ""
-        for item in game_index["applist"]["apps"]:
-            if item["appid"] == int(app_id):
-                app_name = item["name"]
-                break
-        steam_game = {"name": app_name, "id": app_id, "drive": library_drive}
-        steam_games.append(steam_game)
-        if visual: print(f"{count:<2} {app_id:<7} {app_name}")
-        count += 1
+if steam:
+    count = 1
+    drives = len(vdf_data["libraryfolders"]) - 1
+    for folder in range(drives):
+        library_path = vdf_data["libraryfolders"][str(folder)]["path"]
+        library_drive = os.path.splitdrive(library_path)[0]
+        if visual: print(library_path)
+        for app_id in vdf_data["libraryfolders"][str(folder)]["apps"]:
+            app_name = ""
+            for item in game_index["applist"]["apps"]:
+                if item["appid"] == int(app_id):
+                    app_name = item["name"]
+                    break
+            steam_game = {"name": app_name, "id": app_id, "drive": library_drive}
+            steam_games.append(steam_game)
+            if visual: print(f"{count:<2} {app_id:<7} {app_name}")
+            count += 1
 
 # separate soundtracks
 steam_soundtracks = []
 steam_other = []
-for item in steam_games:
-    if "Soundtrack" in item["name"]:
-        steam_soundtracks.append(item)
-        steam_games.remove(item)
-    if "Redistributables" in item["name"]:
-        steam_games.remove(item)
+if steam:
+    for item in steam_games:
+        if "Soundtrack" in item["name"]:
+            steam_soundtracks.append(item)
+            steam_games.remove(item)
+        if "Redistributables" in item["name"]:
+            steam_games.remove(item)
 
 print("Finding other games")
 # find epic games
