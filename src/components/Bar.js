@@ -27,11 +27,11 @@ function Bar() {
         </div>
 
         <div className="list listBottom">
-        <Link to="/" className="navItem" text="Settings (non-functional)">settings</Link>
+        <Link to="/settings" className="navItem" text="Settings">Settings</Link>
           {/* <div className="dropDown">
             Δ Other stuff Δ
             <div className="dropList">
-              <Link to="/" className="navItem" text="Settings (non-functional)"></Link>
+              <Link to="/" className="navItem" text="Settings"></Link>
             </div>
           </div> */}
 

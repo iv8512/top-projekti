@@ -6,9 +6,10 @@ import Shortcuts from "./Shortcuts"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Bar from './Bar';
 
-import Test from './Test';
-import Gantt from './Gantt';
 import Games from './Games';
+import Gantt from './Gantt';
+import Test from './Test';
+import Settings from './Settings';
 
 function Home() {
 
@@ -54,9 +55,10 @@ function Home() {
             <Router>
                 <Bar />
                 <Routes>
+                    <Route path="/" element={<Games />} />
                     <Route path="/ganttchart" element={<Gantt />} />
                     <Route path="/test" element={<Test />} />
-                    <Route path="/" element={<Games />} />
+                    <Route path="/settings" element={<Settings />} />
                 </Routes>
             </Router>
 
