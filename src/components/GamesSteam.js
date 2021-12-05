@@ -58,7 +58,7 @@ function GamesSteam(props) {
 
             <div className="gameGrid" style={{ gridTemplateColumns: Cols }}>
                 {props.data.steam.games.map((data,index) => (
-                    <a href={"steam://run/" + data.id} className="gameCard" key={index}>
+                    <a launch={"steam://run/" + data.id} className="gameCard task" key={index}>
                         <img loading="lazy" src={ "https://cdn.cloudflare.steamstatic.com/steam/apps/" + data.id + "/library_600x900.jpg" } alt={data.name} style={{ display: BigImg }} />
                         <img loading="lazy" src={ "https://cdn.akamai.steamstatic.com/steam/apps/" + data.id + "/capsule_184x69.jpg" } alt={data.name} style={{ display: SmallImg }} />
                     </a>
@@ -69,7 +69,7 @@ function GamesSteam(props) {
             </div>
             <div className="gameGrid" style={{ gridTemplateColumns: Cols }}>
                 {props.data.steam.soundtracks.map((data,index) => (
-                    <a href={"steam://run/" + data.id} className="gameCard" key={index}>
+                    <a launch={"steam://run/" + data.id} className="gameCard task" key={index}>
                         <img loading="lazy" src={ "https://cdn.cloudflare.steamstatic.com/steam/apps/" + data.id + "/library_600x900.jpg" } alt={data.name} style={{ display: BigImg }} />
                         <img loading="lazy" src={ "https://cdn.akamai.steamstatic.com/steam/apps/" + data.id + "/capsule_184x69.jpg" } alt={data.name} style={{ display: SmallImg }} />
                     </a>

@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 
 function Bar() {
-
     return ( 
       <div className="bar">
 

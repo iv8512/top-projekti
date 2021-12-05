@@ -33,7 +33,7 @@ function GamesEpic(props) {
 
             <div className="gameGrid" style={{ gridTemplateColumns: Cols }}>
                 {props.data.epic.games.map((data,index) => (
-                    <a href={"com.epicgames.launcher://apps/" + data.id + "?action=launch&silent=true"} className="gameCard" key={index}>
+                    <a launch={"com.epicgames.launcher://apps/" + data.id + "?action=launch&silent=true"} className="gameCard task" key={index}>
                         <img loading="lazy" src={ "https://cdn.cloudflare.steamstatic.com/steam/apps/" + data.id + "/library_600x900.jpg" } alt={data.name} style={{ display: BigImg }} />
                         <img loading="lazy" src={ "https://cdn.akamai.steamstatic.com/steam/apps/" + data.id + "/capsule_184x69.jpg" } alt={data.name} style={{ display: SmallImg }} />
                     </a>

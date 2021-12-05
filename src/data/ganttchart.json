@@ -43,7 +43,7 @@
             {"label": "suunnittelu",            "start": 0,"end": 3,"progress": 60},
             {"label": "git/vscode",             "start": 0,"end": 1,"progress": 100},
             {"label": "custom browser protocol","start": 2,"end": 4,"progress": 100},
-            {"label": "html/react",             "start": 0,"end": 6,"progress": 65},
+            {"label": "html/react",             "start": 0,"end": 6,"progress": 40},
             {"label": "css",                    "start": 1,"end": 7,"progress": 40},
             {"label": "sivun käyttö-ohje",      "start": 4,"end": 7,"progress": 0},
             {"label": "hienompi chart",         "start": 0,"end": 4,"progress": 100}
@@ -55,33 +55,33 @@
             {"label": "suunnittelu",            "start": 0,"end": 3,"progress": 70},
             {"label": "git/vscode",             "start": 0,"end": 1,"progress": 100},
             {"label": "custom browser protocol","start": 2,"end": 4,"progress": 100},
-            {"label": "html/react",             "start": 0,"end": 6,"progress": 80},
+            {"label": "html/react",             "start": 0,"end": 6,"progress": 50},
             {"label": "css",                    "start": 1,"end": 7,"progress": 60},
-            {"label": "sivun käyttö-ohje",      "start": 4,"end": 7,"progress": 0},
+            {"label": "sivun käyttö-ohje",      "start": 4,"end": 7,"progress": 10},
             {"label": "hienompi chart",         "start": 0,"end": 4,"progress": 100}
         ]
         },
         {
         "num": 48,
         "rows": [
-            {"label": "suunnittelu",            "start": 0,"end": 3,"progress": 0},
+            {"label": "suunnittelu",            "start": 0,"end": 3,"progress": 90},
             {"label": "git/vscode",             "start": 0,"end": 1,"progress": 100},
             {"label": "custom browser protocol","start": 2,"end": 4,"progress": 100},
-            {"label": "html/react",             "start": 0,"end": 6,"progress": 0},
-            {"label": "css",                    "start": 1,"end": 7,"progress": 0},
-            {"label": "sivun käyttö-ohje",      "start": 4,"end": 7,"progress": 0},
+            {"label": "html/react",             "start": 0,"end": 6,"progress": 80},
+            {"label": "css",                    "start": 1,"end": 7,"progress": 80},
+            {"label": "sivun käyttö-ohje",      "start": 4,"end": 7,"progress": 30},
             {"label": "hienompi chart",         "start": 0,"end": 4,"progress": 100}
         ]
         },
         {
         "num": 49,
         "rows": [
-            {"label": "suunnittelu",            "start": 0,"end": 3,"progress": 0},
+            {"label": "suunnittelu",            "start": 0,"end": 3,"progress": 100},
             {"label": "git/vscode",             "start": 0,"end": 1,"progress": 100},
             {"label": "custom browser protocol","start": 2,"end": 4,"progress": 100},
-            {"label": "html/react",             "start": 0,"end": 6,"progress": 0},
-            {"label": "css",                    "start": 1,"end": 7,"progress": 0},
-            {"label": "sivun käyttö-ohje",      "start": 4,"end": 7,"progress": 0},
+            {"label": "html/react",             "start": 0,"end": 6,"progress": 100},
+            {"label": "css",                    "start": 1,"end": 7,"progress": 100},
+            {"label": "sivun käyttö-ohje",      "start": 4,"end": 7,"progress": 100},
             {"label": "hienompi chart",         "start": 0,"end": 4,"progress": 100}
         ]
         }
