@@ -215,19 +215,19 @@ CCM CustomContextMenu
 
 .CCMItem {
   display: grid;
-  padding: 0 2em 0 1em;
   text-transform: capitalize;
   text-decoration: none;
   font-size: 20px;
   width: 100%;
   text-align: start;
-}
-
-.CCMItem a {
-  display: none;
   cursor: pointer;
 }
-.CCMItem a.active {
+
+.CCMItem > * {
+  padding: 0 2em 0 1em;
+  display: none;
+}
+.CCMItem > *.active {
   display: grid;
 }
 
@@ -235,12 +235,12 @@ CCM CustomContextMenu
   background: var(--color-transparent-accent2);
 }
 
-.CCMItem a {
-  color: var(--color-white);
+.CCMItem > * {
+  color: var(--color-transparent-white);
   text-decoration: none;
 }
 
-.CCMItem a:hover {
+.CCMItem > *:hover {
   color: var(--color-white);
 }
 
@@ -563,9 +563,8 @@ Games
   width: 3em;
   height: 3em;
   border-radius: 999em;
-  background: transparent;
+  background: var(--color-transparent-dark3);
   outline: 0px solid transparent;
-  backdrop-filter: invert(0.5);
   transition: 0.2s;
 }
 
@@ -580,7 +579,6 @@ Games
 }
 
 .icon.shortcutIcon:hover {
-  backdrop-filter: invert(0);
   background: var(--color-transparent-accent2);
   outline: 0.25em solid var(--color-transparent-accent2);
 }

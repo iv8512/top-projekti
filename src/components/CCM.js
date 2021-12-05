@@ -17,43 +17,45 @@ function CCM() {
                 let CCM = document.getElementById('CCMContainer');
                 CCM.style.display = 'grid'
 
-                let launchcode = taskele.getAttribute('launch')
-                let launchBTN = document.querySelector('.launchBTN');
-                let delBTN = document.querySelector('.delBTN');
+                
                 setTimeout(function() {
+                    let launchcode = taskele.getAttribute('launch')
+                    let launchBTN = document.querySelector('.launchBTN');
+                    let delBTN = document.querySelector('.delBTN');
                     launchBTN.setAttribute('href', launchcode);
                     launchBTN.classList.add('active');
                     console.log('launchURL', launchcode);
-                }, 50);
-                
-                if (taskele.classList.contains('shortcutIcon')) {
-                    setTimeout(function() {
-                        var gridIndex = taskele.getAttribute('index');
-                        let storage = localStorage.getItem('links');
-                        storage = JSON.parse(storage);
-                        
-                        
-                        
-                        delBTN.classList.add('active');
+                    
+                    if (taskele.classList.contains('shortcutGridItem')) {
 
-                        delBTN.addEventListener('click', function(){
-                            taskele.remove();
-
-                            storage.splice(gridIndex, 1);
-                            storage = JSON.stringify(storage);
-
-                            localStorage.setItem('links', storage)
-                        })
-                    }, 50);
-                }
+                        setTimeout(function() {
+                            var gridIndex = taskele.getAttribute('index');
+                            let storage = localStorage.getItem('links');
+                            storage = JSON.parse(storage);
+                            
+                            
+                            
+                            delBTN.classList.add('active');
+                            
+                            delBTN.addEventListener('click', function remover(){
+                                taskele.remove();
+                                console.log(taskele);
+                                
+                                storage.splice(gridIndex, 1);
+                                storage = JSON.stringify(storage);
+                                
+                                localStorage.setItem('links', storage)
+                            });
+                        }, 25);
+                    }
+                }, 25);
             });
         }
         
         document.addEventListener("contextmenu", function(){
             let delBTN = document.querySelector('.delBTN');
             let launchBTN = document.querySelector('.launchBTN');
-            
-            delBTN.classList.remove('active');
+            delBTN.replaceWith(delBTN.cloneNode(true));
 
             launchBTN.classList.remove('active');
             launchBTN.setAttribute('href', window.location.href);
@@ -86,8 +88,8 @@ function CCM() {
 
     return ( 
         <div id="CCMContainer" style={{ top: Y, left: X }}>
-            <div className="CCMItem"><a className="launchBTN" target="_self" href={window.location.href}>launch</a></div>
-            <div className="CCMItem"><button className="delBTN">delete shortcut</button></div>
+            <div className="CCMItem"><a className="launchBTN clickable" target="_self" href={window.location.href}>launch</a></div>
+            <div className="CCMItem"><div className="delBTN clickable">delete shortcut</div></div>
         </div>
      );
 }

@@ -39,7 +39,7 @@ function Shortcuts() {
         SCcontainer.innerHTML = '';
         if (links !== null) {
             {links.map((link, index) => (
-                SCcontainer.innerHTML = SCcontainer.innerHTML + '<div class="shortcutGridItem"><a class="icon shortcutIcon task" index="' + index + '"launch="https://' + link + '" href="https://' + link + '"><img src="https://' + link + '/favicon.ico" alt="error" /></a></div>'
+                SCcontainer.innerHTML = SCcontainer.innerHTML + '<div class="shortcutGridItem task" index="' + index + '"launch="https://' + link + '"><a class="icon shortcutIcon" href="https://' + link + '"><img src="https://' + link + '/favicon.ico" alt="error" /></a></div>'
             ))}
         }
         else {
