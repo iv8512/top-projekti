@@ -367,6 +367,10 @@ Games
   transition: min-height 0.2s;
 }
 
+.shortcutGridItem {
+  display: grid;
+  place-content: center;
+}
 
 .weather:first-child {
   display: grid;
@@ -556,22 +560,29 @@ Games
 }
 
 .icon.shortcutIcon {
-  width: 4em;
-  height: 4em;
-  margin: auto;
-  border-radius: 0.5em;
+  width: 3em;
+  height: 3em;
+  border-radius: 999em;
   background: transparent;
+  outline: 0px solid transparent;
+  backdrop-filter: invert(0.5);
   transition: 0.2s;
 }
 
 .icon.shortcutIcon img {
-	bottom: 0;
+  bottom: 0;
 	left: 0;
 	margin: auto;
-	height: 4em;
-	width: 4em;
+	width: 1.5em;
+	height: 1.5em;
 	right: 0;
 	top: 0;
+}
+
+.icon.shortcutIcon:hover {
+  backdrop-filter: invert(0);
+  background: var(--color-transparent-accent2);
+  outline: 0.25em solid var(--color-transparent-accent2);
 }
 
 .icon.navItem {
@@ -579,10 +590,6 @@ Games
   height: 3.5em;
 }
 
-.icon.shortcutIcon:hover {
-  background: var(--color-transparent-accent2);
-  outline: 0.25em solid var(--color-transparent-accent2);
-}
 
 form {
   display: grid;
@@ -717,7 +724,7 @@ form input[type="submit"]:is(:hover, :focus) {
 }
 
 
-a.gameCard {
+div.gameCard {
   display: flex;
   place-content: center;
   color: var(--color-white);
