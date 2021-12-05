@@ -13,22 +13,38 @@ function CCM() {
       
         function contextMenuListener(taskele) {
             taskele.addEventListener( "contextmenu", function(e) {
+                e.preventDefault();
+                let CCM = document.getElementById('CCMContainer');
+                CCM.style.display = 'grid'
+
                 let launchcode = taskele.getAttribute('launch')
-                let launchele = document.querySelector('.launchBTN');
-                if (launchcode !== null) {
-                    launchele.setAttribute('href', launchcode);
-                    launchele.classList.add('active');
+                let launchBTN = document.querySelector('.launchBTN');
+                let delBTN = document.querySelector('.delBTN');
+                setTimeout(function() {
+                    launchBTN.setAttribute('href', launchcode);
+                    launchBTN.classList.add('active');
+                    console.log(launchcode);
+                }, 50);
+                
+                if (taskele.classList.contains('shortcutIcon')) {
+                    setTimeout(function() {
+                        delBTN.classList.add('active');
+                    }, 50);
                 }
-                else {
-                    launchele.setAttribute('href', window.location.href);
-                    launchele.classList.remove('active');
-                }
-          });
+            });
         }
+        
+        document.addEventListener("contextmenu", function(){
+            let delBTN = document.querySelector('.delBTN');
+            let launchBTN = document.querySelector('.launchBTN');
+            delBTN.classList.remove('active');
+            launchBTN.classList.remove('active');
+            launchBTN.setAttribute('href', window.location.href);
+            console.log('CCM reset');
+        })
       
     });
 
-    let [CCMDisplay, setCCMDisplay] = useState('none');
     let [X, setX] = useState(0);
     let [Y, setY] = useState(0);
 
@@ -39,24 +55,21 @@ function CCM() {
         let y;
     
         document.addEventListener('contextmenu', (data) => {
-            data.preventDefault();
             x = data.pageX + CCM.offsetWidth > document.innerWidth ? document.innerWidth - CCM.offsetWidth : data.pageX;
             y = data.pageY + CCM.offsetHeight > document.innerHeight ? document.innerHeight - CCM.offsetHeight : data.pageY;
             setX(x);
             setY(y);
-            setCCMDisplay('grid');
         });
         
         document.addEventListener('mouseup', () => {
-            setCCMDisplay('none');
+            CCM.style.display = 'none';
         });
     });
 
     return ( 
-        <div id="CCMContainer" style={{ display: CCMDisplay, top: Y, left: X + 'px' }}>
-            <div className="CCMItem"><a className="launchBTN" target="_self">Launch</a></div>
-            <div className="CCMDivider"></div>
-            <div className="CCMItem">delete shortcut</div>
+        <div id="CCMContainer" style={{ top: Y, left: X }}>
+            <div className="CCMItem"><a className="launchBTN" target="_self">launch</a></div>
+            <div className="CCMItem"><a className="delBTN" target="_self">delete shortcut</a></div>
         </div>
      );
 }

@@ -201,6 +201,12 @@ CCM CustomContextMenu
   text-align: start;
 }
 
+.CCMItem a {
+  display: none;
+}
+.CCMItem a.active {
+  display: grid;
+}
 
 .CCMItem:hover {
   background: var(--color-transparent-accent2);
