@@ -2,63 +2,63 @@
     {
         "city": "Sauvo",
         "weather": {
-            "description": "pilvinen",
-            "icon": "04n"
+            "description": "v\u00e4h\u00e4n pilvi\u00e4",
+            "icon": "02n"
         },
         "air": {
             "temperature": {
                 "current": [
-                    -8,
-                    -8.18
+                    -14,
+                    -13.83
                 ],
                 "min": [
-                    -11,
-                    -10.97
+                    -15,
+                    -14.54
                 ],
                 "max": [
-                    -7,
-                    -6.83
+                    -11,
+                    -11.25
                 ],
                 "feels_like": [
-                    -11,
-                    -11.24
+                    -21,
+                    -20.83
                 ]
             },
             "wind": {
                 "speed": [
-                    1.58,
-                    "Light breeze"
+                    3.93,
+                    "Gentle breeze"
                 ],
                 "deg": [
-                    124,
-                    "SE"
+                    57,
+                    "ENE"
                 ],
-                "gust": 2.91
+                "gust": 9.72
             },
             "clouds": {
-                "all": 88
+                "all": 14
             },
             "other": {
-                "pressure": "993hPa",
-                "humidity": "90%",
+                "pressure": "1017hPa",
+                "humidity": "85%",
                 "visibility": "10.0km"
             }
         },
         "dt": {
             "current": [
-                2204,
-                "2021-02-12",
-                "00:36:44"
+                12730,
+                "2021-05-12",
+                "03:32:10"
             ],
             "sunrise": [
-                32957,
-                "2021-02-12",
-                "09:09:17"
+                33303,
+                "2021-05-12",
+                "09:15:03"
             ],
             "sunset": [
-                55703,
-                "2021-02-12",
-                "15:28:23"
+                55499,
+                "2021-05-12",
+                "15:24:59"
             ]
         },
         "other": {
@@ -79,63 +79,63 @@
     {
         "city": "Turku",
         "weather": {
-            "description": "pilvinen",
+            "description": "hajanaisia pilvi\u00e4",
             "icon": "04n"
         },
         "air": {
             "temperature": {
                 "current": [
-                    -8,
-                    -7.63
+                    -14,
+                    -13.97
                 ],
                 "min": [
-                    -9,
-                    -8.63
+                    -14,
+                    -14.42
                 ],
                 "max": [
-                    -7,
-                    -6.71
+                    -12,
+                    -12.12
                 ],
                 "feels_like": [
-                    -11,
-                    -10.54
+                    -20,
+                    -20.4
                 ]
             },
             "wind": {
                 "speed": [
-                    1.54,
-                    "Light air"
+                    3.09,
+                    "Light breeze"
                 ],
                 "deg": [
-                    110,
-                    "ESE"
+                    70,
+                    "ENE"
                 ],
                 "gust": null
             },
             "clouds": {
-                "all": 90
+                "all": 75
             },
             "other": {
-                "pressure": "992hPa",
-                "humidity": "93%",
+                "pressure": "1016hPa",
+                "humidity": "78%",
                 "visibility": "10.0km"
             }
         },
         "dt": {
             "current": [
-                2240,
-                "2021-02-12",
-                "00:37:20"
+                12702,
+                "2021-05-12",
+                "03:31:42"
             ],
             "sunrise": [
-                33116,
-                "2021-02-12",
-                "09:11:56"
+                33465,
+                "2021-05-12",
+                "09:17:45"
             ],
             "sunset": [
-                55749,
-                "2021-02-12",
-                "15:29:09"
+                55543,
+                "2021-05-12",
+                "15:25:43"
             ]
         },
         "other": {
@@ -156,63 +156,63 @@
     {
         "city": "Muurla",
         "weather": {
-            "description": "hajanaisia pilvi\u00e4",
-            "icon": "04n"
+            "description": "ajoittaisia pilvi\u00e4",
+            "icon": "03n"
         },
         "air": {
             "temperature": {
                 "current": [
-                    -9,
-                    -8.72
+                    -14,
+                    -13.7
                 ],
                 "min": [
-                    -10,
-                    -9.83
+                    -15,
+                    -14.66
                 ],
                 "max": [
-                    -7,
-                    -6.95
+                    -12,
+                    -12.31
                 ],
                 "feels_like": [
-                    -9,
-                    -8.72
+                    -21,
+                    -20.7
                 ]
             },
             "wind": {
                 "speed": [
-                    1.22,
-                    "Light air"
+                    3.83,
+                    "Gentle breeze"
                 ],
                 "deg": [
-                    131,
-                    "SE"
+                    54,
+                    "NE"
                 ],
-                "gust": 1.5
+                "gust": 9.98
             },
             "clouds": {
-                "all": 78
+                "all": 29
             },
             "other": {
-                "pressure": "994hPa",
-                "humidity": "92%",
+                "pressure": "1017hPa",
+                "humidity": "86%",
                 "visibility": "10.0km"
             }
         },
         "dt": {
             "current": [
-                2206,
-                "2021-02-12",
-                "00:36:46"
+                12732,
+                "2021-05-12",
+                "03:32:12"
             ],
             "sunrise": [
-                32820,
-                "2021-02-12",
-                "09:07:00"
+                33166,
+                "2021-05-12",
+                "09:12:46"
             ],
             "sunset": [
-                55559,
-                "2021-02-12",
-                "15:25:59"
+                55355,
+                "2021-05-12",
+                "15:22:35"
             ]
         },
         "other": {
