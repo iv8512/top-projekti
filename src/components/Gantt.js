@@ -21,7 +21,7 @@ function Gantt() {
     }
     
     return ( 
-        <div className="page" id="GanttPage">
+        <div className="page subpage" id="GanttPage">
             <div className="header">
                 <h1>Gantt Chart</h1>
             </div>

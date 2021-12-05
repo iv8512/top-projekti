@@ -23,12 +23,27 @@ function CCM() {
                 setTimeout(function() {
                     launchBTN.setAttribute('href', launchcode);
                     launchBTN.classList.add('active');
-                    console.log(launchcode);
+                    console.log('launchURL', launchcode);
                 }, 50);
                 
                 if (taskele.classList.contains('shortcutIcon')) {
                     setTimeout(function() {
+                        var gridIndex = taskele.getAttribute('index');
+                        let storage = localStorage.getItem('links');
+                        storage = JSON.parse(storage);
+                        
+                        
+                        
                         delBTN.classList.add('active');
+
+                        delBTN.addEventListener('click', function(){
+                            taskele.remove();
+
+                            storage.splice(gridIndex, 1);
+                            storage = JSON.stringify(storage);
+
+                            localStorage.setItem('links', storage)
+                        })
                     }, 50);
                 }
             });
@@ -37,9 +52,12 @@ function CCM() {
         document.addEventListener("contextmenu", function(){
             let delBTN = document.querySelector('.delBTN');
             let launchBTN = document.querySelector('.launchBTN');
+            
             delBTN.classList.remove('active');
+
             launchBTN.classList.remove('active');
             launchBTN.setAttribute('href', window.location.href);
+
             console.log('CCM reset');
         })
       
@@ -68,8 +86,8 @@ function CCM() {
 
     return ( 
         <div id="CCMContainer" style={{ top: Y, left: X }}>
-            <div className="CCMItem"><a className="launchBTN" target="_self">launch</a></div>
-            <div className="CCMItem"><a className="delBTN" target="_self">delete shortcut</a></div>
+            <div className="CCMItem"><a className="launchBTN" target="_self" href={window.location.href}>launch</a></div>
+            <div className="CCMItem"><button className="delBTN">delete shortcut</button></div>
         </div>
      );
 }

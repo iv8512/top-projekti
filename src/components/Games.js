@@ -65,7 +65,7 @@ function Games() {
     });    
 
     return ( 
-        <div className="slideshow content drag" id="Slides">
+        <div className="slideshow content drag subpage" id="Slides">
             <GamesSteam data={GameData} />
             <GamesEpic data={GameData} />
             <GamesUbisoft data={GameData} />

@@ -33,10 +33,10 @@ function GamesUbisoft(props) {
 
             <div className="gameGrid" style={{ gridTemplateColumns: Cols }}>
                 {props.data.ubisoft.games.map((data,index) => (  
-                    <a launch={"uplay://launch/" + data.id} className="gameCard task" key={index}>
+                    <div launch={"uplay://launch/" + data.id} className="gameCard task" key={index}>
                         <img loading="lazy" src={ "https://cdn.cloudflare.steamstatic.com/steam/apps/" + 0 + "/library_600x900.jpg" } alt={data.name} style={{ display: BigImg }} />
                         <img loading="lazy" src={ "https://cdn.akamai.steamstatic.com/steam/apps/" + 0 +"/capsule_184x69.jpg" } alt={data.name} style={{ display: SmallImg }} />
-                    </a>
+                    </div>
                 ))}
             </div>
         </div>

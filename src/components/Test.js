@@ -1,6 +1,6 @@
 function Test() {
     return ( 
-        <div className="page" id="Test">
+        <div className="page subpage" id="Test">
             <div className="header">
                 <h1>Olet Testisivulla</h1>
             </div>

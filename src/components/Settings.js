@@ -1,7 +1,7 @@
 import Info from '../data/info.json'
 function Settings() {
     return ( 
-        <div className="page" id="Settings">
+        <div className="page subpage" id="Settings">
             <div className="header">
                 <h1>Settings</h1>
             </div>

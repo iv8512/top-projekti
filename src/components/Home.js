@@ -18,7 +18,7 @@ function Home() {
    
     
     return ( 
-        <div className="page" id="Games">
+        <div className="page">
 
             <div id="Home">
                 <div className="banner">

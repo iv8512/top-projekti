@@ -1,55 +1,108 @@
+import React from "react";
 function Shortcuts() {
 
+    function addlink(newlink) {
+        let links = localStorage.getItem('links');
+        if (links === null) {
+            localStorage.setItem('links', JSON.stringify([]))
+        }
+        links = localStorage.getItem('links');
+        links = links.substring(0, links.length - 1);
+        
+        if (links === '[') {
+            links = links + '"' + newlink + '"]';
+        }
+        else {
+            links = links + ',"' +newlink + '"]';
+        }
+        console.log(links);
+        
+        localStorage.setItem('links', links);
+        refreshShortcutIcons();
+    }
     
-    function addicon() {
-        let ele = document.querySelector('.shortcutGrid');
-        let content = ele.innerHTML;
-        ele.innerHTML = '<a class="icon shortcutIcon task" launch="https://www.youtube.com/" href="https://www.youtube.com/"><img src="http://localhost:3000/test.svg" alt="error" /></a>' + content;
+    function newLinkSubmit() {
+        let inputele = document.querySelector('.addIconForm').firstElementChild;
+        addlink((inputele.value));
+    }
+    
+    
+
+
+    
+    
+    function refreshShortcutIcons() {
+        let links = localStorage.getItem('links');
+        links = JSON.parse(links);
+
+        let SCcontainer = document.querySelector('.shortcutGrid');
+        SCcontainer.innerHTML = '';
+        if (links !== null) {
+            {links.map((link, index) => (
+                SCcontainer.innerHTML = SCcontainer.innerHTML + '<a class="icon shortcutIcon task" index="' + index + '"launch="https://' + link + '" href="https://' + link + '"><img src="https://' + link + '/favicon.ico" alt="error" /></a>'
+            ))}
+        }
+        else {
+            SCcontainer.innerHTML = '<div style="grid-area: 1 / 1 / 2 / 4;">You can add shortcuts by pressing the "+" button</div>';
+        }
     }
 
-
-    //////////////
-    // does not work
-    //////////////
-    // function removeicon() {
-    //     let ele = document.querySelector('.shortcutGrid');
-    //     let content = ele.innerHTML;
-    //     ele.innerHTML = content;
-    // }
+    React.useEffect(() => {
+        refreshShortcutIcons();
+    });
 
 
-    //////////////
-    // this function tries to set all href attributes to the launch attributes value
-    //////////////
-    // (function() {
-    //     var ShortcutItems = document.querySelectorAll(".shortcutIcon");
-      
-    //     for ( var i = 0, len = ShortcutItems.length; i < len; i++ ) {
-    //       var ShortcutItem = ShortcutItems[i];
-    //       ShortcutItem.style.display = 'none';
-    //       var launch = ShortcutItem.getAttribute('launch');
-    //       ShortcutItem.setAttribute('href', launch);
-    //     }
-    // })();
+
+
+
+    
+    window.onclick = function(event) {
+        var modal = document.querySelector('.modal');
+        if (event.target === modal) {
+            modal.style.display = "none";
+            formReset();
+        }
+    }
+    
+    function openModal() {
+        var modal = document.querySelector('.modal');
+        modal.style.display = 'grid';
+    }
+
+    function formReset() {
+        let ele = document.querySelector('.addIconForm')
+        ele.reset()
+    }
 
     return (
+        <>
+        <div className="modal">
+            <div className="modalContent">
+                <div className="rowContainer">
+                    <form className="addIconForm">
+                        <input type="text" placeholder="example url: www.w3schools.com"/>
+                    </form>
+                    <button className="mimicSubmit" onClick={newLinkSubmit}>Add Icon</button>
+                </div>
+            </div>
+        </div>
         <div className="shortcuts">
     
             <div className="header">
                 <div className="row">
-                    <button onClick={addicon}>+</button>
+                    <button onClick={openModal}>+</button>
                     <div className="row">
                         Shortcut Icons
                     </div>
-                    <button>-</button>
                 </div>
             </div>
 
             <div className="shortcutGrid">
-                <a className="icon shortcutIcon task" launch="https://www.youtube.com/" href="https://www.youtube.com/"><img src="http://localhost:3000/test.svg" alt="error" /></a>
-                <a className="icon shortcutIcon task" launch="https://www.youtube.com/" href="https://www.youtube.com/"><img src="http://localhost:3000/test.svg" alt="error" /></a>
+            <a className="icon shortcutIcon task" launch="https://www.youtube.com/" href="https://www.youtube.com/"><img src="http://localhost:3000/test.svg" alt="error" /></a>
+                
             </div>
         </div>
+        </>
      );
 }
 
