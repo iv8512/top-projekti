@@ -204,8 +204,6 @@ CCM CustomContextMenu
   display: none;
   z-index: 111;
   position: absolute;
-  top: 100px;
-  left: 100px;
   padding: 1em 0;
   background: var(--color-dark1);
   box-shadow: 0 0 20px -5px var(--color-transparent-black);
@@ -226,6 +224,8 @@ CCM CustomContextMenu
 .CCMItem > * {
   padding: 0 2em 0 1em;
   display: none;
+  word-break: keep-all;
+  white-space: pre;
 }
 .CCMItem > *.active {
   display: grid;
@@ -259,12 +259,12 @@ Modal
 }
 
 .modalContent {
-  position: relative;
+  position: absolute;
+  top: 30vh;
+  left: 30vw;
   z-index: 1;
   display: grid;
-  min-width: 40vw;
-  width: max-content;
-  max-width: 90vw;
+  width: 40vw;
   height: 40vh;
   border-radius: 2em;
   background: var(--color-dark1);
@@ -370,6 +370,8 @@ Games
 .shortcutGridItem {
   display: grid;
   place-content: center;
+  height: 4em;
+  width: 100%;
 }
 
 .weather:first-child {
@@ -515,10 +517,10 @@ Games
 .timeBar .dot::before {
   content: '';
   position: absolute;
-  left: -0.75em;
+  left: -1.25em;
   border: 0.25em solid currentColor;
-  border-radius: 100% 100% 0%;
-  transform: translateY(100%) rotateZ(-45deg);
+  border-radius: 999em;
+  transform: translateY(100%);
 }
 
 .statics {
