@@ -5,7 +5,7 @@ function CCM() {
     
     
     React.useEffect(() => {
-        document.querySelector('.shortcuts').addEventListener('mousedown', function() {
+        document.querySelector('body').addEventListener('mousedown', function() {
             var taskItems = document.querySelectorAll(".task");
             
             for ( var i = 0, len = taskItems.length; i < len; i++ ) {
@@ -30,7 +30,6 @@ function CCM() {
                 let delBTN = document.querySelector('.delBTN');
                 launchBTN.setAttribute('href', launchcode);
                 launchBTN.classList.add('active');
-                // console.log('launchURL', launchcode);
                 
                 if (taskele.classList.contains('shortcutGridItem')) {
                     setTimeout(function() {
@@ -73,7 +72,7 @@ function CCM() {
     React.useEffect(() => {
         const CCM = document.getElementById('CCMContainer');
 
-        document.addEventListener('contextmenu', function(e) {
+        window.addEventListener('contextmenu', function(e) {
             var x = e.pageX + CCM.offsetWidth > document.innerWidth ? document.innerWidth - CCM.offsetWidth : e.pageX;
             var y = e.pageY + CCM.offsetHeight > document.innerHeight ? document.innerHeight - CCM.offsetHeight : e.pageY;
             CCM.style.left = x + 'px';
@@ -81,7 +80,7 @@ function CCM() {
             console.log(x, y);
         });
         
-        document.addEventListener('mouseup', () => {
+        window.addEventListener('mouseup', () => {
             CCM.style.display = 'none';
         });
     });

@@ -16,7 +16,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--color-dark1);
   color: var(--color-white);
-  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar{
@@ -88,6 +87,7 @@ select:-webkit-autofill:focus {
 
 *, *::before, *::after {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 
@@ -204,6 +204,8 @@ CCM CustomContextMenu
   display: none;
   z-index: 111;
   position: absolute;
+  top: 0;
+  left: 0;
   padding: 1em 0;
   background: var(--color-dark1);
   box-shadow: 0 0 20px -5px var(--color-transparent-black);
