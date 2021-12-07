@@ -8,7 +8,19 @@ function Settings() {
             <div className="content" id ="SettingsContent">
                 <div>
                     <h2>Website info:</h2>
-                    <div>site started on: {Info.Website.Started[0]} -:- {Info.Website.Started[1]}</div>
+                    <div className="rowContainer">
+                        <div className="row">Website by: </div>
+                        <ul>
+                            <li>
+                                Jussi Lehtinen (front end)
+                            </li>
+                            <li>
+                                Iivari Vitikainen (back end)
+                            </li>
+                        </ul>
+                        <div className="row"></div>
+                        <div className="row">site started on: {Info.Website.Started[0]} -:- {Info.Website.Started[1]}</div>
+                    </div>
                 </div>
             </div>
         </div>
