@@ -19,7 +19,16 @@ function Home() {
     
     return ( 
         <div className="page">
-
+            <div className="modal">
+                <div className="modalContent">
+                    <div className="rowContainer">
+                        <form className="addIconForm">
+                            <input type="text" placeholder="example url: www.w3schools.com"/>
+                        </form>
+                        <button className="mimicSubmit submitShortcut">Add Icon</button>
+                    </div>
+                </div>
+            </div>
             <div id="Home">
                 <div className="banner">
                     <div className="bannerList">

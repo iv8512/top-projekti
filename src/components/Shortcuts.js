@@ -20,53 +20,66 @@ function Shortcuts() {
         localStorage.setItem('links', links);
         refreshShortcutIcons();
     }
-    
-    function newLinkSubmit() {
-        let inputele = document.querySelector('.addIconForm').firstElementChild;
-        addlink((inputele.value));
-    }
-    
-    
 
 
-    
-    
+
+
+
+
     function refreshShortcutIcons() {
-        let links = localStorage.getItem('links');
+        console.log('refresh');
+        var links = localStorage.getItem('links');
         links = JSON.parse(links);
 
-        let SCcontainer = document.querySelector('.shortcutGrid');
+        const SCcontainer = document.querySelector('.shortcutGrid');
         SCcontainer.innerHTML = '';
-        if (links !== null) {
-            {links.map((link, index) => (
-                SCcontainer.innerHTML = SCcontainer.innerHTML + '<div class="shortcutGridItem task" index="' + index + '"launch="https://' + link + '"><a class="icon shortcutIcon" href="https://' + link + '"><img src="https://' + link + '/favicon.ico" alt="error" /></a></div>'
-            ))}
+
+        if (links === null || links.length === 0) {
+            SCcontainer.innerHTML = '<div style="grid-area: 1 / 1 / 2 / 4;">You can add shortcuts by pressing the "+" button</div>';
         }
         else {
-            SCcontainer.innerHTML = '<div style="grid-area: 1 / 1 / 2 / 4;">You can add shortcuts by pressing the "+" button</div>';
+            links.map((link) => (
+                SCcontainer.innerHTML = SCcontainer.innerHTML + '<div class="shortcutGridItem task" launch="https://' + link + '"><a class="icon shortcutIcon" href="https://' + link + '"><img src="https://' + link + '/favicon.ico" alt="error" /></a></div>'
+            ))
         }
     }
 
-    React.useEffect(() => {
-        refreshShortcutIcons();
-    });
+    
 
+    React.useLayoutEffect(() => {
+        const SCcontainer = document.querySelector('.shortcutGrid');
+        SCcontainer.addEventListener('change', function() {
+            refreshShortcutIcons();
+        });
+
+        refreshShortcutIcons();
+
+        document.querySelector('.submitShortcut').addEventListener('click', function newLinkSubmit() {
+            let inputele = document.querySelector('.addIconForm').firstElementChild;
+            addlink((inputele.value));
+        });
+    });
 
 
 
 
     
     window.onclick = function(event) {
+        var body = document.getElementsByTagName('body')[0];
         var modal = document.querySelector('.modal');
+
         if (event.target === modal) {
-            modal.style.display = "none";
+            modal.style.display = 'none';
+            body.style.overflowY = 'unset';
             formReset();
         }
     }
     
     function openModal() {
+        var body = document.getElementsByTagName('body')[0];
         var modal = document.querySelector('.modal');
         modal.style.display = 'grid';
+        body.style.overflowY = 'hidden';
     }
 
     function formReset() {
@@ -75,17 +88,6 @@ function Shortcuts() {
     }
 
     return (
-        <>
-        <div className="modal">
-            <div className="modalContent">
-                <div className="rowContainer">
-                    <form className="addIconForm">
-                        <input type="text" placeholder="example url: www.w3schools.com"/>
-                    </form>
-                    <button className="mimicSubmit" onClick={newLinkSubmit}>Add Icon</button>
-                </div>
-            </div>
-        </div>
         <div className="shortcuts">
     
             <div className="header">
@@ -102,7 +104,6 @@ function Shortcuts() {
                 
             </div>
         </div>
-        </>
      );
 }
 
