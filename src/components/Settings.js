@@ -1,4 +1,5 @@
 import Info from '../data/info.json'
+
 function Settings() {
     return ( 
         <div className="page subpage" id="Settings">
@@ -20,6 +21,16 @@ function Settings() {
                         </ul>
                         <div className="row"></div>
                         <div className="row">site started on: {Info.Website.Started[0]} -:- {Info.Website.Started[1]}</div>
+                        <div className="row"></div>
+                        <div className="row">Version List:</div>
+                        <ul>
+                            <li>Website: {Info.Website.Version}</li>
+                            <li>QuickStart: {Info.Versions.QStart}</li>
+                            <li>QuickSetup: {Info.Versions.QSetup}</li>
+                            <li>Gamefinder: {Info.Versions.Gamefinder}</li>
+                            <li>Weatherfinder: {Info.Versions.Weatherfinder}</li>
+                            <li>Itemfinder: {Info.Versions.Itemfinder}</li>
+                        </ul>
                     </div>
                 </div>
             </div>
