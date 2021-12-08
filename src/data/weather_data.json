@@ -2,69 +2,69 @@
     {
         "city": "Sauvo",
         "weather": {
-            "description": "v\u00e4h\u00e4n pilvi\u00e4",
-            "icon": "02n"
+            "description": "ajoittaisia pilvi\u00e4",
+            "icon": "03n"
         },
         "air": {
             "temperature": {
                 "current": [
-                    -14,
-                    -13.83
+                    -16,
+                    -15.85
                 ],
                 "min": [
-                    -15,
-                    -14.54
+                    -17,
+                    -16.83
                 ],
                 "max": [
-                    -11,
-                    -11.25
+                    -14,
+                    -13.99
                 ],
                 "feels_like": [
                     -21,
-                    -20.83
+                    -20.74
                 ]
             },
             "wind": {
                 "speed": [
-                    3.93,
-                    "Gentle breeze"
+                    1.91,
+                    "Light breeze"
                 ],
                 "deg": [
-                    57,
-                    "ENE"
+                    36,
+                    "NE"
                 ],
-                "gust": 9.72
+                "gust": 5.1
             },
             "clouds": {
-                "all": 14
+                "all": 41
             },
             "other": {
-                "pressure": "1017hPa",
-                "humidity": "85%",
+                "pressure": "1021hPa",
+                "humidity": "89%",
                 "visibility": "10.0km"
             }
         },
         "dt": {
             "current": [
-                12730,
-                "2021-05-12",
-                "03:32:10"
+                69556,
+                "2021-06-12",
+                "19:19:16"
             ],
             "sunrise": [
-                33303,
-                "2021-05-12",
-                "09:15:03"
+                33412,
+                "2021-06-12",
+                "09:16:52"
             ],
             "sunset": [
-                55499,
-                "2021-05-12",
-                "15:24:59"
+                55441,
+                "2021-06-12",
+                "15:24:01"
             ]
         },
         "other": {
             "country": {
                 "name": "FI",
-                "id": 2012701,
+                "id": 2004216,
                 "timezone": 7200
             },
             "coord": {
@@ -79,63 +79,63 @@
     {
         "city": "Turku",
         "weather": {
-            "description": "hajanaisia pilvi\u00e4",
-            "icon": "04n"
+            "description": "taivas on selke\u00e4",
+            "icon": "01n"
         },
         "air": {
             "temperature": {
                 "current": [
-                    -14,
-                    -13.97
+                    -16,
+                    -15.99
                 ],
                 "min": [
-                    -14,
-                    -14.42
+                    -17,
+                    -16.71
                 ],
                 "max": [
-                    -12,
-                    -12.12
+                    -14,
+                    -14.43
                 ],
                 "feels_like": [
                     -20,
-                    -20.4
+                    -20.09
                 ]
             },
             "wind": {
                 "speed": [
-                    3.09,
-                    "Light breeze"
+                    1.54,
+                    "Light air"
                 ],
                 "deg": [
-                    70,
+                    60,
                     "ENE"
                 ],
                 "gust": null
             },
             "clouds": {
-                "all": 75
+                "all": 0
             },
             "other": {
-                "pressure": "1016hPa",
-                "humidity": "78%",
+                "pressure": "1019hPa",
+                "humidity": "85%",
                 "visibility": "10.0km"
             }
         },
         "dt": {
             "current": [
-                12702,
-                "2021-05-12",
-                "03:31:42"
+                69319,
+                "2021-06-12",
+                "19:15:19"
             ],
             "sunrise": [
-                33465,
-                "2021-05-12",
-                "09:17:45"
+                33574,
+                "2021-06-12",
+                "09:19:34"
             ],
             "sunset": [
-                55543,
-                "2021-05-12",
-                "15:25:43"
+                55484,
+                "2021-06-12",
+                "15:24:44"
             ]
         },
         "other": {
@@ -162,63 +162,63 @@
         "air": {
             "temperature": {
                 "current": [
-                    -14,
-                    -13.7
+                    -15,
+                    -14.98
                 ],
                 "min": [
-                    -15,
-                    -14.66
+                    -17,
+                    -16.95
                 ],
                 "max": [
-                    -12,
-                    -12.31
+                    -14,
+                    -14.11
                 ],
                 "feels_like": [
-                    -21,
-                    -20.7
+                    -20,
+                    -20.22
                 ]
             },
             "wind": {
                 "speed": [
-                    3.83,
-                    "Gentle breeze"
+                    2.17,
+                    "Light breeze"
                 ],
                 "deg": [
-                    54,
+                    45,
                     "NE"
                 ],
-                "gust": 9.98
+                "gust": 6.15
             },
             "clouds": {
-                "all": 29
+                "all": 43
             },
             "other": {
-                "pressure": "1017hPa",
-                "humidity": "86%",
+                "pressure": "1020hPa",
+                "humidity": "91%",
                 "visibility": "10.0km"
             }
         },
         "dt": {
             "current": [
-                12732,
-                "2021-05-12",
-                "03:32:12"
+                69559,
+                "2021-06-12",
+                "19:19:19"
             ],
             "sunrise": [
-                33166,
-                "2021-05-12",
-                "09:12:46"
+                33274,
+                "2021-06-12",
+                "09:14:34"
             ],
             "sunset": [
-                55355,
-                "2021-05-12",
-                "15:22:35"
+                55296,
+                "2021-06-12",
+                "15:21:36"
             ]
         },
         "other": {
             "country": {
                 "name": "FI",
-                "id": 2022765,
+                "id": 2016390,
                 "timezone": 7200
             },
             "coord": {
