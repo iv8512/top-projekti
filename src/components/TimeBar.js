@@ -31,14 +31,13 @@ function TimeBar(props) {
     }
 
     React.useEffect(() => {
-            times();
-        });
+        times();
+    });
         
     return (
         <div className="timeBar">
             <div className="statics">
                 <span className="start dot">00:00</span>
-                <div></div>
                 <span className="end dot">24:00</span>
             </div>
             <div className="times">

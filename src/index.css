@@ -509,7 +509,7 @@ Games
 
 .timeBar {
   height: 100%;
-  padding-left: 1em;
+  padding-left: 0.75em;
   border-left: 1px solid var(--color-main1);
   color: var(--color-main1);
   border-radius: 0 1em 1em 0;
@@ -519,19 +519,27 @@ Games
 .timeBar .dot::before {
   content: '';
   position: absolute;
-  left: -1.25em;
+  left: -1em;
   border: 0.25em solid currentColor;
   border-radius: 999em;
   transform: translateY(100%);
 }
 
 .statics {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
   position: absolute;
   height: 100%;
   top: 0;
   padding: 0.1em 0;
+}
+
+.start {
+  position: absolute;
+  top: 0;
+}
+
+.end {
+  position: absolute;
+  bottom: 0;
 }
 
 .times > * {
@@ -561,6 +569,7 @@ Games
 
 .icon.tempDegs {
   font-size: 48px;
+  margin-left: 0.4em;
 }
 
 .icon.shortcutIcon {
