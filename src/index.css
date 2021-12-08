@@ -16,6 +16,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--color-dark1);
   color: var(--color-white);
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar{
@@ -87,7 +88,6 @@ select:-webkit-autofill:focus {
 
 *, *::before, *::after {
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 
