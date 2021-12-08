@@ -120,7 +120,7 @@ def clean_data(weather_index):
             "other": {
                 "pressure": str(weather_index["main"]["pressure"]) + "hPa",
                 "humidity": str(weather_index["main"]["humidity"]) + "%",
-                "visibility": str(weather_index["visibility"] / 1000) + "km"
+                "visibility": str(round(weather_index["visibility"] / 1000, 1)) + "km"
                 }
             },
         "dt": {
