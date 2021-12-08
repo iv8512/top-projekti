@@ -55,8 +55,10 @@ function Shortcuts() {
         refreshShortcutIcons();
 
         document.querySelector('.submitShortcut').addEventListener('click', function newLinkSubmit() {
-            let inputele = document.querySelector('.addIconForm').firstElementChild;
-            addlink((inputele.value));
+            let inputele = document.querySelector('.addIconInput');
+            if (inputele.value !== '') {
+                addlink((inputele.value));
+            }
         });
     });
 
@@ -83,8 +85,8 @@ function Shortcuts() {
     }
 
     function formReset() {
-        let ele = document.querySelector('.addIconForm')
-        ele.reset()
+        let ele = document.querySelector('.addIconInput');
+        ele.value = null;
     }
 
     return (

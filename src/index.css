@@ -275,6 +275,28 @@ Modal
   box-shadow: 0 0 15px -5px var(--color-main1) inset;
   padding: 2em;
 }
+
+.modalContent > * {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.modalContent > * > *:nth-child(3) {
+  display: grid;
+  place-content: end;
+}
+
+.addIconInput {
+  width: 100%;
+}
+
+.description {
+  margin: 1em;
+  display: grid;
+  font-size: 20px;
+  color: var(--color-transparent-white);
+}
+
 /*
 Games
 */
@@ -602,7 +624,7 @@ Games
 }
 
 
-form {
+.formy {
   display: grid;
   grid-template-columns: 1fr auto;
   /* transform: translateX(calc(var(--bar-thickness) * -0.5)); */
@@ -615,18 +637,18 @@ form {
   white-space: nowrap;
 }
 
-form:focus-within {
+.formy:focus-within {
   outline: 1px solid var(--color-main2);
   box-shadow: 0 0 25px -10px var(--color-accent2);
 }
 
-form input[type="text"]::selection {
+.formy input[type="text"]::selection {
   color: var(--color-accent2);
   background: var(--color-white);
 }
 
-form input[type="text"],
-form input[type="submit"] {
+.formy input[type="text"],
+.formy input[type="submit"] {
   padding: 1em;
   color: var(--color-transparent-white);
   border: none;
@@ -637,11 +659,11 @@ form input[type="submit"] {
   font-size: 100%;
   transition: color 0.3s;
 }
-form input[type="text"]:is(:hover, :focus) {
+.formy input[type="text"]:is(:hover, :focus) {
   color: var(--color-white);
 }
 
-form input[type="submit"]:is(:hover, :focus) {
+.formy input[type="submit"]:is(:hover, :focus) {
   color: var(--color-white);
 }
 
