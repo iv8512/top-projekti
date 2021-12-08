@@ -3,9 +3,9 @@ import os
 
 root = Tk()
 
-left = Frame(root)
-left.pack(side="left", fill="both", expand=True)
-left.config(bg="#1B1B1B")
+#left = Frame(root)
+#left.pack(side="left", fill="both", expand=True)
+#left.config(bg="#1B1B1B")
 middle = Frame(root)
 middle.pack(side="left", fill="both", expand=True)
 right = Frame(root)
@@ -70,11 +70,11 @@ create_button("Install global yarn", "setup\\yarn_install.py")
 create_button("Install react-router", "setup\\react_router.py")
 create_button("Return to QStart", "quick_start.pyw", "bottom", False)
 
-def create_label(text, frame=left):
-    label = Label(frame, text=text, bg="#1B1B1B", fg="white")
-    label.pack()
+#def create_label(text, frame=left):
+#    label = Label(frame, text=text, bg="#1B1B1B", fg="white")
+#    label.pack()
 
-create_label("test")
+#create_label("test")
 
 try: root.iconbitmap("blume.ico")
 except TclError: root.iconbitmap("../blume.ico")
