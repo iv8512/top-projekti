@@ -51,8 +51,8 @@ function GamesSteam(props) {
     if (props.data.steam.info.games > 0)
     return ( 
         <div className="slide drag" id="steam"> 
-            <div className="header dataToolTip" data-tool-tip={tooltip}>
-                <span><span className="accent2text" onClick={Switch}>Steam Games</span></span>
+            <div className="header dataToolTip" data-tool-tip={tooltip} onClick={Switch}>
+                <span><span className="accent2text">Steam Games</span></span>
             </div> 
 
 
